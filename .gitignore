@@ -2,3 +2,4 @@
 /backup
 **/*.rat
 **/*.tx
+**/*.autosave
