@@ -6,7 +6,7 @@ Different renderers produce very different images for the same USD due to differ
 ![Moore Lane rendered in Solaris/Arnold](renders/moore-lane/moore-lane_arnold.jpg)
 ![Moore Lane rendered in USD Composer/RTX Interactive](renders/moore-lane/moore-lane_rtx.jpg)
 
-The issue here is that each renderer has its own interpretation of the quantity to be emitted given a particular parameterization of the light. Karma appears to be emitting nits when normalize is off and "lux at a patch facing the light" when normalize is on. Arnold and RTX both ignore the normalize flag, and RTX is essentially emitting "pi * lux". RIS does something else entirely:
+The issue here is that each renderer has its own interpretation of the quantity to be emitted given a particular parameterization of the distant light representiong the sun. Karma appears to be emitting nits when normalize is off and "lux at a patch facing the light" when normalize is on. Arnold and RTX both ignore the normalize flag, and RTX is essentially emitting "pi * lux". RIS does something else entirely:
 
 ![Comparison of a distant light illuminating a sphere](renders/distant_comparison.jpg)
 
