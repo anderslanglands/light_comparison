@@ -1,0 +1,2827 @@
+#! C:/Program Files/Nuke13.2v1/nuke-13.2.1.dll -nx
+version 13.2 v1
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="8" y="1" w="2542" h="1351" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="1879" stretch="1"/>
+            <splitter orientation="2">
+                <split size="768"/>
+                <dock id="" activePageId="Viewer.1">
+                    <page id="Viewer.1"/>
+                </dock>
+                <split size="541"/>
+                <dock id="" activePageId="DAG.1" focus="true">
+                    <page id="DAG.1"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+            </splitter>
+            <split size="615"/>
+            <dock id="" activePageId="Properties.1">
+                <page id="Properties.1"/>
+                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name C:/Users/alanglands/Desktop/light_comparison/light_comparison.nk
+ project_directory "\[python \{nuke.script_directory()\}]"
+ frame -1
+ format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+ colorManagement Nuke
+ workingSpaceLUT linear
+ monitorLut sRGB
+ monitorOutLUT rec709
+ int8Lut sRGB
+ int16Lut sRGB
+ logLut Cineon
+ floatLut linear
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_rtx_norm-on_angle-65.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read6
+ xpos 5474
+ ypos 187
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize on}
+  {set angle 65}
+ }
+ name ModifyMetaData18
+ xpos 5474
+ ypos 295
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 54 53}
+   }
+ old_expression_markers {{0 2 10 11 20 21}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text18
+ xpos 5474
+ ypos 319
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_rtx_norm-on_angle-1.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read5
+ xpos 5323
+ ypos 188
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize on}
+  {set angle 1}
+ }
+ name ModifyMetaData17
+ xpos 5323
+ ypos 297
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 49}
+   }
+ old_expression_markers {{0 2 10 11 20 20}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text17
+ xpos 5323
+ ypos 321
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_rtx_norm-on_angle-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read4
+ xpos 5158
+ ypos 194
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData16
+ xpos 5158
+ ypos 299
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 48}
+   }
+ old_expression_markers {{0 2 10 11 20 20}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text16
+ xpos 5158
+ ypos 323
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_rtx_norm-off_angle-65.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read3
+ xpos 4927
+ ypos 198
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set angle 65}
+ }
+ name ModifyMetaData15
+ xpos 4927
+ ypos 304
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 54 53}
+   }
+ old_expression_markers {{0 2 10 12 21 22}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text15
+ xpos 4927
+ ypos 328
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_rtx_norm-off_angle-1.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read2
+ xpos 4775
+ ypos 205
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set angle 1}
+ }
+ name ModifyMetaData14
+ xpos 4775
+ ypos 310
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 49}
+   }
+ old_expression_markers {{0 2 10 12 21 21}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text14
+ xpos 4775
+ ypos 334
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_rtx_norm-off_angle-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read1
+ xpos 4617
+ ypos 207
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData13
+ xpos 4617
+ ypos 305
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 48}
+   }
+ old_expression_markers {{0 2 10 12 21 21}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text13
+ xpos 4617
+ ypos 329
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_arnold_norm-on_angle-65.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read16
+ xpos 5468
+ ypos -30
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize on}
+  {set angle 65}
+ }
+ name ModifyMetaData12
+ xpos 5464
+ ypos 62
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 54 53}
+   }
+ old_expression_markers {{0 5 13 14 23 24}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text12
+ xpos 5464
+ ypos 86
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_arnold_norm-on_angle-1.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read17
+ xpos 5318
+ ypos -31
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize on}
+  {set angle 1}
+ }
+ name ModifyMetaData11
+ xpos 5318
+ ypos 65
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 49}
+   }
+ old_expression_markers {{0 5 13 14 23 23}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text11
+ xpos 5318
+ ypos 89
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_arnold_norm-on_angle-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read18
+ xpos 5156
+ ypos -36
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData10
+ xpos 5156
+ ypos 62
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 48}
+   }
+ old_expression_markers {{0 5 13 14 23 23}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text10
+ xpos 5156
+ ypos 86
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_arnold_norm-off_angle-65.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read19
+ xpos 4917
+ ypos -35
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set angle 65}
+ }
+ name ModifyMetaData9
+ xpos 4915
+ ypos 65
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 54 53}
+   }
+ old_expression_markers {{0 5 13 15 24 25}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text9
+ xpos 4915
+ ypos 89
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_arnold_norm-off_angle-1.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read20
+ xpos 4765
+ ypos -36
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set angle 1}
+ }
+ name ModifyMetaData8
+ xpos 4765
+ ypos 60
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 49}
+   }
+ old_expression_markers {{0 5 13 15 24 24}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text8
+ xpos 4765
+ ypos 84
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_arnold_norm-off_angle-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read21
+ xpos 4611
+ ypos -39
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData7
+ xpos 4611
+ ypos 63
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 48}
+   }
+ old_expression_markers {{0 5 13 15 24 24}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text7
+ xpos 4611
+ ypos 87
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_karma_norm-on_angle-65.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read22
+ xpos 5460
+ ypos -285
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize on}
+  {set angle 65}
+ }
+ name ModifyMetaData6
+ xpos 5461
+ ypos -196
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 54 53}
+   }
+ old_expression_markers {{0 4 12 13 22 23}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text6
+ xpos 5461
+ ypos -172
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_karma_norm-on_angle-1.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read23
+ xpos 5312
+ ypos -279
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize on}
+  {set angle 1}
+ }
+ name ModifyMetaData5
+ xpos 5311
+ ypos -192
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 49}
+   }
+ old_expression_markers {{0 4 12 13 22 22}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text5
+ xpos 5311
+ ypos -168
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_karma_norm-on_angle-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read24
+ xpos 5156
+ ypos -286
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData4
+ xpos 5167
+ ypos -187
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 48}
+   }
+ old_expression_markers {{0 4 12 13 22 22}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text4
+ xpos 5167
+ ypos -163
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_karma_norm-off_angle-65.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read25
+ xpos 4912
+ ypos -277
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set angle 65}
+ }
+ name ModifyMetaData3
+ xpos 4912
+ ypos -193
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 54 53}
+   }
+ old_expression_markers {{0 4 12 14 23 24}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text3
+ xpos 4912
+ ypos -169
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_karma_norm-off_angle-1.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read26
+ xpos 4762
+ ypos -273
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set angle 1}
+ }
+ name ModifyMetaData2
+ xpos 4762
+ ypos -189
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 49}
+   }
+ old_expression_markers {{0 4 12 14 23 23}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text2
+ xpos 4762
+ ypos -165
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_karma_norm-off_angle-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read27
+ xpos 4618
+ ypos -268
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData1
+ xpos 4618
+ ypos -184
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 48}
+   }
+ old_expression_markers {{0 4 12 14 23 23}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text1
+ xpos 4618
+ ypos -160
+}
+ContactSheet {
+ inputs 18
+ width 6144
+ height 3072
+ columns 6
+ roworder TopBottom
+ name ContactSheet1
+ xpos 5016
+ ypos 631
+}
+Write {
+ file C:/Users/alanglands/Desktop/light_comparison/distant-light.jpg
+ file_type jpeg
+ checkHashOnRead false
+ version 2
+ name Write1
+ xpos 5016
+ ypos 808
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/sphere-light-plane/sphere-light-plane_rtx_norm-on.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read15
+ xpos 6006
+ ypos 189
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData24
+ xpos 6006
+ ypos 307
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 110}
+   }
+ old_expression_markers {{0 2 10 11}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text24
+ xpos 6006
+ ypos 331
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/sphere-light-plane/sphere-light-plane_rtx_norm-off.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read14
+ xpos 5837
+ ypos 189
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData23
+ xpos 5837
+ ypos 309
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 102 102}
+   }
+ old_expression_markers {{0 2 10 12}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text23
+ xpos 5837
+ ypos 333
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/sphere-light-plane/sphere-light-plane_arnold_norm-on.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read28
+ xpos 6007
+ ypos -70
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData22
+ xpos 6007
+ ypos 14
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 110}
+   }
+ old_expression_markers {{0 5 13 14}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text22
+ xpos 6007
+ ypos 38
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/sphere-light-plane/sphere-light-plane_arnold_norm-off.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read29
+ xpos 5838
+ ypos -68
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData21
+ xpos 5838
+ ypos 16
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 102 102}
+   }
+ old_expression_markers {{0 5 13 15}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text21
+ xpos 5838
+ ypos 40
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/sphere-light-plane/sphere-light-plane_karma_norm-on.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read30
+ xpos 6003
+ ypos -269
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData20
+ xpos 6003
+ ypos -185
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 110}
+   }
+ old_expression_markers {{0 4 12 13}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text20
+ xpos 6003
+ ypos -161
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/sphere-light-plane/sphere-light-plane_karma_norm-off.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read31
+ xpos 5844
+ ypos -266
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData19
+ xpos 5844
+ ypos -182
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 102 102}
+   }
+ old_expression_markers {{0 4 12 14}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text19
+ xpos 5844
+ ypos -158
+}
+ContactSheet {
+ inputs 6
+ width 2048
+ height 3072
+ columns 2
+ roworder TopBottom
+ name ContactSheet2
+ xpos 5911
+ ypos 486
+}
+Write {
+ file C:/Users/alanglands/Desktop/light_comparison/sphere-light.jpg
+ file_type jpeg
+ checkHashOnRead false
+ version 2
+ name Write2
+ xpos 5911
+ ypos 792
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/rect-light-plane/rect-light-plane_rtx_norm-on_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 1
+ name Read10
+ xpos 6931
+ ypos 204
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize on}
+  {set focus 10}
+ }
+ name ModifyMetaData36
+ xpos 6931
+ ypos 304
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nfocus: \[metadata focus]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 110 10 102 111 99 117 115 58 32 49 48}
+   }
+ old_expression_markers {{0 2 10 11 20 21}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text36
+ xpos 6931
+ ypos 328
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/rect-light-plane/rect-light-plane_rtx_norm-on_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 1
+ name Read13
+ xpos 6760
+ ypos 196
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize on}
+  {set focus 0}
+ }
+ name ModifyMetaData35
+ xpos 6760
+ ypos 304
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nfocus: \[metadata focus]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 110 10 102 111 99 117 115 58 32 48}
+   }
+ old_expression_markers {{0 2 10 11 20 20}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 47
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text35
+ xpos 6760
+ ypos 328
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/rect-light-plane/rect-light-plane_rtx_norm-off_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read12
+ xpos 6599
+ ypos 194
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 10}
+ }
+ name ModifyMetaData34
+ xpos 6599
+ ypos 303
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nfocus: \[metadata focus]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 102 102 10 102 111 99 117 115 58 32 49 48}
+   }
+ old_expression_markers {{0 2 10 12 21 22}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text34
+ xpos 6599
+ ypos 327
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/rect-light-plane/rect-light-plane_rtx_norm-off_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read11
+ xpos 6447
+ ypos 191
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 0}
+ }
+ name ModifyMetaData33
+ xpos 6447
+ ypos 299
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nfocus: \[metadata focus]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 102 102 10 102 111 99 117 115 58 32 48}
+   }
+ old_expression_markers {{0 2 10 12 21 21}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 47
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text33
+ xpos 6447
+ ypos 323
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/rect-light-plane/rect-light-plane_arnold_norm-on_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read32
+ xpos 6928
+ ypos -64
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize on}
+  {set focus 10}
+ }
+ name ModifyMetaData32
+ xpos 6928
+ ypos 48
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nfocus: \[metadata focus]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 110 10 102 111 99 117 115 58 32 49 48}
+   }
+ old_expression_markers {{0 5 13 14 23 24}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text32
+ xpos 6928
+ ypos 72
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/rect-light-plane/rect-light-plane_arnold_norm-on_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read33
+ xpos 6770
+ ypos -72
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize on}
+  {set focus 0}
+ }
+ name ModifyMetaData31
+ xpos 6776
+ ypos 44
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nfocus: \[metadata focus]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 110 10 102 111 99 117 115 58 32 48}
+   }
+ old_expression_markers {{0 5 13 14 23 23}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 47
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text31
+ xpos 6776
+ ypos 68
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/rect-light-plane/rect-light-plane_arnold_norm-off_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read34
+ xpos 6594
+ ypos -77
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 10}
+ }
+ name ModifyMetaData30
+ xpos 6596
+ ypos 29
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nfocus: \[metadata focus]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 102 102 10 102 111 99 117 115 58 32 49 48}
+   }
+ old_expression_markers {{0 5 13 15 24 25}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text30
+ xpos 6596
+ ypos 53
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/rect-light-plane/rect-light-plane_arnold_norm-off_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read35
+ xpos 6443
+ ypos -77
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 0}
+ }
+ name ModifyMetaData29
+ xpos 6444
+ ypos 25
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nfocus: \[metadata focus]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 102 102 10 102 111 99 117 115 58 32 48}
+   }
+ old_expression_markers {{0 5 13 15 24 24}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 47
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text29
+ xpos 6444
+ ypos 49
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/rect-light-plane/rect-light-plane_karma_norm-on_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read36
+ xpos 6925
+ ypos -252
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize on}
+  {set focus 10}
+ }
+ name ModifyMetaData28
+ xpos 6922
+ ypos -153
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nfocus: \[metadata focus]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 110 10 102 111 99 117 115 58 32 49 48}
+   }
+ old_expression_markers {{0 4 12 13 22 23}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text28
+ xpos 6922
+ ypos -129
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/rect-light-plane/rect-light-plane_karma_norm-on_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read37
+ xpos 6763
+ ypos -256
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize on}
+  {set focus 0}
+ }
+ name ModifyMetaData27
+ xpos 6770
+ ypos -157
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nfocus: \[metadata focus]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 110 10 102 111 99 117 115 58 32 48}
+   }
+ old_expression_markers {{0 4 12 13 22 22}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 47
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text27
+ xpos 6770
+ ypos -133
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/rect-light-plane/rect-light-plane_karma_norm-off_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read38
+ xpos 6590
+ ypos -256
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 10}
+ }
+ name ModifyMetaData26
+ xpos 6590
+ ypos -172
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nfocus: \[metadata focus]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 102 102 10 102 111 99 117 115 58 32 49 48}
+   }
+ old_expression_markers {{0 4 12 14 23 24}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text26
+ xpos 6590
+ ypos -148
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/rect-light-plane/rect-light-plane_karma_norm-off_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read39
+ xpos 6438
+ ypos -260
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 0}
+ }
+ name ModifyMetaData25
+ xpos 6438
+ ypos -176
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nfocus: \[metadata focus]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 102 102 10 102 111 99 117 115 58 32 48}
+   }
+ old_expression_markers {{0 4 12 14 23 23}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 47
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text25
+ xpos 6438
+ ypos -152
+}
+ContactSheet {
+ inputs 12
+ width 4096
+ height 3072
+ roworder TopBottom
+ name ContactSheet3
+ xpos 6678
+ ypos 510
+}
+Write {
+ file C:/Users/alanglands/Desktop/light_comparison/rect-light.jpg
+ file_type jpeg
+ checkHashOnRead false
+ version 2
+ name Write3
+ xpos 6678
+ ypos 773
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/disk-light-plane/disk-light-plane_rtx_norm-on.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read50
+ xpos 7550
+ ypos 194
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData42
+ xpos 7550
+ ypos 336
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 110}
+   }
+ old_expression_markers {{0 2 10 11}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text42
+ xpos 7550
+ ypos 360
+}
+set N3f1b6400 [stack 0]
+Read {
+ inputs 0
+ file_type exr
+ file renders/disk-light-plane/disk-light-plane_rtx_norm-off.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read51
+ xpos 7367
+ ypos 191
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData41
+ xpos 7381
+ ypos 338
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 102 102}
+   }
+ old_expression_markers {{0 2 10 12}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text41
+ xpos 7381
+ ypos 362
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/disk-light-plane/disk-light-plane_arnold_norm-on.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read40
+ xpos 7523
+ ypos -40
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData40
+ xpos 7523
+ ypos 83
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 110}
+   }
+ old_expression_markers {{0 5 13 14}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text40
+ xpos 7523
+ ypos 107
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/disk-light-plane/disk-light-plane_arnold_norm-off.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read41
+ xpos 7351
+ ypos -34
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData39
+ xpos 7354
+ ypos 85
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 102 102}
+   }
+ old_expression_markers {{0 5 13 15}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text39
+ xpos 7354
+ ypos 109
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/disk-light-plane/disk-light-plane_karma_norm-on.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read42
+ xpos 7515
+ ypos -234
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData38
+ xpos 7515
+ ypos -124
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 110}
+   }
+ old_expression_markers {{0 4 12 13}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text38
+ xpos 7515
+ ypos -100
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/disk-light-plane/disk-light-plane_karma_norm-off.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read43
+ xpos 7356
+ ypos -237
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData37
+ xpos 7356
+ ypos -121
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 102 102}
+   }
+ old_expression_markers {{0 4 12 14}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text37
+ xpos 7356
+ ypos -97
+}
+ContactSheet {
+ inputs 6
+ width 2048
+ height 3072
+ columns 2
+ roworder TopBottom
+ name ContactSheet4
+ xpos 7424
+ ypos 513
+}
+Write {
+ file C:/Users/alanglands/Desktop/light_comparison/disk-light.jpg
+ file_type jpeg
+ checkHashOnRead false
+ version 2
+ name Write4
+ xpos 7424
+ ypos 779
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/cylinder-light-plane/cylinder-light-plane_rtx_norm-on.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read49
+ xpos 8122
+ ypos 188
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData48
+ xpos 8122
+ ypos 320
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 110}
+   }
+ old_expression_markers {{0 2 10 11}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text48
+ xpos 8122
+ ypos 344
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/cylinder-light-plane/cylinder-light-plane_rtx_norm-off.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read44
+ xpos 7953
+ ypos 187
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData47
+ xpos 7953
+ ypos 322
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 102 102}
+   }
+ old_expression_markers {{0 2 10 12}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text47
+ xpos 7953
+ ypos 346
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/cylinder-light-plane/cylinder-light-plane_arnold_norm-on.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read45
+ xpos 8116
+ ypos -16
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData45
+ xpos 8121
+ ypos 106
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 110}
+   }
+ old_expression_markers {{0 5 13 14}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text45
+ xpos 8121
+ ypos 130
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/cylinder-light-plane/cylinder-light-plane_arnold_norm-off.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read46
+ xpos 7952
+ ypos -16
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData46
+ xpos 7952
+ ypos 108
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 102 102}
+   }
+ old_expression_markers {{0 5 13 15}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text46
+ xpos 7952
+ ypos 132
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/cylinder-light-plane/cylinder-light-plane_karma_norm-on.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read47
+ xpos 8114
+ ypos -229
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData44
+ xpos 8114
+ ypos -125
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 110}
+   }
+ old_expression_markers {{0 4 12 13}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text44
+ xpos 8114
+ ypos -101
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/cylinder-light-plane/cylinder-light-plane_karma_norm-off.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read48
+ xpos 7919
+ ypos -228
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData43
+ xpos 7919
+ ypos -121
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 102 102}
+   }
+ old_expression_markers {{0 4 12 14}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text43
+ xpos 7919
+ ypos -97
+}
+ContactSheet {
+ inputs 6
+ width 2048
+ height 3072
+ columns 2
+ roworder TopBottom
+ name ContactSheet5
+ xpos 8044
+ ypos 460
+}
+Write {
+ file C:/Users/alanglands/Desktop/light_comparison/cylinder-light.jpg
+ file_type jpeg
+ checkHashOnRead false
+ version 2
+ name Write5
+ xpos 8044
+ ypos 806
+}
+push $N3f1b6400
+Read {
+ inputs 0
+ file_type exr
+ file renders/dome-light-sphere/dome-light-sphere_rtx.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read7
+ xpos 8446
+ ypos -9
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData51
+ xpos 8446
+ ypos 75
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]"
+ old_message {{114 116 120}
+   }
+ old_expression_markers {{0 2}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 19
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text51
+ xpos 8446
+ ypos 99
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/dome-light-sphere/dome-light-sphere_arnold.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read8
+ xpos 8643
+ ypos -209
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData50
+ xpos 8643
+ ypos -125
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]"
+ old_message {{97 114 110 111 108 100}
+   }
+ old_expression_markers {{0 5}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 19
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text50
+ xpos 8643
+ ypos -101
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/dome-light-sphere/dome-light-sphere_karma.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read9
+ xpos 8445
+ ypos -212
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData49
+ xpos 8445
+ ypos -128
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]"
+ old_message {{107 97 114 109 97}
+   }
+ old_expression_markers {{0 4}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 19
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text49
+ xpos 8445
+ ypos -104
+}
+ContactSheet {
+ inputs 3
+ width 2048
+ rows 2
+ columns 2
+ roworder TopBottom
+ name ContactSheet6
+ xpos 8523
+ ypos 221
+}
+Write {
+ file C:/Users/alanglands/Desktop/light_comparison/dome-light.jpg
+ file_type jpeg
+ checkHashOnRead false
+ version 2
+ name Write6
+ xpos 8523
+ ypos 789
+}
+Viewer {
+ inputs 2
+ frame -1
+ frame_range 1-100
+ monitorOutOutputTransform rec709
+ name Viewer1
+ xpos 7424
+ ypos 1500
+}

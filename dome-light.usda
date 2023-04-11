@@ -1,0 +1,349 @@
+#usda 1.0
+(
+    customLayerData = {
+        dictionary MovieCaptureSettings = {
+            int batch_count = 1
+            string camera_name = "/cameras/camera2"
+            int capture_every_nth_frames = 20
+            bool capture_every_nth_frames_checked = 0
+            int capture_frame_end = 49
+            int capture_frame_start = 1
+            string capture_name = "Capture"
+            string capture_range = "Custom Range - Frames"
+            double capture_time_end = 10
+            double capture_time_start = 0
+            string exr_compression_method = "zips"
+            int fps = 24
+            bool hdr_for_exr_checked = 1
+            bool hdr_for_exr_visible = 0
+            int iray_pathtrace_spp = 1
+            int iray_subframes_per_frame = 32
+            string movie_type = "Sequence"
+            string output_format = ".exr"
+            string output_path = "C:/Users/alanglands/Documents/Kit/shared/capture"
+            bool overwrite_existing_frame_checked = 0
+            bool pathtrace_mb_checked = 0
+            double pathtrace_mb_frame_shutter_close = 0.5
+            double pathtrace_mb_frame_shutter_open = 0
+            int pathtrace_mb_subframes = 64
+            int pathtrace_spp_per_iteration_mgpu = 1
+            int pathtrace_spp_per_subframe = 64
+            string queue_instance = "localhost Queue"
+            int realtime_settle_latency = 0
+            string render_preset = "PathTracing"
+            bool render_style = 1
+            bool renumber_negtive_frames_checked = 0
+            int resolution_aspect_ratio_selected = 0
+            string resolution_aspect_ratios = '["1.000:1", "16:9", "4:3"]'
+            int resolution_height = 1024
+            string resolution_type = "Custom"
+            bool resolution_w_h_linked = 0
+            int resolution_width = 1024
+            int run_n_frames_before_start = 20
+            bool run_n_frames_before_start_checked = 0
+            bool save_alpha_checked = 0
+            bool skip_upload_to_s3 = 0
+            int start_delay_seconds = 10
+            double sunstudy_end = 18
+            int sunstudy_movie_minutes = 1
+            int sunstudy_movie_seconds = 1
+            double sunstudy_start = 6
+            string task_comment = ""
+            string task_priority = ""
+            string task_type = "create-render"
+            bool upload_to_s3 = 0
+        }
+        dictionary cameraSettings = {
+            dictionary Front = {
+                double3 position = (0, 0, 500)
+                double radius = 500
+            }
+            dictionary Perspective = {
+                double3 position = (500, 500, 500)
+                double3 target = (-0.00000397803842133726, 0.000007956076785831101, -0.000003978038307650422)
+            }
+            dictionary Right = {
+                double3 position = (-500, 0, 0)
+                double radius = 500
+            }
+            dictionary Top = {
+                double3 position = (0, 500, 0)
+                double radius = 500
+            }
+            string boundCamera = "/cameras/camera2"
+        }
+        dictionary omni_layer = {
+            string authoring_layer = "./dome-light.usda"
+        }
+        dictionary renderSettings = {
+            float3 "rtx:debugView:pixelDebug:textColor" = (0, 1e18, 0)
+            int "rtx:externalFrameCounter" = 1
+            float3 "rtx:fog:fogColor" = (0.75, 0.75, 0.75)
+            float3 "rtx:post:backgroundZeroAlpha:backgroundDefaultColor" = (0, 0, 0)
+            float3 "rtx:post:colorcorr:contrast" = (1, 1, 1)
+            float3 "rtx:post:colorcorr:gain" = (1, 1, 1)
+            float3 "rtx:post:colorcorr:gamma" = (1, 1, 1)
+            float3 "rtx:post:colorcorr:offset" = (0, 0, 0)
+            float3 "rtx:post:colorcorr:saturation" = (1, 1, 1)
+            float3 "rtx:post:colorgrad:blackpoint" = (0, 0, 0)
+            float3 "rtx:post:colorgrad:contrast" = (1, 1, 1)
+            float3 "rtx:post:colorgrad:gain" = (1, 1, 1)
+            float3 "rtx:post:colorgrad:gamma" = (1, 1, 1)
+            float3 "rtx:post:colorgrad:lift" = (0, 0, 0)
+            float3 "rtx:post:colorgrad:multiply" = (1, 1, 1)
+            float3 "rtx:post:colorgrad:offset" = (0, 0, 0)
+            float3 "rtx:post:colorgrad:whitepoint" = (1, 1, 1)
+            float3 "rtx:post:lensDistortion:lensFocalLengthArray" = (10, 30, 50)
+            float3 "rtx:post:lensFlares:anisoFlareFalloffX" = (450, 475, 500)
+            float3 "rtx:post:lensFlares:anisoFlareFalloffY" = (10, 10, 10)
+            float3 "rtx:post:lensFlares:cutoffPoint" = (2, 2, 2)
+            float3 "rtx:post:lensFlares:haloFlareFalloff" = (10, 10, 10)
+            float3 "rtx:post:lensFlares:haloFlareRadius" = (75, 75, 75)
+            float3 "rtx:post:lensFlares:isotropicFlareFalloff" = (50, 50, 50)
+            double "rtx:post:tonemap:filmIso" = 0
+            float3 "rtx:post:tonemap:whitepoint" = (1, 1, 1)
+            float3 "rtx:raytracing:inscattering:singleScatteringAlbedo" = (0.9, 0.9, 0.9)
+            float3 "rtx:raytracing:inscattering:transmittanceColor" = (0.5, 0.5, 0.5)
+            float3 "rtx:sceneDb:ambientLightColor" = (0.1, 0.1, 0.1)
+        }
+    }
+    endTimeCode = 1
+    framesPerSecond = 24
+    metersPerUnit = 1
+    renderSettingsPrimPath = "/Render/karma_rendersettings"
+    startTimeCode = 1
+    timeCodesPerSecond = 24
+    upAxis = "Y"
+)
+
+def Sphere "sphere1" (
+    prepend apiSchemas = ["MaterialBindingAPI"]
+)
+{
+    float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+    rel material:binding = </materials/usdpreviewsurface1>
+    double radius = 1
+    matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1) )
+    uniform token[] xformOpOrder = ["xformOp:transform"]
+}
+
+def Xform "cameras"
+{
+    def Camera "camera2" (
+        prepend apiSchemas = ["HoudiniCameraPlateAPI", "HoudiniViewportGuideAPI"]
+    )
+    {
+        float2 clippingRange = (1, 1000000)
+        float exposure = 0
+        float focalLength = 0.5
+        float focusDistance = 5
+        float fStop = 0
+        float horizontalAperture = 0.20955
+        float horizontalApertureOffset = 0
+        asset houdini:backgroundimage = @@
+        asset houdini:foregroundimage = @@
+        float houdini:guidescale = 1
+        bool houdini:inviewermenu = 1
+        token projection = "perspective"
+        double shutter:close = 0.25
+        double shutter:open = -0.25
+        float verticalAperture = 0.11787187
+        float verticalApertureOffset = 0
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 6, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+}
+
+def Scope "materials"
+{
+    def Material "usdpreviewsurface1"
+    {
+        token outputs:displacement.connect = </materials/usdpreviewsurface1/usdpreviewsurface1.outputs:displacement>
+        token outputs:surface.connect = </materials/usdpreviewsurface1/usdpreviewsurface1.outputs:surface>
+
+        def Shader "usdpreviewsurface1"
+        {
+            uniform token info:id = "UsdPreviewSurface"
+            color3f inputs:diffuseColor = (0.602, 0.602, 0.602)
+            float inputs:metallic = 1
+            float inputs:roughness = 0
+            token outputs:displacement
+            token outputs:surface
+        }
+    }
+}
+
+def Scope "Render"
+{
+    def Scope "Products"
+    {
+        def Scope "Vars"
+        {
+            def RenderVar "RGBA"
+            {
+                custom string arnold:filter = "box_filter"
+                uniform token dataType = "color4f"
+                custom token driver:parameters:aov:format = "color4f"
+                custom string driver:parameters:aov:name = "RGBA"
+                uniform string sourceName = "RGBA"
+                uniform token sourceType = "raw"
+            }
+
+            def RenderVar "Beauty" (
+                prepend apiSchemas = ["KarmaAOVSettingsAPI"]
+            )
+            {
+                token dataType = "color4f"
+                custom string driver:parameters:aov:channel_prefix = ""
+                custom int driver:parameters:aov:clearValue = 0
+                bool driver:parameters:aov:cryptomatte = 0
+                string driver:parameters:aov:filter = '["ubox",{}]'
+                custom token driver:parameters:aov:format = "color4h"
+                custom bool driver:parameters:aov:multiSampled = 1
+                custom string driver:parameters:aov:name = "C"
+                string sourceName = "C.*"
+                token sourceType = "lpe"
+            }
+        }
+
+        def RenderProduct "renderproduct"
+        {
+            custom string arnold:driver = "driver_exr"
+            custom string driver:parameters:artist = ""
+            custom string driver:parameters:comment = ""
+            custom string driver:parameters:hostname = ""
+            custom string driver:parameters:OpenEXR:compression = "zips"
+            rel orderedVars = [
+                </Render/Products/Vars/Beauty>,
+                </Render/Products/Vars/RGBA>,
+            ]
+            token productName.timeSamples = {
+                1: "C:/Users/alanglands/Desktop/light_comparison/render/light_comparison.karmarendersettings7.0001.exr",
+            }
+            token productType = "raster"
+            int2 resolution = (1024, 1024)
+        }
+    }
+
+    def RenderSettings "arnold_rendersettings"
+    {
+        custom int arnold:global:AA_seed
+        int arnold:global:AA_seed.timeSamples = {
+            1: 1,
+        }
+        rel camera = </cameras/camera2>
+        token[] includedPurposes = ["default"]
+        bool instantaneousShutter = 0
+        token[] materialBindingPurposes = ["full", "allPurpose"]
+        rel products = </Render/Products/renderproduct>
+        int2 resolution = (1024, 1024)
+    }
+
+    def RenderSettings "karma_rendersettings" (
+        prepend apiSchemas = ["KarmaRendererSettingsAPI"]
+    )
+    {
+        token aspectRatioConformPolicy = "expandAperture"
+        rel camera = </cameras/camera2>
+        float4 dataWindowNDC = (0, 0, 1, 1)
+        token[] includedPurposes = ["default", "render"]
+        bool instantaneousShutter = 0
+        bool karma:global:abortmissingtexture = 0
+        bool karma:global:autoheadlight = 1
+        token karma:global:bucketorder = "Middle"
+        int karma:global:bucketsize = 32
+        float karma:global:cacheratio = 0.25
+        int karma:global:cachesize = 1000
+        float karma:global:colorlimit = 10
+        float karma:global:colorlimitindirect = 10
+        bool karma:global:colorlimitindlinked = 1
+        bool karma:global:constrainmaxrough = 1
+        token karma:global:convergence_mode = "Variance"
+        float karma:global:dicingqualityscale = 1
+        string karma:global:diffusecomponents = "diffuse"
+        bool karma:global:enable_dof = 1
+        string karma:global:engine = "cpu"
+        string karma:global:exportcomponents = "diffuse reflect coat refract volume sss"
+        bool karma:global:guiding_enable = 0
+        int karma:global:guiding_samples = 64
+        string karma:global:imagefilter = "[]"
+        token karma:global:imagemode = "Progressive"
+        token karma:global:light_sampling_mode = "Light Tree"
+        float karma:global:light_sampling_quality = 1
+        float karma:global:offscreenquality = 0.1
+        int karma:global:pathtracedsamples = 128
+        string karma:global:pixelfilter = "gauss"
+        float karma:global:pixelfiltersize = 2
+        string karma:global:pixeloracle = '["variance", {"variance": 0.01, "plane": "C", "minrays": 3, "ociomode": 0, "ociodisplay": "ACES", "ocioview": "sRGB", "ociocolorspace": "default"}]'
+        int karma:global:randomseed = 0
+        float karma:global:raybias = 0.001
+        string karma:global:refractcomponents = "refract"
+        int karma:global:russianroulette_cutoff = 2
+        string karma:global:samplefilter = "[]"
+        int karma:global:samplesperpixel = 9
+        int karma:global:screendoorlimit = 4
+        float karma:global:shadingqualitymult = 1
+        string karma:global:ssscomponents = "sss"
+        bool karma:global:usecacheratio = 1
+        string karma:global:volumecomponents = "volume"
+        custom bool karma:object:causticsenable = 0
+        custom float karma:object:causticsroughnessclamp = 0.2
+        custom token karma:object:cull_backface = "Off"
+        custom int karma:object:curve_basis = 0
+        custom token karma:object:curve_style = "Rounded Curves"
+        custom float karma:object:diffuselimit = 1
+        custom float karma:object:diffusequality = 1
+        custom int karma:object:geosamples = 2
+        custom int karma:object:instance_samples = 2
+        custom token karma:object:instance_vblur = "No Velocity Blur"
+        custom bool karma:object:mblur = 1
+        custom token karma:object:point_style = "Spheres"
+        custom float karma:object:reflectlimit = 4
+        custom float karma:object:reflectquality = 1
+        custom float karma:object:refractlimit = 4
+        custom float karma:object:refractquality = 1
+        custom float karma:object:ssslimit = 0
+        custom float karma:object:sssquality = 1
+        custom int karma:object:varianceaa_maxsamples = 9
+        custom int karma:object:varianceaa_minsamples = 1
+        custom float karma:object:varianceaa_thresh = 0.01
+        custom token karma:object:vblur = "No Velocity Blur"
+        custom float karma:object:volumelimit = 0
+        custom float karma:object:volumequality = 1
+        custom float karma:object:volumesteprate = 0.25
+        custom float karma:object:volumevblurscale = 1
+        custom int karma:object:xformsamples = 2
+        token[] materialBindingPurposes = ["full", "allPurpose"]
+        float pixelAspectRatio = 1
+        rel products = </Render/Products/renderproduct>
+        int2 resolution = (1024, 1024)
+    }
+}
+
+def Xform "lights"
+{
+    def DomeLight "domelight1" (
+        prepend apiSchemas = ["HoudiniViewportGuideAPI"]
+    )
+    {
+        custom rel filters = None
+        float houdini:guidescale.timeSamples = {
+            1: 1,
+        }
+        bool houdini:inviewermenu = 0
+        color3f inputs:color = (1, 1, 1)
+        float inputs:diffuse = 1
+        bool inputs:enableColorTemperature = 0
+        float inputs:exposure = 0
+        float inputs:intensity = 1
+        bool inputs:normalize = 0
+        float inputs:specular = 1
+        asset inputs:texture:file = @./dome_grid_2k.exr@
+        token inputs:texture:format = "automatic"
+        rel light:filters = None
+        rel portals = None
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+}
+

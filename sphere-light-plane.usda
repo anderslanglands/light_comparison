@@ -1,0 +1,247 @@
+#usda 1.0
+(
+    defaultPrim = "grid1"
+    endTimeCode = 1
+    framesPerSecond = 24
+    metersPerUnit = 1
+    renderSettingsPrimPath = "/Render/karma_rendersettings"
+    startTimeCode = 1
+    timeCodesPerSecond = 24
+    upAxis = "Y"
+)
+
+def Xform "grid1" (
+    prepend apiSchemas = ["MaterialBindingAPI"]
+    kind = "component"
+)
+{
+    rel material:binding = </materials/usdpreviewsurface1>
+    matrix4d xformOp:transform:xform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1) )
+    uniform token[] xformOpOrder = ["xformOp:transform:xform"]
+
+    def Mesh "mesh_0"
+    {
+        float3[] extent = [(-5, 0, -5), (5, 0, 5)]
+        int[] faceVertexCounts = [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+        int[] faceVertexIndices = [0, 1, 11, 10, 1, 2, 12, 11, 2, 3, 13, 12, 3, 4, 14, 13, 4, 5, 15, 14, 5, 6, 16, 15, 6, 7, 17, 16, 7, 8, 18, 17, 8, 9, 19, 18, 10, 11, 21, 20, 11, 12, 22, 21, 12, 13, 23, 22, 13, 14, 24, 23, 14, 15, 25, 24, 15, 16, 26, 25, 16, 17, 27, 26, 17, 18, 28, 27, 18, 19, 29, 28, 20, 21, 31, 30, 21, 22, 32, 31, 22, 23, 33, 32, 23, 24, 34, 33, 24, 25, 35, 34, 25, 26, 36, 35, 26, 27, 37, 36, 27, 28, 38, 37, 28, 29, 39, 38, 30, 31, 41, 40, 31, 32, 42, 41, 32, 33, 43, 42, 33, 34, 44, 43, 34, 35, 45, 44, 35, 36, 46, 45, 36, 37, 47, 46, 37, 38, 48, 47, 38, 39, 49, 48, 40, 41, 51, 50, 41, 42, 52, 51, 42, 43, 53, 52, 43, 44, 54, 53, 44, 45, 55, 54, 45, 46, 56, 55, 46, 47, 57, 56, 47, 48, 58, 57, 48, 49, 59, 58, 50, 51, 61, 60, 51, 52, 62, 61, 52, 53, 63, 62, 53, 54, 64, 63, 54, 55, 65, 64, 55, 56, 66, 65, 56, 57, 67, 66, 57, 58, 68, 67, 58, 59, 69, 68, 60, 61, 71, 70, 61, 62, 72, 71, 62, 63, 73, 72, 63, 64, 74, 73, 64, 65, 75, 74, 65, 66, 76, 75, 66, 67, 77, 76, 67, 68, 78, 77, 68, 69, 79, 78, 70, 71, 81, 80, 71, 72, 82, 81, 72, 73, 83, 82, 73, 74, 84, 83, 74, 75, 85, 84, 75, 76, 86, 85, 76, 77, 87, 86, 77, 78, 88, 87, 78, 79, 89, 88, 80, 81, 91, 90, 81, 82, 92, 91, 82, 83, 93, 92, 83, 84, 94, 93, 84, 85, 95, 94, 85, 86, 96, 95, 86, 87, 97, 96, 87, 88, 98, 97, 88, 89, 99, 98]
+        uniform token orientation = "leftHanded"
+        point3f[] points = [(-5, 0, -5), (-3.8888888, 0, -5), (-2.7777777, 0, -5), (-1.6666665, 0, -5), (-0.55555534, 0, -5), (0.5555558, 0, -5), (1.666667, 0, -5), (2.7777781, 0, -5), (3.8888893, 0, -5), (5, 0, -5), (-5, 0, -3.8888888), (-3.8888888, 0, -3.8888888), (-2.7777777, 0, -3.8888888), (-1.6666665, 0, -3.8888888), (-0.55555534, 0, -3.8888888), (0.5555558, 0, -3.8888888), (1.666667, 0, -3.8888888), (2.7777781, 0, -3.8888888), (3.8888893, 0, -3.8888888), (5, 0, -3.8888888), (-5, 0, -2.7777777), (-3.8888888, 0, -2.7777777), (-2.7777777, 0, -2.7777777), (-1.6666665, 0, -2.7777777), (-0.55555534, 0, -2.7777777), (0.5555558, 0, -2.7777777), (1.666667, 0, -2.7777777), (2.7777781, 0, -2.7777777), (3.8888893, 0, -2.7777777), (5, 0, -2.7777777), (-5, 0, -1.6666665), (-3.8888888, 0, -1.6666665), (-2.7777777, 0, -1.6666665), (-1.6666665, 0, -1.6666665), (-0.55555534, 0, -1.6666665), (0.5555558, 0, -1.6666665), (1.666667, 0, -1.6666665), (2.7777781, 0, -1.6666665), (3.8888893, 0, -1.6666665), (5, 0, -1.6666665), (-5, 0, -0.55555534), (-3.8888888, 0, -0.55555534), (-2.7777777, 0, -0.55555534), (-1.6666665, 0, -0.55555534), (-0.55555534, 0, -0.55555534), (0.5555558, 0, -0.55555534), (1.666667, 0, -0.55555534), (2.7777781, 0, -0.55555534), (3.8888893, 0, -0.55555534), (5, 0, -0.55555534), (-5, 0, 0.5555558), (-3.8888888, 0, 0.5555558), (-2.7777777, 0, 0.5555558), (-1.6666665, 0, 0.5555558), (-0.55555534, 0, 0.5555558), (0.5555558, 0, 0.5555558), (1.666667, 0, 0.5555558), (2.7777781, 0, 0.5555558), (3.8888893, 0, 0.5555558), (5, 0, 0.5555558), (-5, 0, 1.666667), (-3.8888888, 0, 1.666667), (-2.7777777, 0, 1.666667), (-1.6666665, 0, 1.666667), (-0.55555534, 0, 1.666667), (0.5555558, 0, 1.666667), (1.666667, 0, 1.666667), (2.7777781, 0, 1.666667), (3.8888893, 0, 1.666667), (5, 0, 1.666667), (-5, 0, 2.7777781), (-3.8888888, 0, 2.7777781), (-2.7777777, 0, 2.7777781), (-1.6666665, 0, 2.7777781), (-0.55555534, 0, 2.7777781), (0.5555558, 0, 2.7777781), (1.666667, 0, 2.7777781), (2.7777781, 0, 2.7777781), (3.8888893, 0, 2.7777781), (5, 0, 2.7777781), (-5, 0, 3.8888893), (-3.8888888, 0, 3.8888893), (-2.7777777, 0, 3.8888893), (-1.6666665, 0, 3.8888893), (-0.55555534, 0, 3.8888893), (0.5555558, 0, 3.8888893), (1.666667, 0, 3.8888893), (2.7777781, 0, 3.8888893), (3.8888893, 0, 3.8888893), (5, 0, 3.8888893), (-5, 0, 5), (-3.8888888, 0, 5), (-2.7777777, 0, 5), (-1.6666665, 0, 5), (-0.55555534, 0, 5), (0.5555558, 0, 5), (1.666667, 0, 5), (2.7777781, 0, 5), (3.8888893, 0, 5), (5, 0, 5)] (
+            interpolation = "vertex"
+        )
+        uniform token subdivisionScheme = "none"
+    }
+}
+
+def Xform "cameras"
+{
+    def Camera "camera1" (
+        prepend apiSchemas = ["HoudiniCameraPlateAPI", "HoudiniViewportGuideAPI"]
+    )
+    {
+        float2 clippingRange = (1, 1000000)
+        float exposure = 0
+        float focalLength = 0.5
+        float focusDistance = 5
+        float fStop = 0
+        float horizontalAperture = 0.20955
+        float horizontalApertureOffset = 0
+        asset houdini:backgroundimage = @@
+        asset houdini:foregroundimage = @@
+        float houdini:guidescale = 1
+        bool houdini:inviewermenu = 1
+        token projection = "perspective"
+        double shutter:close = 0.25
+        double shutter:open = -0.25
+        float verticalAperture = 0.11787187
+        float verticalApertureOffset = 0
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 0, -1, 0), (0, 1, 0, 0), (0, 30, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+}
+
+def Scope "materials"
+{
+    def Material "usdpreviewsurface1"
+    {
+        token outputs:displacement.connect = </materials/usdpreviewsurface1/usdpreviewsurface1.outputs:displacement>
+        token outputs:surface.connect = </materials/usdpreviewsurface1/usdpreviewsurface1.outputs:surface>
+
+        def Shader "usdpreviewsurface1"
+        {
+            uniform token info:id = "UsdPreviewSurface"
+            float inputs:ior = 1
+            int inputs:useSpecularWorkflow = 1
+            token outputs:displacement
+            token outputs:surface
+        }
+    }
+}
+
+def Scope "Render"
+{
+    def Scope "Products"
+    {
+        def Scope "Vars"
+        {
+            def RenderVar "RGBA"
+            {
+                custom string arnold:filter = "box_filter"
+                uniform token dataType = "color4f"
+                custom token driver:parameters:aov:format = "color4f"
+                custom string driver:parameters:aov:name = "RGBA"
+                uniform string sourceName = "RGBA"
+                uniform token sourceType = "raw"
+            }
+
+            def RenderVar "Beauty" (
+                prepend apiSchemas = ["KarmaAOVSettingsAPI"]
+            )
+            {
+                token dataType = "color4f"
+                custom string driver:parameters:aov:channel_prefix = ""
+                custom int driver:parameters:aov:clearValue = 0
+                bool driver:parameters:aov:cryptomatte = 0
+                string driver:parameters:aov:filter = '["ubox",{}]'
+                custom token driver:parameters:aov:format = "color4h"
+                custom bool driver:parameters:aov:multiSampled = 1
+                custom string driver:parameters:aov:name = "C"
+                string sourceName = "C.*"
+                token sourceType = "lpe"
+            }
+        }
+
+        def RenderProduct "renderproduct"
+        {
+            custom string arnold:driver = "driver_exr"
+            custom string driver:parameters:artist = ""
+            custom string driver:parameters:comment = ""
+            custom string driver:parameters:hostname = ""
+            custom string driver:parameters:OpenEXR:compression = "zips"
+            rel orderedVars = [
+                </Render/Products/Vars/Beauty>,
+                </Render/Products/Vars/RGBA>,
+            ]
+            token productName.timeSamples = {
+                1: "C:/Users/alanglands/Desktop/light_comparison/render/light_comparison.karmarendersettings6.0001.exr",
+            }
+            token productType = "raster"
+            int2 resolution = (1024, 1024)
+        }
+    }
+
+    def RenderSettings "arnold_rendersettings"
+    {
+        custom int arnold:global:AA_seed
+        int arnold:global:AA_seed.timeSamples = {
+            1: 1,
+        }
+        rel camera = None
+        token[] includedPurposes = ["default"]
+        bool instantaneousShutter = 0
+        token[] materialBindingPurposes = ["full", "allPurpose"]
+        rel products = </Render/Products/renderproduct>
+        int2 resolution = (1024, 1024)
+    }
+
+    def RenderSettings "karma_rendersettings" (
+        prepend apiSchemas = ["KarmaRendererSettingsAPI"]
+    )
+    {
+        token aspectRatioConformPolicy = "expandAperture"
+        rel camera = </cameras/camera1>
+        float4 dataWindowNDC = (0, 0, 1, 1)
+        token[] includedPurposes = ["default", "render"]
+        bool instantaneousShutter = 0
+        bool karma:global:abortmissingtexture = 0
+        bool karma:global:autoheadlight = 1
+        token karma:global:bucketorder = "Middle"
+        int karma:global:bucketsize = 32
+        float karma:global:cacheratio = 0.25
+        int karma:global:cachesize = 1000
+        float karma:global:colorlimit = 10
+        float karma:global:colorlimitindirect = 10
+        bool karma:global:colorlimitindlinked = 1
+        bool karma:global:constrainmaxrough = 1
+        token karma:global:convergence_mode = "Variance"
+        float karma:global:dicingqualityscale = 1
+        string karma:global:diffusecomponents = "diffuse"
+        bool karma:global:enable_dof = 1
+        string karma:global:engine = "cpu"
+        string karma:global:exportcomponents = "diffuse reflect coat refract volume sss"
+        bool karma:global:guiding_enable = 0
+        int karma:global:guiding_samples = 64
+        string karma:global:imagefilter = "[]"
+        token karma:global:imagemode = "Progressive"
+        token karma:global:light_sampling_mode = "Light Tree"
+        float karma:global:light_sampling_quality = 1
+        float karma:global:offscreenquality = 0.1
+        int karma:global:pathtracedsamples = 128
+        string karma:global:pixelfilter = "gauss"
+        float karma:global:pixelfiltersize = 2
+        string karma:global:pixeloracle = '["variance", {"variance": 0.01, "plane": "C", "minrays": 3, "ociomode": 0, "ociodisplay": "ACES", "ocioview": "sRGB", "ociocolorspace": "default"}]'
+        int karma:global:randomseed = 0
+        float karma:global:raybias = 0.001
+        string karma:global:refractcomponents = "refract"
+        int karma:global:russianroulette_cutoff = 2
+        string karma:global:samplefilter = "[]"
+        int karma:global:samplesperpixel = 9
+        int karma:global:screendoorlimit = 4
+        float karma:global:shadingqualitymult = 1
+        string karma:global:ssscomponents = "sss"
+        bool karma:global:usecacheratio = 1
+        string karma:global:volumecomponents = "volume"
+        custom bool karma:object:causticsenable = 0
+        custom float karma:object:causticsroughnessclamp = 0.2
+        custom token karma:object:cull_backface = "Off"
+        custom int karma:object:curve_basis = 0
+        custom token karma:object:curve_style = "Rounded Curves"
+        custom float karma:object:diffuselimit = 1
+        custom float karma:object:diffusequality = 1
+        custom int karma:object:geosamples = 2
+        custom int karma:object:instance_samples = 2
+        custom token karma:object:instance_vblur = "No Velocity Blur"
+        custom bool karma:object:mblur = 1
+        custom token karma:object:point_style = "Spheres"
+        custom float karma:object:reflectlimit = 4
+        custom float karma:object:reflectquality = 1
+        custom float karma:object:refractlimit = 4
+        custom float karma:object:refractquality = 1
+        custom float karma:object:ssslimit = 0
+        custom float karma:object:sssquality = 1
+        custom int karma:object:varianceaa_maxsamples = 9
+        custom int karma:object:varianceaa_minsamples = 1
+        custom float karma:object:varianceaa_thresh = 0.01
+        custom token karma:object:vblur = "No Velocity Blur"
+        custom float karma:object:volumelimit = 0
+        custom float karma:object:volumequality = 1
+        custom float karma:object:volumesteprate = 0.25
+        custom float karma:object:volumevblurscale = 1
+        custom int karma:object:xformsamples = 2
+        token[] materialBindingPurposes = ["full", "allPurpose"]
+        float pixelAspectRatio = 1
+        rel products = </Render/Products/renderproduct>
+        int2 resolution = (1024, 1024)
+    }
+}
+
+def Xform "lights"
+{
+    def SphereLight "light2" (
+        prepend apiSchemas = ["HoudiniViewportGuideAPI"]
+    )
+    {
+        bool houdini:inviewermenu = 1
+        color3f inputs:color = (1, 1, 1)
+        float inputs:diffuse = 1
+        bool inputs:enableColorTemperature = 0
+        float inputs:exposure = 0
+        float inputs:intensity = 30
+        bool inputs:normalize = 0
+        float inputs:radius = 0.5
+        float inputs:specular = 1
+        rel light:filters = None
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 2, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+}
+
