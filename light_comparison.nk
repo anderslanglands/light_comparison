@@ -15,14 +15,14 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
                     <page id="Viewer.1"/>
                 </dock>
                 <split size="541"/>
-                <dock id="" activePageId="DAG.1" focus="true">
+                <dock id="" activePageId="DAG.1">
                     <page id="DAG.1"/>
                     <page id="Curve Editor.1"/>
                     <page id="DopeSheet.1"/>
                 </dock>
             </splitter>
             <split size="615"/>
-            <dock id="" activePageId="Properties.1">
+            <dock id="" activePageId="Properties.1" focus="true">
                 <page id="Properties.1"/>
                 <page id="uk.co.thefoundry.backgroundrenderview.1"/>
             </dock>
@@ -32,9 +32,8 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 }
 Root {
  inputs 0
- name C:/Users/alanglands/Desktop/light_comparison/light_comparison.nk
+ name D:/code_win/light_comparison/light_comparison.nk
  project_directory "\[python \{nuke.script_directory()\}]"
- frame -1
  format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
  proxy_type scale
  proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
@@ -46,6 +45,1174 @@ Root {
  int16Lut sRGB
  logLut Cineon
  floatLut linear
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/disk-light-plane/disk-light-plane_rtx_norm-on.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read50
+ xpos 5192
+ ypos 6445
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData42
+ xpos 5192
+ ypos 6587
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 110}
+   }
+ old_expression_markers {{0 2 10 11}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text42
+ xpos 5192
+ ypos 6611
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/disk-light-plane/disk-light-plane_rtx_norm-off.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read51
+ xpos 5009
+ ypos 6442
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData41
+ xpos 5023
+ ypos 6589
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 102 102}
+   }
+ old_expression_markers {{0 2 10 12}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text41
+ xpos 5023
+ ypos 6613
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/disk-light-plane/disk-light-plane_arnold_norm-on.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read40
+ xpos 5165
+ ypos 6211
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData40
+ xpos 5165
+ ypos 6334
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 110}
+   }
+ old_expression_markers {{0 5 13 14}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text40
+ xpos 5165
+ ypos 6358
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/disk-light-plane/disk-light-plane_arnold_norm-off.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read41
+ xpos 4993
+ ypos 6217
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData39
+ xpos 4996
+ ypos 6336
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 102 102}
+   }
+ old_expression_markers {{0 5 13 15}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text39
+ xpos 4996
+ ypos 6360
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/disk-light-plane/disk-light-plane_karma_norm-on.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read42
+ xpos 5157
+ ypos 6017
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData38
+ xpos 5157
+ ypos 6127
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 110}
+   }
+ old_expression_markers {{0 4 12 13}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text38
+ xpos 5157
+ ypos 6151
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/disk-light-plane/disk-light-plane_karma_norm-off.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read43
+ xpos 4998
+ ypos 6014
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData37
+ xpos 4998
+ ypos 6130
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 102 102}
+   }
+ old_expression_markers {{0 4 12 14}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text37
+ xpos 4998
+ ypos 6154
+}
+ContactSheet {
+ inputs 6
+ width 2048
+ height 3072
+ columns 2
+ roworder TopBottom
+ name ContactSheet4
+ xpos 5066
+ ypos 6764
+}
+Write {
+ file disk-light.jpg
+ file_type jpeg
+ checkHashOnRead false
+ version 3
+ name Write4
+ xpos 5066
+ ypos 7030
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/cylinder-light-plane/cylinder-light-plane_rtx_norm-on.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read49
+ xpos 5153
+ ypos 8292
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData48
+ xpos 5153
+ ypos 8424
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 110}
+   }
+ old_expression_markers {{0 2 10 11}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text48
+ xpos 5153
+ ypos 8448
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/cylinder-light-plane/cylinder-light-plane_rtx_norm-off.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read44
+ xpos 4984
+ ypos 8291
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData47
+ xpos 4984
+ ypos 8426
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 102 102}
+   }
+ old_expression_markers {{0 2 10 12}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text47
+ xpos 4984
+ ypos 8450
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/cylinder-light-plane/cylinder-light-plane_arnold_norm-on.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read45
+ xpos 5147
+ ypos 8088
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData45
+ xpos 5152
+ ypos 8210
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 110}
+   }
+ old_expression_markers {{0 5 13 14}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text45
+ xpos 5152
+ ypos 8234
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/cylinder-light-plane/cylinder-light-plane_arnold_norm-off.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read46
+ xpos 4983
+ ypos 8088
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData46
+ xpos 4983
+ ypos 8212
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 102 102}
+   }
+ old_expression_markers {{0 5 13 15}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text46
+ xpos 4983
+ ypos 8236
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/cylinder-light-plane/cylinder-light-plane_karma_norm-on.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read47
+ xpos 5145
+ ypos 7875
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData44
+ xpos 5145
+ ypos 7979
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 110}
+   }
+ old_expression_markers {{0 4 12 13}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text44
+ xpos 5145
+ ypos 8003
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/cylinder-light-plane/cylinder-light-plane_karma_norm-off.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read48
+ xpos 4950
+ ypos 7876
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData43
+ xpos 4950
+ ypos 7983
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 102 102}
+   }
+ old_expression_markers {{0 4 12 14}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text43
+ xpos 4950
+ ypos 8007
+}
+ContactSheet {
+ inputs 6
+ width 2048
+ height 3072
+ columns 2
+ roworder TopBottom
+ name ContactSheet5
+ xpos 5075
+ ypos 8564
+}
+Write {
+ file cylinder-light.jpg
+ file_type jpeg
+ checkHashOnRead false
+ version 3
+ name Write5
+ xpos 5075
+ ypos 8910
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/dome-light-sphere/dome-light-sphere_rtx.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read7
+ xpos 5011
+ ypos 10284
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData51
+ xpos 5011
+ ypos 10368
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]"
+ old_message {{114 116 120}
+   }
+ old_expression_markers {{0 2}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 19
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text51
+ xpos 5011
+ ypos 10392
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/dome-light-sphere/dome-light-sphere_arnold.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read8
+ xpos 5208
+ ypos 10084
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData50
+ xpos 5208
+ ypos 10168
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]"
+ old_message {{97 114 110 111 108 100}
+   }
+ old_expression_markers {{0 5}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 19
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text50
+ xpos 5208
+ ypos 10192
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/dome-light-sphere/dome-light-sphere_karma.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read9
+ xpos 5010
+ ypos 10081
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData49
+ xpos 5010
+ ypos 10165
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]"
+ old_message {{107 97 114 109 97}
+   }
+ old_expression_markers {{0 4}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 19
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text49
+ xpos 5010
+ ypos 10189
+}
+ContactSheet {
+ inputs 3
+ width 2048
+ rows 2
+ columns 2
+ roworder TopBottom
+ name ContactSheet6
+ xpos 5088
+ ypos 10514
+}
+Write {
+ file dome-light.jpg
+ file_type jpeg
+ checkHashOnRead false
+ version 2
+ name Write6
+ xpos 5088
+ ypos 11082
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/sphere-light-plane/sphere-light-plane_rtx_norm-on.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read15
+ xpos 5132
+ ypos 2240
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData24
+ xpos 5132
+ ypos 2358
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 110}
+   }
+ old_expression_markers {{0 2 10 11}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text24
+ xpos 5132
+ ypos 2382
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/sphere-light-plane/sphere-light-plane_rtx_norm-off.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read14
+ xpos 4963
+ ypos 2240
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData23
+ xpos 4963
+ ypos 2360
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 102 102}
+   }
+ old_expression_markers {{0 2 10 12}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text23
+ xpos 4963
+ ypos 2384
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/sphere-light-plane/sphere-light-plane_arnold_norm-on.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read28
+ xpos 5133
+ ypos 1981
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData22
+ xpos 5133
+ ypos 2065
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 110}
+   }
+ old_expression_markers {{0 5 13 14}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text22
+ xpos 5133
+ ypos 2089
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/sphere-light-plane/sphere-light-plane_arnold_norm-off.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read29
+ xpos 4964
+ ypos 1983
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData21
+ xpos 4964
+ ypos 2067
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 102 102}
+   }
+ old_expression_markers {{0 5 13 15}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text21
+ xpos 4964
+ ypos 2091
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/sphere-light-plane/sphere-light-plane_karma_norm-on.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read30
+ xpos 5129
+ ypos 1782
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData20
+ xpos 5129
+ ypos 1866
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 110}
+   }
+ old_expression_markers {{0 4 12 13}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text20
+ xpos 5129
+ ypos 1890
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/sphere-light-plane/sphere-light-plane_karma_norm-off.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read31
+ xpos 4970
+ ypos 1785
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData19
+ xpos 4970
+ ypos 1869
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 102 102}
+   }
+ old_expression_markers {{0 4 12 14}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 46
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text19
+ xpos 4970
+ ypos 1893
+}
+ContactSheet {
+ inputs 6
+ width 2048
+ height 3072
+ columns 2
+ roworder TopBottom
+ name ContactSheet2
+ xpos 5037
+ ypos 2537
+}
+Write {
+ file sphere-light.jpg
+ file_type jpeg
+ checkHashOnRead false
+ version 2
+ name Write2
+ xpos 5037
+ ypos 2843
 }
 Read {
  inputs 0
@@ -994,7 +2161,7 @@ ContactSheet {
  ypos 631
 }
 Write {
- file C:/Users/alanglands/Desktop/light_comparison/distant-light.jpg
+ file distant-light.jpg
  file_type jpeg
  checkHashOnRead false
  version 2
@@ -1005,344 +2172,13 @@ Write {
 Read {
  inputs 0
  file_type exr
- file renders/sphere-light-plane/sphere-light-plane_rtx_norm-on.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read15
- xpos 6006
- ypos 189
-}
-ModifyMetaData {
- metadata {
-  {set renderer rtx}
-  {set normalize on}
-  {set angle 0}
- }
- name ModifyMetaData24
- xpos 6006
- ypos 307
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]"
- old_message {{114 116 120 10 110 111 114 109 58 32 111 110}
-   }
- old_expression_markers {{0 2 10 11}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 46
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text24
- xpos 6006
- ypos 331
-}
-Read {
- inputs 0
- file_type exr
- file renders/sphere-light-plane/sphere-light-plane_rtx_norm-off.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read14
- xpos 5837
- ypos 189
-}
-ModifyMetaData {
- metadata {
-  {set renderer rtx}
-  {set normalize off}
-  {set angle 0}
- }
- name ModifyMetaData23
- xpos 5837
- ypos 309
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]"
- old_message {{114 116 120 10 110 111 114 109 58 32 111 102 102}
-   }
- old_expression_markers {{0 2 10 12}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 46
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text23
- xpos 5837
- ypos 333
-}
-Read {
- inputs 0
- file_type exr
- file renders/sphere-light-plane/sphere-light-plane_arnold_norm-on.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read28
- xpos 6007
- ypos -70
-}
-ModifyMetaData {
- metadata {
-  {set renderer arnold}
-  {set normalize on}
-  {set angle 0}
- }
- name ModifyMetaData22
- xpos 6007
- ypos 14
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]"
- old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 110}
-   }
- old_expression_markers {{0 5 13 14}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 46
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text22
- xpos 6007
- ypos 38
-}
-Read {
- inputs 0
- file_type exr
- file renders/sphere-light-plane/sphere-light-plane_arnold_norm-off.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read29
- xpos 5838
- ypos -68
-}
-ModifyMetaData {
- metadata {
-  {set renderer arnold}
-  {set normalize off}
-  {set angle 0}
- }
- name ModifyMetaData21
- xpos 5838
- ypos 16
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]"
- old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 102 102}
-   }
- old_expression_markers {{0 5 13 15}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 46
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text21
- xpos 5838
- ypos 40
-}
-Read {
- inputs 0
- file_type exr
- file renders/sphere-light-plane/sphere-light-plane_karma_norm-on.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read30
- xpos 6003
- ypos -269
-}
-ModifyMetaData {
- metadata {
-  {set renderer karma}
-  {set normalize on}
-  {set angle 0}
- }
- name ModifyMetaData20
- xpos 6003
- ypos -185
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]"
- old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 110}
-   }
- old_expression_markers {{0 4 12 13}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 46
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text20
- xpos 6003
- ypos -161
-}
-Read {
- inputs 0
- file_type exr
- file renders/sphere-light-plane/sphere-light-plane_karma_norm-off.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read31
- xpos 5844
- ypos -266
-}
-ModifyMetaData {
- metadata {
-  {set renderer karma}
-  {set normalize off}
-  {set angle 0}
- }
- name ModifyMetaData19
- xpos 5844
- ypos -182
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]"
- old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 102 102}
-   }
- old_expression_markers {{0 4 12 14}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 46
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text19
- xpos 5844
- ypos -158
-}
-ContactSheet {
- inputs 6
- width 2048
- height 3072
- columns 2
- roworder TopBottom
- name ContactSheet2
- xpos 5911
- ypos 486
-}
-Write {
- file C:/Users/alanglands/Desktop/light_comparison/sphere-light.jpg
- file_type jpeg
- checkHashOnRead false
- version 2
- name Write2
- xpos 5911
- ypos 792
-}
-Read {
- inputs 0
- file_type exr
  file renders/rect-light-plane/rect-light-plane_rtx_norm-on_focus-10.exr
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
  version 1
  name Read10
- xpos 6931
- ypos 204
+ xpos 5291
+ ypos 4445
 }
 ModifyMetaData {
  metadata {
@@ -1351,8 +2187,8 @@ ModifyMetaData {
   {set focus 10}
  }
  name ModifyMetaData36
- xpos 6931
- ypos 304
+ xpos 5291
+ ypos 4545
 }
 Text2 {
  font_size_toolbar 100
@@ -1383,8 +2219,8 @@ Text2 {
  shadow_softness 0.4
  shadow_size 4.25
  name Text36
- xpos 6931
- ypos 328
+ xpos 5291
+ ypos 4569
 }
 Read {
  inputs 0
@@ -1394,8 +2230,8 @@ Read {
  origset true
  version 1
  name Read13
- xpos 6760
- ypos 196
+ xpos 5120
+ ypos 4437
 }
 ModifyMetaData {
  metadata {
@@ -1404,8 +2240,8 @@ ModifyMetaData {
   {set focus 0}
  }
  name ModifyMetaData35
- xpos 6760
- ypos 304
+ xpos 5120
+ ypos 4545
 }
 Text2 {
  font_size_toolbar 100
@@ -1436,8 +2272,8 @@ Text2 {
  shadow_softness 0.4
  shadow_size 4.25
  name Text35
- xpos 6760
- ypos 328
+ xpos 5120
+ ypos 4569
 }
 Read {
  inputs 0
@@ -1446,8 +2282,8 @@ Read {
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
  name Read12
- xpos 6599
- ypos 194
+ xpos 4959
+ ypos 4435
 }
 ModifyMetaData {
  metadata {
@@ -1456,8 +2292,8 @@ ModifyMetaData {
   {set focus 10}
  }
  name ModifyMetaData34
- xpos 6599
- ypos 303
+ xpos 4959
+ ypos 4544
 }
 Text2 {
  font_size_toolbar 100
@@ -1488,8 +2324,8 @@ Text2 {
  shadow_softness 0.4
  shadow_size 4.25
  name Text34
- xpos 6599
- ypos 327
+ xpos 4959
+ ypos 4568
 }
 Read {
  inputs 0
@@ -1498,8 +2334,8 @@ Read {
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
  name Read11
- xpos 6447
- ypos 191
+ xpos 4807
+ ypos 4432
 }
 ModifyMetaData {
  metadata {
@@ -1508,8 +2344,8 @@ ModifyMetaData {
   {set focus 0}
  }
  name ModifyMetaData33
- xpos 6447
- ypos 299
+ xpos 4807
+ ypos 4540
 }
 Text2 {
  font_size_toolbar 100
@@ -1540,8 +2376,8 @@ Text2 {
  shadow_softness 0.4
  shadow_size 4.25
  name Text33
- xpos 6447
- ypos 323
+ xpos 4807
+ ypos 4564
 }
 Read {
  inputs 0
@@ -1550,8 +2386,8 @@ Read {
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
  name Read32
- xpos 6928
- ypos -64
+ xpos 5288
+ ypos 4177
 }
 ModifyMetaData {
  metadata {
@@ -1560,8 +2396,8 @@ ModifyMetaData {
   {set focus 10}
  }
  name ModifyMetaData32
- xpos 6928
- ypos 48
+ xpos 5288
+ ypos 4289
 }
 Text2 {
  font_size_toolbar 100
@@ -1592,8 +2428,8 @@ Text2 {
  shadow_softness 0.4
  shadow_size 4.25
  name Text32
- xpos 6928
- ypos 72
+ xpos 5288
+ ypos 4313
 }
 Read {
  inputs 0
@@ -1602,8 +2438,8 @@ Read {
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
  name Read33
- xpos 6770
- ypos -72
+ xpos 5130
+ ypos 4169
 }
 ModifyMetaData {
  metadata {
@@ -1612,8 +2448,8 @@ ModifyMetaData {
   {set focus 0}
  }
  name ModifyMetaData31
- xpos 6776
- ypos 44
+ xpos 5136
+ ypos 4285
 }
 Text2 {
  font_size_toolbar 100
@@ -1644,8 +2480,8 @@ Text2 {
  shadow_softness 0.4
  shadow_size 4.25
  name Text31
- xpos 6776
- ypos 68
+ xpos 5136
+ ypos 4309
 }
 Read {
  inputs 0
@@ -1654,8 +2490,8 @@ Read {
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
  name Read34
- xpos 6594
- ypos -77
+ xpos 4954
+ ypos 4164
 }
 ModifyMetaData {
  metadata {
@@ -1664,8 +2500,8 @@ ModifyMetaData {
   {set focus 10}
  }
  name ModifyMetaData30
- xpos 6596
- ypos 29
+ xpos 4956
+ ypos 4270
 }
 Text2 {
  font_size_toolbar 100
@@ -1696,8 +2532,8 @@ Text2 {
  shadow_softness 0.4
  shadow_size 4.25
  name Text30
- xpos 6596
- ypos 53
+ xpos 4956
+ ypos 4294
 }
 Read {
  inputs 0
@@ -1706,8 +2542,8 @@ Read {
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
  name Read35
- xpos 6443
- ypos -77
+ xpos 4803
+ ypos 4164
 }
 ModifyMetaData {
  metadata {
@@ -1716,8 +2552,8 @@ ModifyMetaData {
   {set focus 0}
  }
  name ModifyMetaData29
- xpos 6444
- ypos 25
+ xpos 4804
+ ypos 4266
 }
 Text2 {
  font_size_toolbar 100
@@ -1748,8 +2584,8 @@ Text2 {
  shadow_softness 0.4
  shadow_size 4.25
  name Text29
- xpos 6444
- ypos 49
+ xpos 4804
+ ypos 4290
 }
 Read {
  inputs 0
@@ -1758,8 +2594,8 @@ Read {
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
  name Read36
- xpos 6925
- ypos -252
+ xpos 5285
+ ypos 3989
 }
 ModifyMetaData {
  metadata {
@@ -1768,8 +2604,8 @@ ModifyMetaData {
   {set focus 10}
  }
  name ModifyMetaData28
- xpos 6922
- ypos -153
+ xpos 5282
+ ypos 4088
 }
 Text2 {
  font_size_toolbar 100
@@ -1800,8 +2636,8 @@ Text2 {
  shadow_softness 0.4
  shadow_size 4.25
  name Text28
- xpos 6922
- ypos -129
+ xpos 5282
+ ypos 4112
 }
 Read {
  inputs 0
@@ -1810,8 +2646,8 @@ Read {
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
  name Read37
- xpos 6763
- ypos -256
+ xpos 5123
+ ypos 3985
 }
 ModifyMetaData {
  metadata {
@@ -1820,8 +2656,8 @@ ModifyMetaData {
   {set focus 0}
  }
  name ModifyMetaData27
- xpos 6770
- ypos -157
+ xpos 5130
+ ypos 4084
 }
 Text2 {
  font_size_toolbar 100
@@ -1852,8 +2688,8 @@ Text2 {
  shadow_softness 0.4
  shadow_size 4.25
  name Text27
- xpos 6770
- ypos -133
+ xpos 5130
+ ypos 4108
 }
 Read {
  inputs 0
@@ -1862,8 +2698,8 @@ Read {
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
  name Read38
- xpos 6590
- ypos -256
+ xpos 4950
+ ypos 3985
 }
 ModifyMetaData {
  metadata {
@@ -1872,8 +2708,8 @@ ModifyMetaData {
   {set focus 10}
  }
  name ModifyMetaData26
- xpos 6590
- ypos -172
+ xpos 4950
+ ypos 4069
 }
 Text2 {
  font_size_toolbar 100
@@ -1904,8 +2740,8 @@ Text2 {
  shadow_softness 0.4
  shadow_size 4.25
  name Text26
- xpos 6590
- ypos -148
+ xpos 4950
+ ypos 4093
 }
 Read {
  inputs 0
@@ -1914,8 +2750,8 @@ Read {
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
  name Read39
- xpos 6438
- ypos -260
+ xpos 4798
+ ypos 3981
 }
 ModifyMetaData {
  metadata {
@@ -1924,8 +2760,8 @@ ModifyMetaData {
   {set focus 0}
  }
  name ModifyMetaData25
- xpos 6438
- ypos -176
+ xpos 4798
+ ypos 4065
 }
 Text2 {
  font_size_toolbar 100
@@ -1956,8 +2792,8 @@ Text2 {
  shadow_softness 0.4
  shadow_size 4.25
  name Text25
- xpos 6438
- ypos -152
+ xpos 4798
+ ypos 4089
 }
 ContactSheet {
  inputs 12
@@ -1965,105 +2801,55 @@ ContactSheet {
  height 3072
  roworder TopBottom
  name ContactSheet3
- xpos 6678
- ypos 510
+ xpos 5038
+ ypos 4751
 }
 Write {
- file C:/Users/alanglands/Desktop/light_comparison/rect-light.jpg
+ file rect-light.jpg
  file_type jpeg
  checkHashOnRead false
  version 2
  name Write3
- xpos 6678
- ypos 773
+ xpos 5038
+ ypos 5014
 }
 Read {
  inputs 0
  file_type exr
- file renders/disk-light-plane/disk-light-plane_rtx_norm-on.exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_rtx_norm-on_cone-45_softness-3_focus-10.exr
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
- name Read50
- xpos 7550
- ypos 194
-}
-ModifyMetaData {
- metadata {
-  {set renderer rtx}
-  {set normalize on}
-  {set angle 0}
- }
- name ModifyMetaData42
- xpos 7550
- ypos 336
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]"
- old_message {{114 116 120 10 110 111 114 109 58 32 111 110}
-   }
- old_expression_markers {{0 2 10 11}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 46
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text42
- xpos 7550
- ypos 360
-}
-set N3f1b6400 [stack 0]
-Read {
- inputs 0
- file_type exr
- file renders/disk-light-plane/disk-light-plane_rtx_norm-off.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read51
- xpos 7367
- ypos 191
+ version 2
+ name Read70
+ xpos 10420
+ ypos 4349
 }
 ModifyMetaData {
  metadata {
   {set renderer rtx}
   {set normalize off}
-  {set angle 0}
+  {set focus 10}
+  {set cone 45}
+  {set softness 3}
  }
- name ModifyMetaData41
- xpos 7381
- ypos 338
+ name ModifyMetaData70
+ xpos 10420
+ ypos 4433
 }
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
  font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]"
- old_message {{114 116 120 10 110 111 114 109 58 32 111 102 102}
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
    }
- old_expression_markers {{0 2 10 12}
+ old_expression_markers {{0 2 11 12 20 21 33 33}
    }
  box {24 24 1024 1024}
  yjustify bottom
  transforms {{0 2}
    }
- cursor_position 46
+ cursor_position 96
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -2078,44 +2864,47 @@ Text2 {
  shadow_distance 0
  shadow_softness 0.4
  shadow_size 4.25
- name Text41
- xpos 7381
- ypos 362
+ name Text70
+ xpos 10420
+ ypos 4467
 }
 Read {
  inputs 0
  file_type exr
- file renders/disk-light-plane/disk-light-plane_arnold_norm-on.exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_rtx_norm-on_cone-45_softness-0_focus-10.exr
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
- name Read40
- xpos 7523
- ypos -40
+ version 2
+ name Read71
+ xpos 10179
+ ypos 4335
 }
 ModifyMetaData {
  metadata {
-  {set renderer arnold}
-  {set normalize on}
-  {set angle 0}
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 0}
  }
- name ModifyMetaData40
- xpos 7523
- ypos 83
+ name ModifyMetaData71
+ xpos 10179
+ ypos 4428
 }
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
  font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]"
- old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 110}
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
    }
- old_expression_markers {{0 5 13 14}
+ old_expression_markers {{0 2 11 12 20 21 33 33}
    }
  box {24 24 1024 1024}
  yjustify bottom
  transforms {{0 2}
    }
- cursor_position 46
+ cursor_position 96
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -2130,44 +2919,266 @@ Text2 {
  shadow_distance 0
  shadow_softness 0.4
  shadow_size 4.25
- name Text40
- xpos 7523
- ypos 107
+ name Text71
+ xpos 10179
+ ypos 4475
 }
 Read {
  inputs 0
  file_type exr
- file renders/disk-light-plane/disk-light-plane_arnold_norm-off.exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_rtx_norm-on_cone-90_softness-0_focus-10.exr
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
- name Read41
- xpos 7351
- ypos -34
+ version 2
+ name Read72
+ xpos 9960
+ ypos 4347
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 10}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData72
+ xpos 9960
+ ypos 4431
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 2 11 12 20 21 33 33}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text72
+ xpos 9960
+ ypos 4455
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_rtx_norm-on_cone-45_softness-3_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 2
+ name Read73
+ xpos 9648
+ ypos 4346
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 3}
+ }
+ name ModifyMetaData73
+ xpos 9648
+ ypos 4430
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+   }
+ old_expression_markers {{0 2 11 11 19 20 32 32}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text73
+ xpos 9648
+ ypos 4454
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_rtx_norm-on_cone-45_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 2
+ name Read74
+ xpos 9407
+ ypos 4332
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 0}
+ }
+ name ModifyMetaData74
+ xpos 9407
+ ypos 4425
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 2 11 11 19 20 32 32}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text74
+ xpos 9407
+ ypos 4449
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_rtx_norm-on_cone-90_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 2
+ name Read75
+ xpos 9188
+ ypos 4344
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 0}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData75
+ xpos 9188
+ ypos 4428
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 2 11 11 19 20 32 32}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text75
+ xpos 9188
+ ypos 4452
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_arnold_norm-on_cone-45_softness-3_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read76
+ xpos 10407
+ ypos 4157
 }
 ModifyMetaData {
  metadata {
   {set renderer arnold}
   {set normalize off}
-  {set angle 0}
+  {set focus 10}
+  {set cone 45}
+  {set softness 3}
  }
- name ModifyMetaData39
- xpos 7354
- ypos 85
+ name ModifyMetaData76
+ xpos 10407
+ ypos 4241
 }
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
  font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]"
- old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 102 102}
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
    }
- old_expression_markers {{0 5 13 15}
+ old_expression_markers {{0 5 14 15 23 24 36 36}
    }
  box {24 24 1024 1024}
  yjustify bottom
  transforms {{0 2}
    }
- cursor_position 46
+ cursor_position 96
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -2182,44 +3193,46 @@ Text2 {
  shadow_distance 0
  shadow_softness 0.4
  shadow_size 4.25
- name Text39
- xpos 7354
- ypos 109
+ name Text76
+ xpos 10407
+ ypos 4278
 }
 Read {
  inputs 0
  file_type exr
- file renders/disk-light-plane/disk-light-plane_karma_norm-on.exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_arnold_norm-on_cone-45_softness-0_focus-10.exr
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
- name Read42
- xpos 7515
- ypos -234
+ name Read77
+ xpos 10166
+ ypos 4143
 }
 ModifyMetaData {
  metadata {
-  {set renderer karma}
-  {set normalize on}
-  {set angle 0}
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 0}
  }
- name ModifyMetaData38
- xpos 7515
- ypos -124
+ name ModifyMetaData77
+ xpos 10166
+ ypos 4236
 }
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
  font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]"
- old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 110}
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
    }
- old_expression_markers {{0 4 12 13}
+ old_expression_markers {{0 5 14 15 23 24 36 36}
    }
  box {24 24 1024 1024}
  yjustify bottom
  transforms {{0 2}
    }
- cursor_position 46
+ cursor_position 96
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -2234,44 +3247,262 @@ Text2 {
  shadow_distance 0
  shadow_softness 0.4
  shadow_size 4.25
- name Text38
- xpos 7515
- ypos -100
+ name Text77
+ xpos 10166
+ ypos 4268
 }
 Read {
  inputs 0
  file_type exr
- file renders/disk-light-plane/disk-light-plane_karma_norm-off.exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_arnold_norm-on_cone-90_softness-0_focus-10.exr
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
- name Read43
- xpos 7356
- ypos -237
+ name Read78
+ xpos 9947
+ ypos 4155
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 10}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData78
+ xpos 9947
+ ypos 4239
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 5 14 15 23 24 36 36}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text78
+ xpos 9947
+ ypos 4263
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_arnold_norm-on_cone-45_softness-3_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read79
+ xpos 9635
+ ypos 4154
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 3}
+ }
+ name ModifyMetaData79
+ xpos 9635
+ ypos 4238
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+   }
+ old_expression_markers {{0 5 14 14 22 23 35 35}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text79
+ xpos 9635
+ ypos 4272
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_arnold_norm-on_cone-45_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read80
+ xpos 9394
+ ypos 4140
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 0}
+ }
+ name ModifyMetaData80
+ xpos 9394
+ ypos 4233
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 5 14 14 22 23 35 35}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text80
+ xpos 9394
+ ypos 4269
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_arnold_norm-on_cone-90_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read81
+ xpos 9175
+ ypos 4152
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 0}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData81
+ xpos 9175
+ ypos 4236
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 5 14 14 22 23 35 35}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text81
+ xpos 9175
+ ypos 4260
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_karma_norm-on_cone-45_softness-3_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read82
+ xpos 10385
+ ypos 3950
 }
 ModifyMetaData {
  metadata {
   {set renderer karma}
   {set normalize off}
-  {set angle 0}
+  {set focus 10}
+  {set cone 45}
+  {set softness 3}
  }
- name ModifyMetaData37
- xpos 7356
- ypos -121
+ name ModifyMetaData82
+ xpos 10385
+ ypos 4034
 }
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
  font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]"
- old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 102 102}
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
    }
- old_expression_markers {{0 4 12 14}
+ old_expression_markers {{0 4 13 14 22 23 35 35}
    }
  box {24 24 1024 1024}
  yjustify bottom
  transforms {{0 2}
    }
- cursor_position 46
+ cursor_position 96
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -2286,115 +3517,2867 @@ Text2 {
  shadow_distance 0
  shadow_softness 0.4
  shadow_size 4.25
- name Text37
- xpos 7356
- ypos -97
+ name Text82
+ xpos 10385
+ ypos 4058
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_karma_norm-on_cone-45_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read83
+ xpos 10168
+ ypos 3945
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 0}
+ }
+ name ModifyMetaData83
+ xpos 10168
+ ypos 4038
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 4 13 14 22 23 35 35}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text83
+ xpos 10168
+ ypos 4062
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_karma_norm-on_cone-90_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read84
+ xpos 9942
+ ypos 3954
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 10}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData84
+ xpos 9942
+ ypos 4044
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 4 13 14 22 23 35 35}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text84
+ xpos 9942
+ ypos 4068
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_karma_norm-on_cone-45_softness-3_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read85
+ xpos 9613
+ ypos 3947
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 3}
+ }
+ name ModifyMetaData85
+ xpos 9613
+ ypos 4031
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+   }
+ old_expression_markers {{0 4 13 13 21 22 34 34}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text85
+ xpos 9613
+ ypos 4055
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_karma_norm-on_cone-45_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read86
+ xpos 9396
+ ypos 3942
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 0}
+ }
+ name ModifyMetaData86
+ xpos 9396
+ ypos 4035
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 4 13 13 21 22 34 34}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text86
+ xpos 9396
+ ypos 4059
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_karma_norm-on_cone-90_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read87
+ xpos 9170
+ ypos 3951
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 0}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData87
+ xpos 9170
+ ypos 4041
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 4 13 13 21 22 34 34}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text87
+ xpos 9170
+ ypos 4065
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_rtx_norm-on_cone-45_softness-3_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 4
+ name Read106
+ xpos 9841
+ ypos 2116
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 3}
+ }
+ name ModifyMetaData106
+ xpos 9841
+ ypos 2200
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+   }
+ old_expression_markers {{0 2 11 12 20 21 33 33}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text106
+ xpos 9841
+ ypos 2234
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_rtx_norm-on_cone-45_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 3
+ name Read107
+ xpos 9600
+ ypos 2102
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 0}
+ }
+ name ModifyMetaData107
+ xpos 9600
+ ypos 2195
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 2 11 12 20 21 33 33}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text107
+ xpos 9600
+ ypos 2242
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_rtx_norm-on_cone-90_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 3
+ name Read108
+ xpos 9381
+ ypos 2114
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 10}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData108
+ xpos 9381
+ ypos 2198
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 2 11 12 20 21 33 33}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text108
+ xpos 9381
+ ypos 2222
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_rtx_norm-on_cone-45_softness-3_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 3
+ name Read109
+ xpos 9017
+ ypos 2133
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 3}
+ }
+ name ModifyMetaData109
+ xpos 9017
+ ypos 2217
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+   }
+ old_expression_markers {{0 2 11 11 19 20 32 32}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text109
+ xpos 9017
+ ypos 2241
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_rtx_norm-on_cone-45_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 4
+ name Read110
+ xpos 8776
+ ypos 2119
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 0}
+ }
+ name ModifyMetaData110
+ xpos 8776
+ ypos 2212
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 2 11 11 19 20 32 32}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text110
+ xpos 8776
+ ypos 2236
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_rtx_norm-on_cone-90_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 6
+ name Read111
+ xpos 8557
+ ypos 2131
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 0}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData111
+ xpos 8557
+ ypos 2215
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 2 11 11 19 20 32 32}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text111
+ xpos 8557
+ ypos 2239
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_arnold_norm-on_cone-45_softness-3_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read112
+ xpos 9828
+ ypos 1924
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 3}
+ }
+ name ModifyMetaData112
+ xpos 9828
+ ypos 2008
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+   }
+ old_expression_markers {{0 5 14 15 23 24 36 36}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text112
+ xpos 9828
+ ypos 2045
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_arnold_norm-on_cone-45_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read113
+ xpos 9587
+ ypos 1910
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 0}
+ }
+ name ModifyMetaData113
+ xpos 9587
+ ypos 2003
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 5 14 15 23 24 36 36}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text113
+ xpos 9587
+ ypos 2035
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_arnold_norm-on_cone-90_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read114
+ xpos 9368
+ ypos 1922
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 10}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData114
+ xpos 9368
+ ypos 2006
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 5 14 15 23 24 36 36}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text114
+ xpos 9368
+ ypos 2030
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_arnold_norm-on_cone-45_softness-3_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read115
+ xpos 9004
+ ypos 1941
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 3}
+ }
+ name ModifyMetaData115
+ xpos 9004
+ ypos 2025
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+   }
+ old_expression_markers {{0 5 14 14 22 23 35 35}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text115
+ xpos 9004
+ ypos 2059
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_arnold_norm-on_cone-45_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read116
+ xpos 8763
+ ypos 1927
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 0}
+ }
+ name ModifyMetaData116
+ xpos 8763
+ ypos 2020
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 5 14 14 22 23 35 35}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text116
+ xpos 8763
+ ypos 2056
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_arnold_norm-on_cone-90_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read117
+ xpos 8544
+ ypos 1939
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 0}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData117
+ xpos 8544
+ ypos 2023
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 5 14 14 22 23 35 35}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text117
+ xpos 8544
+ ypos 2047
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_karma_norm-on_cone-45_softness-3_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read118
+ xpos 9806
+ ypos 1717
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 3}
+ }
+ name ModifyMetaData118
+ xpos 9806
+ ypos 1801
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+   }
+ old_expression_markers {{0 4 13 14 22 23 35 35}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text118
+ xpos 9806
+ ypos 1825
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_karma_norm-on_cone-45_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read119
+ xpos 9589
+ ypos 1712
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 0}
+ }
+ name ModifyMetaData119
+ xpos 9589
+ ypos 1805
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 4 13 14 22 23 35 35}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text119
+ xpos 9589
+ ypos 1829
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_karma_norm-on_cone-90_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read120
+ xpos 9363
+ ypos 1721
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 10}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData120
+ xpos 9363
+ ypos 1811
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 4 13 14 22 23 35 35}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text120
+ xpos 9363
+ ypos 1835
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_karma_norm-on_cone-45_softness-3_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read121
+ xpos 8982
+ ypos 1734
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 3}
+ }
+ name ModifyMetaData121
+ xpos 8982
+ ypos 1818
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+   }
+ old_expression_markers {{0 4 13 13 21 22 34 34}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text121
+ xpos 8982
+ ypos 1842
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_karma_norm-on_cone-45_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read122
+ xpos 8765
+ ypos 1729
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 0}
+ }
+ name ModifyMetaData122
+ xpos 8765
+ ypos 1822
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 4 13 13 21 22 34 34}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text122
+ xpos 8765
+ ypos 1846
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_karma_norm-on_cone-90_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read123
+ xpos 8539
+ ypos 1738
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 0}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData123
+ xpos 8539
+ ypos 1828
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 4 13 13 21 22 34 34}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text123
+ xpos 8539
+ ypos 1852
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_rtx_norm-off_cone-45_softness-3_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 4
+ name Read88
+ xpos 7458
+ ypos 2114
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 3}
+ }
+ name ModifyMetaData88
+ xpos 7458
+ ypos 2198
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+   }
+ old_expression_markers {{0 2 10 11 23 23}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text88
+ xpos 7458
+ ypos 2232
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_rtx_norm-off_cone-45_softness-05_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 3
+ name Read133
+ xpos 7268
+ ypos 2117
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 0.5}
+ }
+ name ModifyMetaData133
+ xpos 7268
+ ypos 2201
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 46 53 10}
+   }
+ old_expression_markers {{0 2 10 11 23 25}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text133
+ xpos 7268
+ ypos 2225
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_rtx_norm-off_cone-45_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 3
+ name Read89
+ xpos 7071
+ ypos 2100
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 0}
+ }
+ name ModifyMetaData89
+ xpos 7071
+ ypos 2193
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 2 10 11 23 23}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text89
+ xpos 7071
+ ypos 2240
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_rtx_norm-off_cone-90_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 3
+ name Read90
+ xpos 6852
+ ypos 2112
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 10}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData90
+ xpos 6852
+ ypos 2196
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 2 10 11 23 23}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text90
+ xpos 6852
+ ypos 2220
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_rtx_norm-off_cone-180_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 6
+ name Read130
+ xpos 6706
+ ypos 2117
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 10}
+  {set cone 180}
+  {set softness 0}
+ }
+ name ModifyMetaData130
+ xpos 6706
+ ypos 2201
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 99 111 110 101 58 32 49 56 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 2 10 12 24 24}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text130
+ xpos 6706
+ ypos 2225
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_arnold_norm-off_cone-45_softness-3_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read94
+ xpos 7445
+ ypos 1922
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 3}
+ }
+ name ModifyMetaData94
+ xpos 7445
+ ypos 2006
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+   }
+ old_expression_markers {{0 5 13 14 26 26}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text94
+ xpos 7445
+ ypos 2043
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_arnold_norm-off_cone-45_softness-05_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read134
+ xpos 7255
+ ypos 1925
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 0.5}
+ }
+ name ModifyMetaData134
+ xpos 7255
+ ypos 2009
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 46 53 10}
+   }
+ old_expression_markers {{0 5 13 14 26 28}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text134
+ xpos 7255
+ ypos 2043
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_arnold_norm-off_cone-45_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read95
+ xpos 7058
+ ypos 1908
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 0}
+ }
+ name ModifyMetaData95
+ xpos 7058
+ ypos 2001
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 5 13 14 26 26}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text95
+ xpos 7058
+ ypos 2033
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_arnold_norm-off_cone-90_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read96
+ xpos 6839
+ ypos 1920
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 10}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData96
+ xpos 6839
+ ypos 2004
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 5 13 14 26 26}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text96
+ xpos 6839
+ ypos 2028
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_arnold_norm-off_cone-180_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 1
+ name Read131
+ xpos 6693
+ ypos 1925
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 10}
+  {set cone 180}
+  {set softness 0}
+ }
+ name ModifyMetaData131
+ xpos 6693
+ ypos 2009
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 99 111 110 101 58 32 49 56 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 5 13 15 27 27}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text131
+ xpos 6693
+ ypos 2033
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_karma_norm-off_cone-45_softness-3_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read100
+ xpos 7423
+ ypos 1715
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 3}
+ }
+ name ModifyMetaData100
+ xpos 7423
+ ypos 1799
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+   }
+ old_expression_markers {{0 4 12 13 25 25}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text100
+ xpos 7423
+ ypos 1823
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_karma_norm-off_cone-45_softness-05_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read135
+ xpos 7233
+ ypos 1718
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 0.5}
+ }
+ name ModifyMetaData135
+ xpos 7233
+ ypos 1802
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 46 53 10}
+   }
+ old_expression_markers {{0 4 12 13 25 27}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text135
+ xpos 7233
+ ypos 1826
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_karma_norm-off_cone-45_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read101
+ xpos 7060
+ ypos 1710
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 0}
+ }
+ name ModifyMetaData101
+ xpos 7060
+ ypos 1803
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 4 12 13 25 25}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text101
+ xpos 7060
+ ypos 1827
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_karma_norm-off_cone-90_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read102
+ xpos 6834
+ ypos 1719
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 10}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData102
+ xpos 6834
+ ypos 1809
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 4 12 13 25 25}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text102
+ xpos 6834
+ ypos 1833
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_karma_norm-off_cone-180_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read132
+ xpos 6688
+ ypos 1724
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 10}
+  {set cone 180}
+  {set softness 0}
+ }
+ name ModifyMetaData132
+ xpos 6688
+ ypos 1814
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 99 111 110 101 58 32 49 56 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 4 12 14 26 26}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text132
+ xpos 6688
+ ypos 1838
 }
 ContactSheet {
- inputs 6
- width 2048
+ inputs 15
+ width 5120
+ columns 5
+ roworder TopBottom
+ name ContactSheet10
+ xpos 7071
+ ypos 2385
+}
+Reformat {
+ format "5120 2348 0 0 5120 2348 1 5120x2348"
+ resize none
+ name Reformat2
+ xpos 7071
+ ypos 2505
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "sphere light, norm off, focus 10"
+ old_message {{115 112 104 101 114 101 32 108 105 103 104 116 44 32 110 111 114 109 32 111 102 102 44 32 102 111 99 117 115 32 49 48}
+   }
+ box {0 2200 5120 2348}
+ xjustify center
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 32
+ center {2560 1174}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 2348}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 2560 1174 0 0 1 1 0 0 0 0}
+   }
+ enable_background true
+ background_color {0.1 0.1 0.1 1}
+ name Text137
+ xpos 7071
+ ypos 2565
+}
+Write {
+ file sphere-light_spot_focus-10.jpg
+ file_type jpeg
+ checkHashOnRead false
+ version 1
+ name Write10
+ xpos 7071
+ ypos 2845
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_rtx_norm-off_cone-45_softness-3_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 2
+ name Read69
+ xpos 8003
+ ypos 4343
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 3}
+ }
+ name ModifyMetaData69
+ xpos 8003
+ ypos 4427
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+   }
+ old_expression_markers {{0 2 11 12 20 21 33 33}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text69
+ xpos 8003
+ ypos 4461
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_rtx_norm-off_cone-45_softness-05_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 4
+ name Read141
+ xpos 7827
+ ypos 4338
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 3}
+ }
+ name ModifyMetaData141
+ xpos 7827
+ ypos 4422
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+   }
+ old_expression_markers {{0 2 11 12 20 21 33 33}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text143
+ xpos 7827
+ ypos 4456
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_rtx_norm-off_cone-45_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 2
+ name Read68
+ xpos 7625
+ ypos 4324
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 0}
+ }
+ name ModifyMetaData68
+ xpos 7625
+ ypos 4417
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 2 11 12 20 21 33 33}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text68
+ xpos 7625
+ ypos 4464
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_rtx_norm-off_cone-90_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 2
+ name Read67
+ xpos 7406
+ ypos 4336
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 10}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData67
+ xpos 7406
+ ypos 4420
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 2 11 12 20 21 33 33}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text67
+ xpos 7406
+ ypos 4444
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_arnold_norm-off_cone-45_softness-3_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read66
+ xpos 7990
+ ypos 4151
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 3}
+ }
+ name ModifyMetaData66
+ xpos 7990
+ ypos 4235
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+   }
+ old_expression_markers {{0 5 14 15 23 24 36 36}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text66
+ xpos 7990
+ ypos 4272
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_arnold_norm-off_cone-45_softness-05_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read140
+ xpos 7814
+ ypos 4146
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 3}
+ }
+ name ModifyMetaData140
+ xpos 7814
+ ypos 4230
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+   }
+ old_expression_markers {{0 5 14 15 23 24 36 36}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text142
+ xpos 7814
+ ypos 4267
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_arnold_norm-off_cone-45_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read65
+ xpos 7612
+ ypos 4132
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 0}
+ }
+ name ModifyMetaData65
+ xpos 7612
+ ypos 4225
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 5 14 15 23 24 36 36}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text65
+ xpos 7612
+ ypos 4257
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_arnold_norm-off_cone-90_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read64
+ xpos 7393
+ ypos 4144
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 10}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData64
+ xpos 7393
+ ypos 4228
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 5 14 15 23 24 36 36}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text64
+ xpos 7393
+ ypos 4252
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_karma_norm-off_cone-45_softness-3_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read63
+ xpos 7968
+ ypos 3944
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 3}
+ }
+ name ModifyMetaData63
+ xpos 7968
+ ypos 4028
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+   }
+ old_expression_markers {{0 4 13 14 22 23 35 35}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text63
+ xpos 7968
+ ypos 4052
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_karma_norm-off_cone-45_softness-05_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read139
+ xpos 7792
+ ypos 3939
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 3}
+ }
+ name ModifyMetaData139
+ xpos 7792
+ ypos 4023
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+   }
+ old_expression_markers {{0 4 13 14 22 23 35 35}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text141
+ xpos 7792
+ ypos 4047
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_karma_norm-off_cone-45_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read62
+ xpos 7614
+ ypos 3934
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 10}
+  {set cone 45}
+  {set softness 0}
+ }
+ name ModifyMetaData62
+ xpos 7614
+ ypos 4027
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 4 13 14 22 23 35 35}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text62
+ xpos 7614
+ ypos 4051
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_karma_norm-off_cone-90_softness-0_focus-10.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read61
+ xpos 7388
+ ypos 3943
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 10}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData61
+ xpos 7388
+ ypos 4033
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 4 13 14 22 23 35 35}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text61
+ xpos 7388
+ ypos 4057
+}
+ContactSheet {
+ inputs 12
+ width 4096
  height 3072
- columns 2
  roworder TopBottom
- name ContactSheet4
- xpos 7424
- ypos 513
+ name ContactSheet8
+ xpos 7753
+ ypos 4614
+}
+Reformat {
+ format "4096 3372 0 0 4096 3372 1 4096x3372"
+ name Reformat4
+ xpos 7753
+ ypos 4638
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "rect light, norm off, focus 10"
+ old_message {{114 101 99 116 32 108 105 103 104 116 44 32 110 111 114 109 32 111 102 102 44 32 102 111 99 117 115 32 49 48}
+   }
+ box {0 3172 4096 3372}
+ xjustify center
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 29
+ center {2560 1174}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 2348}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 2560 1174 0 0 1 1 0 0 0 0}
+   }
+ enable_background true
+ background_color {0.1 0.1 0.1 1}
+ name Text145
+ xpos 7753
+ ypos 4707
 }
 Write {
- file C:/Users/alanglands/Desktop/light_comparison/disk-light.jpg
+ file rect-light_spot_focus-10.jpg
  file_type jpeg
  checkHashOnRead false
  version 2
- name Write4
- xpos 7424
- ypos 779
+ name Write8
+ selected true
+ xpos 7753
+ ypos 4941
 }
 Read {
  inputs 0
  file_type exr
- file renders/cylinder-light-plane/cylinder-light-plane_rtx_norm-on.exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_rtx_norm-off_cone-45_softness-3_focus-0.exr
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
- name Read49
- xpos 8122
- ypos 188
-}
-ModifyMetaData {
- metadata {
-  {set renderer rtx}
-  {set normalize on}
-  {set angle 0}
- }
- name ModifyMetaData48
- xpos 8122
- ypos 320
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]"
- old_message {{114 116 120 10 110 111 114 109 58 32 111 110}
-   }
- old_expression_markers {{0 2 10 11}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 46
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text48
- xpos 8122
- ypos 344
-}
-Read {
- inputs 0
- file_type exr
- file renders/cylinder-light-plane/cylinder-light-plane_rtx_norm-off.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read44
- xpos 7953
- ypos 187
+ version 2
+ name Read137
+ xpos 6700
+ ypos 4345
 }
 ModifyMetaData {
  metadata {
   {set renderer rtx}
   {set normalize off}
-  {set angle 0}
+  {set focus 0}
+  {set cone 45}
+  {set softness 3}
  }
- name ModifyMetaData47
- xpos 7953
- ypos 322
+ name ModifyMetaData137
+ xpos 6700
+ ypos 4429
 }
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
  font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]"
- old_message {{114 116 120 10 110 111 114 109 58 32 111 102 102}
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
    }
- old_expression_markers {{0 2 10 12}
+ old_expression_markers {{0 2 11 11 19 20 32 32}
    }
  box {24 24 1024 1024}
  yjustify bottom
  transforms {{0 2}
    }
- cursor_position 46
+ cursor_position 96
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -2409,44 +6392,47 @@ Text2 {
  shadow_distance 0
  shadow_softness 0.4
  shadow_size 4.25
- name Text47
- xpos 7953
- ypos 346
+ name Text139
+ xpos 6700
+ ypos 4453
 }
 Read {
  inputs 0
  file_type exr
- file renders/cylinder-light-plane/cylinder-light-plane_arnold_norm-on.exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_rtx_norm-off_cone-45_softness-05_focus-0.exr
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
- name Read45
- xpos 8116
- ypos -16
+ version 4
+ name Read60
+ xpos 6471
+ ypos 4348
 }
 ModifyMetaData {
  metadata {
-  {set renderer arnold}
-  {set normalize on}
-  {set angle 0}
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 3}
  }
- name ModifyMetaData45
- xpos 8121
- ypos 106
+ name ModifyMetaData60
+ xpos 6471
+ ypos 4432
 }
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
  font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]"
- old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 110}
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
    }
- old_expression_markers {{0 5 13 14}
+ old_expression_markers {{0 2 11 11 19 20 32 32}
    }
  box {24 24 1024 1024}
  yjustify bottom
  transforms {{0 2}
    }
- cursor_position 46
+ cursor_position 96
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -2461,44 +6447,156 @@ Text2 {
  shadow_distance 0
  shadow_softness 0.4
  shadow_size 4.25
- name Text45
- xpos 8121
- ypos 130
+ name Text60
+ xpos 6471
+ ypos 4456
 }
 Read {
  inputs 0
  file_type exr
- file renders/cylinder-light-plane/cylinder-light-plane_arnold_norm-off.exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_rtx_norm-off_cone-45_softness-0_focus-0.exr
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
- name Read46
- xpos 7952
- ypos -16
+ version 2
+ name Read59
+ xpos 6230
+ ypos 4334
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 0}
+ }
+ name ModifyMetaData59
+ xpos 6230
+ ypos 4427
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 2 11 11 19 20 32 32}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text59
+ xpos 6230
+ ypos 4451
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_rtx_norm-off_cone-90_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 2
+ name Read58
+ xpos 6011
+ ypos 4346
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 0}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData58
+ xpos 6011
+ ypos 4430
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 2 11 11 19 20 32 32}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text58
+ xpos 6011
+ ypos 4454
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_arnold_norm-off_cone-45_softness-3_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read138
+ xpos 6687
+ ypos 4153
 }
 ModifyMetaData {
  metadata {
   {set renderer arnold}
   {set normalize off}
-  {set angle 0}
+  {set focus 0}
+  {set cone 45}
+  {set softness 3}
  }
- name ModifyMetaData46
- xpos 7952
- ypos 108
+ name ModifyMetaData138
+ xpos 6687
+ ypos 4237
 }
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
  font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]"
- old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 102 102}
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
    }
- old_expression_markers {{0 5 13 15}
+ old_expression_markers {{0 5 14 14 22 23 35 35}
    }
  box {24 24 1024 1024}
  yjustify bottom
  transforms {{0 2}
    }
- cursor_position 46
+ cursor_position 96
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -2513,44 +6611,46 @@ Text2 {
  shadow_distance 0
  shadow_softness 0.4
  shadow_size 4.25
- name Text46
- xpos 7952
- ypos 132
+ name Text140
+ xpos 6687
+ ypos 4271
 }
 Read {
  inputs 0
  file_type exr
- file renders/cylinder-light-plane/cylinder-light-plane_karma_norm-on.exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_arnold_norm-off_cone-45_softness-05_focus-0.exr
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
- name Read47
- xpos 8114
- ypos -229
+ name Read56
+ xpos 6458
+ ypos 4156
 }
 ModifyMetaData {
  metadata {
-  {set renderer karma}
-  {set normalize on}
-  {set angle 0}
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 3}
  }
- name ModifyMetaData44
- xpos 8114
- ypos -125
+ name ModifyMetaData56
+ xpos 6458
+ ypos 4240
 }
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
  font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]"
- old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 110}
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
    }
- old_expression_markers {{0 4 12 13}
+ old_expression_markers {{0 5 14 14 22 23 35 35}
    }
  box {24 24 1024 1024}
  yjustify bottom
  transforms {{0 2}
    }
- cursor_position 46
+ cursor_position 96
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -2565,44 +6665,154 @@ Text2 {
  shadow_distance 0
  shadow_softness 0.4
  shadow_size 4.25
- name Text44
- xpos 8114
- ypos -101
+ name Text57
+ xpos 6458
+ ypos 4274
 }
 Read {
  inputs 0
  file_type exr
- file renders/cylinder-light-plane/cylinder-light-plane_karma_norm-off.exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_arnold_norm-off_cone-45_softness-0_focus-0.exr
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
- name Read48
- xpos 7919
- ypos -228
+ name Read55
+ xpos 6217
+ ypos 4142
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 0}
+ }
+ name ModifyMetaData55
+ xpos 6217
+ ypos 4235
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 5 14 14 22 23 35 35}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text56
+ xpos 6217
+ ypos 4271
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_arnold_norm-off_cone-90_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read57
+ xpos 5998
+ ypos 4154
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 0}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData57
+ xpos 5998
+ ypos 4238
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 5 14 14 22 23 35 35}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text55
+ xpos 5998
+ ypos 4262
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_karma_norm-off_cone-45_softness-3_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read136
+ xpos 6665
+ ypos 3946
 }
 ModifyMetaData {
  metadata {
   {set renderer karma}
   {set normalize off}
-  {set angle 0}
+  {set focus 0}
+  {set cone 45}
+  {set softness 3}
  }
- name ModifyMetaData43
- xpos 7919
- ypos -121
+ name ModifyMetaData136
+ xpos 6665
+ ypos 4030
 }
 Text2 {
  font_size_toolbar 100
  font_width_toolbar 100
  font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]"
- old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 102 102}
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
    }
- old_expression_markers {{0 4 12 14}
+ old_expression_markers {{0 4 13 13 21 22 34 34}
    }
  box {24 24 1024 1024}
  yjustify bottom
  transforms {{0 2}
    }
- cursor_position 46
+ cursor_position 96
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -2617,211 +6827,1097 @@ Text2 {
  shadow_distance 0
  shadow_softness 0.4
  shadow_size 4.25
- name Text43
- xpos 7919
- ypos -97
+ name Text138
+ xpos 6665
+ ypos 4054
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_karma_norm-off_cone-45_softness-05_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read53
+ xpos 6436
+ ypos 3949
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 3}
+ }
+ name ModifyMetaData53
+ xpos 6436
+ ypos 4033
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+   }
+ old_expression_markers {{0 4 13 13 21 22 34 34}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text54
+ xpos 6436
+ ypos 4057
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_karma_norm-off_cone-45_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read52
+ xpos 6219
+ ypos 3944
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 0}
+ }
+ name ModifyMetaData52
+ xpos 6219
+ ypos 4037
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 4 13 13 21 22 34 34}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text53
+ xpos 6219
+ ypos 4061
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/rect-light-plane/rect-light-plane_karma_norm-off_cone-90_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read54
+ xpos 5993
+ ypos 3953
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 0}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData54
+ xpos 5993
+ ypos 4043
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 102 111 99 117 115 58 32 48 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 4 13 13 21 22 34 34}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 96
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text52
+ xpos 5993
+ ypos 4067
 }
 ContactSheet {
- inputs 6
- width 2048
+ inputs 12
+ width 4096
  height 3072
- columns 2
  roworder TopBottom
- name ContactSheet5
- xpos 8044
- ypos 460
+ name ContactSheet7
+ xpos 6394
+ ypos 4586
+}
+Reformat {
+ format "4096 3372 0 0 4096 3372 1 4096x3372"
+ name Reformat3
+ xpos 6394
+ ypos 4657
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "rect light, norm off, focus 0"
+ old_message {{114 101 99 116 32 108 105 103 104 116 44 32 110 111 114 109 32 111 102 102 44 32 102 111 99 117 115 32 48}
+   }
+ box {0 3172 4096 3372}
+ xjustify center
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 4
+ center {2560 1174}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 2348}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 2560 1174 0 0 1 1 0 0 0 0}
+   }
+ enable_background true
+ background_color {0.1 0.1 0.1 1}
+ name Text144
+ xpos 6394
+ ypos 4726
 }
 Write {
- file C:/Users/alanglands/Desktop/light_comparison/cylinder-light.jpg
+ file rect-light_spot_focus-0.jpg
  file_type jpeg
  checkHashOnRead false
- version 2
- name Write5
- xpos 8044
- ypos 806
-}
-push $N3f1b6400
-Read {
- inputs 0
- file_type exr
- file renders/dome-light-sphere/dome-light-sphere_rtx.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read7
- xpos 8446
- ypos -9
-}
-ModifyMetaData {
- metadata {
-  {set renderer rtx}
-  {set normalize off}
-  {set angle 0}
- }
- name ModifyMetaData51
- xpos 8446
- ypos 75
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]"
- old_message {{114 116 120}
-   }
- old_expression_markers {{0 2}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 19
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text51
- xpos 8446
- ypos 99
-}
-Read {
- inputs 0
- file_type exr
- file renders/dome-light-sphere/dome-light-sphere_arnold.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read8
- xpos 8643
- ypos -209
-}
-ModifyMetaData {
- metadata {
-  {set renderer arnold}
-  {set normalize off}
-  {set angle 0}
- }
- name ModifyMetaData50
- xpos 8643
- ypos -125
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]"
- old_message {{97 114 110 111 108 100}
-   }
- old_expression_markers {{0 5}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 19
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text50
- xpos 8643
- ypos -101
-}
-Read {
- inputs 0
- file_type exr
- file renders/dome-light-sphere/dome-light-sphere_karma.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read9
- xpos 8445
- ypos -212
-}
-ModifyMetaData {
- metadata {
-  {set renderer karma}
-  {set normalize off}
-  {set angle 0}
- }
- name ModifyMetaData49
- xpos 8445
- ypos -128
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]"
- old_message {{107 97 114 109 97}
-   }
- old_expression_markers {{0 4}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 19
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text49
- xpos 8445
- ypos -104
-}
-ContactSheet {
- inputs 3
- width 2048
- rows 2
- columns 2
- roworder TopBottom
- name ContactSheet6
- xpos 8523
- ypos 221
-}
-Write {
- file C:/Users/alanglands/Desktop/light_comparison/dome-light.jpg
- file_type jpeg
- checkHashOnRead false
- version 2
- name Write6
- xpos 8523
- ypos 789
+ version 1
+ name Write7
+ xpos 6394
+ ypos 4985
 }
 Viewer {
  inputs 2
- frame -1
+ frame 1
  frame_range 1-100
  monitorOutOutputTransform rec709
  name Viewer1
- xpos 7424
- ypos 1500
+ xpos 12057
+ ypos -479
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_rtx_norm-off_cone-45_softness-3_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 3
+ name Read91
+ xpos 6414
+ ypos 2146
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 3}
+ }
+ name ModifyMetaData91
+ xpos 6414
+ ypos 2230
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+   }
+ old_expression_markers {{0 2 10 11 23 23}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text91
+ xpos 6414
+ ypos 2254
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_rtx_norm-off_cone-45_softness-05_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 3
+ name Read127
+ xpos 6148
+ ypos 2144
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 0.5}
+ }
+ name ModifyMetaData127
+ xpos 6148
+ ypos 2228
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 46 53 10}
+   }
+ old_expression_markers {{0 2 10 11 23 25}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text127
+ xpos 6148
+ ypos 2252
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_rtx_norm-off_cone-45_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 3
+ name Read92
+ xpos 5923
+ ypos 2137
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 0}
+ }
+ name ModifyMetaData92
+ xpos 5923
+ ypos 2230
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 2 10 11 23 23}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text92
+ xpos 5923
+ ypos 2254
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_rtx_norm-off_cone-90_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 3
+ name Read93
+ xpos 5704
+ ypos 2149
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 0}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData93
+ xpos 5704
+ ypos 2233
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 2 10 11 23 23}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text93
+ xpos 5704
+ ypos 2257
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_rtx_norm-off_cone-180_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 4
+ name Read124
+ xpos 5491
+ ypos 2147
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set focus 0}
+  {set cone 180}
+  {set softness 0}
+ }
+ name ModifyMetaData124
+ xpos 5491
+ ypos 2231
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{114 116 120 10 99 111 110 101 58 32 49 56 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 2 10 12 24 24}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text124
+ xpos 5491
+ ypos 2255
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_arnold_norm-off_cone-45_softness-3_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read97
+ xpos 6401
+ ypos 1954
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 3}
+ }
+ name ModifyMetaData97
+ xpos 6401
+ ypos 2038
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+   }
+ old_expression_markers {{0 5 13 14 26 26}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text97
+ xpos 6401
+ ypos 2072
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_arnold_norm-off_cone-45_softness-05_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read128
+ xpos 6135
+ ypos 1952
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 0.5}
+ }
+ name ModifyMetaData128
+ xpos 6135
+ ypos 2036
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 46 53 10}
+   }
+ old_expression_markers {{0 5 13 14 26 28}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text128
+ xpos 6135
+ ypos 2070
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_arnold_norm-off_cone-45_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read98
+ xpos 5910
+ ypos 1945
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 0}
+ }
+ name ModifyMetaData98
+ xpos 5910
+ ypos 2038
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 5 13 14 26 26}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text98
+ xpos 5910
+ ypos 2074
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_arnold_norm-off_cone-90_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read99
+ xpos 5691
+ ypos 1957
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 0}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData99
+ xpos 5691
+ ypos 2041
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 5 13 14 26 26}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text99
+ xpos 5691
+ ypos 2065
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_arnold_norm-off_cone-180_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 1
+ name Read125
+ xpos 5478
+ ypos 1955
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set focus 0}
+  {set cone 180}
+  {set softness 0}
+ }
+ name ModifyMetaData125
+ xpos 5478
+ ypos 2039
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{97 114 110 111 108 100 10 99 111 110 101 58 32 49 56 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 5 13 15 27 27}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text125
+ xpos 5478
+ ypos 2063
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_karma_norm-off_cone-45_softness-3_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read103
+ xpos 6379
+ ypos 1747
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 3}
+ }
+ name ModifyMetaData103
+ xpos 6379
+ ypos 1831
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+   }
+ old_expression_markers {{0 4 12 13 25 25}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text103
+ xpos 6379
+ ypos 1855
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_karma_norm-off_cone-45_softness-05_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read129
+ xpos 6113
+ ypos 1745
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 0.5}
+ }
+ name ModifyMetaData129
+ xpos 6113
+ ypos 1829
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 46 53 10}
+   }
+ old_expression_markers {{0 4 12 13 25 27}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text129
+ xpos 6113
+ ypos 1853
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_karma_norm-off_cone-45_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read104
+ xpos 5912
+ ypos 1747
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 0}
+  {set cone 45}
+  {set softness 0}
+ }
+ name ModifyMetaData104
+ xpos 5912
+ ypos 1840
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 4 12 13 25 25}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 72
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text104
+ xpos 5912
+ ypos 1864
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_karma_norm-off_cone-90_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read105
+ xpos 5686
+ ypos 1756
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 0}
+  {set cone 90}
+  {set softness 0}
+ }
+ name ModifyMetaData105
+ xpos 5686
+ ypos 1846
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 99 111 110 101 58 32 57 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 4 12 13 25 25}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 20
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text105
+ xpos 5686
+ ypos 1870
+}
+Read {
+ inputs 0
+ file_type exr
+ file C:/Users/alanglands/code/light_comparison/renders/sphere-light-plane/sphere-light-plane_karma_norm-off_cone-180_softness-0_focus-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read126
+ xpos 5473
+ ypos 1754
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set focus 0}
+  {set cone 180}
+  {set softness 0}
+ }
+ name ModifyMetaData126
+ xpos 5473
+ ypos 1844
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
+ old_message {{107 97 114 109 97 10 99 111 110 101 58 32 49 56 48 10 115 111 102 116 110 101 115 115 58 32 48 10}
+   }
+ old_expression_markers {{0 4 12 14 26 26}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 20
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text126
+ xpos 5473
+ ypos 1868
+}
+ContactSheet {
+ inputs 15
+ width 5120
+ columns 5
+ roworder TopBottom
+ name ContactSheet9
+ xpos 5946
+ ypos 2384
+}
+Reformat {
+ format "5120 2348 0 0 5120 2348 1 5120x2348"
+ resize none
+ name Reformat1
+ xpos 5946
+ ypos 2529
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "sphere light, norm off, focus 0"
+ old_message {{115 112 104 101 114 101 32 108 105 103 104 116 44 32 110 111 114 109 32 111 102 102 44 32 102 111 99 117 115 32 48}
+   }
+ box {0 2200 5120 2348}
+ xjustify center
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 31
+ center {2560 1174}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 2348}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 2560 1174 0 0 1 1 0 0 0 0}
+   }
+ enable_background true
+ background_color {0.1 0.1 0.1 1}
+ name Text136
+ xpos 5946
+ ypos 2603
+}
+Write {
+ file sphere-light_spot_focus-0.jpg
+ file_type jpeg
+ checkHashOnRead false
+ version 1
+ name Write9
+ xpos 5946
+ ypos 2872
 }

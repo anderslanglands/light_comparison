@@ -47,10 +47,22 @@ A rect light of intensity 10, 1 unit above and directly facing an 0.18-grey plan
 
 ![Rect light contact sheet](rect-light.jpg)
 
+###  `rect-light-plane_rotated.usda` 
+A rect light of intensity 10, 1 unit above and rotated at 45 degrees to an 0.18-grey plane with the camera facing perpendicular to the plane. Used to test shaping controls.
+
+![Rect spot, focus 0 contact sheet](rect-light_spot_focus-0.jpg)
+![Rect spot, focus 10 contact sheet](rect-light_spot_focus-10.jpg)
+
 ###  `sphere-light-plane.usda` 
 A sphere light of radius 0.5, and intensity 30, 2 units above an 0.18-grey plane with the camera facing perpendicular to the plane.
 
 ![Sphere light contact sheet](sphere-light.jpg)
+
+###  `sphere-light-plane_rotated.usda` 
+A sphere light of radius 0.5, and intensity 30, 2 units above and rotated at 45 degrees to an 0.18-grey plane with the camera facing perpendicular to the plane. Used to test shaping controls.
+
+![Sphere spot, focus 0 contact sheet](sphere-light_spot_focus-0.jpg)
+![Sphere spot, focus 10 contact sheet](sphere-light_spot_focus-10.jpg)
 
 ### `dome-light.usda`
 A dome light with intensity 1 and default transform using a coloured grid texture, illuminating a perfectly specular metallic sphere with the camera facing the sphere from 6 units along the Z axis.
