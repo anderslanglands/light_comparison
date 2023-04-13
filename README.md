@@ -24,6 +24,12 @@ We need to update UsdLux to specify exactly what quantities should be emitted fo
 
 # Contents of This Repository
 
+## `renders`
+Directory containing source renders for each scene/attribute combination, for each renderer
+
+## `light_comparison.nk`
+Nuke script used to generate the contact sheet images
+
 ## `light_comparison.hip`
 Houdini project used to create USDs for testing, and to perform comparison renders in Solaris of Karma and Arnold (and eventually RIS hopefully). That was used to generate the following USD layers:
 
@@ -101,11 +107,7 @@ A dome light with intensity 1 and default transform using a coloured grid textur
 ![Dome light contact sheet](dome-light.jpg)
 
 #### Observations
-- Karma and RTX have a very different directional mapping to the dome
-
-
-## `renders`
-Directory containing source renders for each scene/attribute combination, for each renderer
-
-## `light_comparison.nk`
-Nuke script used to generate the contact sheet images
+- Karma and Arnold appear to match in terms of mapping on the dome. 
+- For this texture, Arnold interprets `format=automatic` as `angular`, and had to be set manually to `latlong`
+- Arnold appears to ignore `metallic` and `roughness` attributes of the UsdPreviewSurface
+- RTX has a different mapping of the latlong texture from the others
