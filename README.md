@@ -32,20 +32,35 @@ A cylinder light of length 1, radius 0.5 and intensity 30, 2 units above an 0.18
 
 ![Cylinder light contact sheet](cylinder-light.jpg)
 
+#### Observations
+- Karma, Arnold and RTX appear to match
+
 ###  `disk-light-plane.usda` 
 A disk light of radius 0.5, and intensity 30, 2 units above and directly facing an 0.18-grey plane with the camera facing perpendicular to the plane.
 
 ![Disk light contact sheet](disk-light.jpg)
+
+#### Observations
+- Karma, Arnold and RTX appear to match
 
 ###  `distant-light-plane.usda` 
 A distant light of intensity 5, directly facing an 0.18-grey plane with the camera facing perpendicular to the plane.
 
 ![Distant light contact sheet](distant-light.jpg)
 
+#### Observations
+- RTX and Arnold maintain brightness regardless of `angle` and `normalize`
+- RTX is `pi` times brighter than Arnold and Karma
+- Karma's brightness changes with `angle` when `normalize=0`
+
 ###  `rect-light-plane.usda` 
 A rect light of intensity 10, 1 unit above and directly facing an 0.18-grey plane with the camera facing perpendicular to the plane.
 
 ![Rect light contact sheet](rect-light.jpg)
+
+#### Observations
+- Arnold appears to ignore `focus` on a rect light
+- Karma and RTX appear to match
 
 ###  `rect-light-plane_rotated.usda` 
 A rect light of intensity 10, 1 unit above and rotated at 45 degrees to an 0.18-grey plane with the camera facing perpendicular to the plane. Used to test shaping controls.
@@ -53,10 +68,18 @@ A rect light of intensity 10, 1 unit above and rotated at 45 degrees to an 0.18-
 ![Rect spot, focus 0 contact sheet](rect-light_spot_focus-0.jpg)
 ![Rect spot, focus 10 contact sheet](rect-light_spot_focus-10.jpg)
 
+#### Observations
+- Arnold appears to ignore the spotlight controls on a rect light (but does respect them on a sphere light, see below).
+- RTX ignores `focus` when spotlight shaping is enabled.
+- RTX and Karma's mapping for `softness` is very different.
+
 ###  `sphere-light-plane.usda` 
 A sphere light of radius 0.5, and intensity 30, 2 units above an 0.18-grey plane with the camera facing perpendicular to the plane.
 
 ![Sphere light contact sheet](sphere-light.jpg)
+
+#### Observations
+- Karma and RTX have the same normalization, Arnold is different
 
 ###  `sphere-light-plane_rotated.usda` 
 A sphere light of radius 0.5, and intensity 30, 2 units above and rotated at 45 degrees to an 0.18-grey plane with the camera facing perpendicular to the plane. Used to test shaping controls.
@@ -64,10 +87,22 @@ A sphere light of radius 0.5, and intensity 30, 2 units above and rotated at 45 
 ![Sphere spot, focus 0 contact sheet](sphere-light_spot_focus-0.jpg)
 ![Sphere spot, focus 10 contact sheet](sphere-light_spot_focus-10.jpg)
 
+#### Observations
+- Karma appears to expect `softness` in [0, 1], while RTX uses a different mapping that can go above 1 and produces different results for the same value. Arnold's mapping appears most similar to RTX.
+- Arnold's result with `softness` 0 has a very hard edge at the boundary of the cone, while Karma and RTX have a softer edge.
+- RTX and Karma look like they ignore `focus` when `coneAngle` is set, while Arnold does the opposite and ignores spotlight shaping when `foc`us` is set to non-zero.
+- Karma looks like it ignores `coneAngle` in the range [90, 180] on the sphere light.
+
 ### `dome-light.usda`
-A dome light with intensity 1 and default transform using a coloured grid texture, illuminating a perfectly specular metallic sphere with the camera facing the sphere from 6 units along the Z axis.
+A dome light with intensity 1 and default transform using a coloured grid texture, illuminating a perfectly specular metallic sphere with the camera facing the sphere from 6 units along the +Z axis.
+
+![Dome light texture](dome.jpg)
 
 ![Dome light contact sheet](dome-light.jpg)
+
+#### Observations
+- Karma and RTX have a very different directional mapping to the dome
+
 
 ## `renders`
 Directory containing source renders for each scene/attribute combination, for each renderer

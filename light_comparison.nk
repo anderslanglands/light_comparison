@@ -6592,7 +6592,6 @@ ModifyMetaData {
   {set softness 0.5}
  }
  name ModifyMetaData141
- selected true
  xpos 7827
  ypos 4422
 }
@@ -6601,9 +6600,9 @@ Text2 {
  font_width_toolbar 100
  font_height_toolbar 100
  message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
- old_message {{114 116 120 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+ old_message {{114 116 120 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 46 53 10}
    }
- old_expression_markers {{0 2 11 12 20 21 33 33}
+ old_expression_markers {{0 2 11 12 20 21 33 35}
    }
  box {24 24 1024 1024}
  yjustify bottom
@@ -6819,9 +6818,9 @@ Text2 {
  font_width_toolbar 100
  font_height_toolbar 100
  message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
- old_message {{97 114 110 111 108 100 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+ old_message {{97 114 110 111 108 100 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 46 53 10}
    }
- old_expression_markers {{0 5 14 15 23 24 36 36}
+ old_expression_markers {{0 5 14 15 23 24 36 38}
    }
  box {24 24 1024 1024}
  yjustify bottom
@@ -7035,9 +7034,9 @@ Text2 {
  font_width_toolbar 100
  font_height_toolbar 100
  message "\[metadata renderer]\nfocus: \[metadata focus]\ncone: \[metadata cone]\nsoftness: \[metadata softness]\n"
- old_message {{107 97 114 109 97 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 51 10}
+ old_message {{107 97 114 109 97 10 102 111 99 117 115 58 32 49 48 10 99 111 110 101 58 32 52 53 10 115 111 102 116 110 101 115 115 58 32 48 46 53 10}
    }
- old_expression_markers {{0 4 13 14 22 23 35 35}
+ old_expression_markers {{0 4 13 14 22 23 35 37}
    }
  box {24 24 1024 1024}
  yjustify bottom
@@ -7216,9 +7215,7 @@ Write {
  file rect-light_spot_focus-10.jpg
  file_type jpeg
  checkHashOnRead false
- version 2
- in_colorspace scene_linear
- out_colorspace scene_linear
+ version 3
  name Write8
  xpos 7753
  ypos 4941
@@ -7921,7 +7918,7 @@ Write {
  file rect-light_spot_focus-0.jpg
  file_type jpeg
  checkHashOnRead false
- version 1
+ version 2
  name Write7
  xpos 6394
  ypos 4985
@@ -7931,6 +7928,7 @@ Viewer {
  frame_range 1-100
  monitorOutOutputTransform rec709
  name Viewer1
+ selected true
  xpos 12057
  ypos -479
 }
