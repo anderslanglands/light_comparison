@@ -58,6 +58,7 @@ A distant light of intensity 5, directly facing an 0.18-grey plane with the came
 - RTX and Arnold maintain brightness regardless of `angle` and `normalize`
 - RTX is `pi` times brighter than Arnold and Karma
 - Karma's brightness changes with `angle` when `normalize=0`
+- RIS uses a very different mapping of `intensity` to emitted luminance
 
 ###  `rect-light-plane.usda` 
 A rect light of intensity 10, 1 unit above and directly facing an 0.18-grey plane with the camera facing perpendicular to the plane.
@@ -78,6 +79,7 @@ A rect light of intensity 10, 1 unit above and rotated at 45 degrees to an 0.18-
 - Arnold appears to ignore the spotlight controls on a rect light (but does respect them on a sphere light, see below).
 - RTX ignores `focus` when spotlight shaping is enabled.
 - RTX and Karma's mapping for `softness` is very different.
+- RIS seems to interpret `coneAngle` much differently than the others.
 
 ###  `sphere-light-plane.usda` 
 A sphere light of radius 0.5, and intensity 30, 2 units above an 0.18-grey plane with the camera facing perpendicular to the plane.
@@ -98,6 +100,7 @@ A sphere light of radius 0.5, and intensity 30, 2 units above and rotated at 45 
 - Arnold's result with `softness` 0 has a very hard edge at the boundary of the cone, while Karma and RTX have a softer edge.
 - RTX and Karma look like they ignore `focus` when `coneAngle` is set, while Arnold does the opposite and ignores spotlight shaping when `foc`us` is set to non-zero.
 - Karma looks like it ignores `coneAngle` in the range [90, 180] on the sphere light.
+- RIS seems to interpret `coneAngle` much differently than the others.
 
 ### `dome-light.usda`
 A dome light with intensity 1 and default transform using a coloured grid texture, illuminating a perfectly specular metallic sphere with the camera facing the sphere from 6 units along the +Z axis.
