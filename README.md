@@ -17,10 +17,11 @@ We need to update UsdLux to specify exactly what quantities should be emitted fo
 
 
 # High-Level Plan
-- :ballot_box_with_check: Form working group with major rendering authors and users to decide on specification
+- :white_check_mark: Form working group with major rendering authors and users to decide on specification
 - :construction: Enumerate all combinations of lighting attributes that affect the output and create contact sheets to show differences in implementation
 - :construction: Reach consensus on what the implementation should be
 - :construction: Draft a documentation update and/or new USD lighting Schema according to the decided specification
+- :white_square_button: Implement spec in Storm
 - :white_square_button: Merge to USD
 - :white_square_button: Render happily ever after
 
