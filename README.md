@@ -118,5 +118,16 @@ A dome light with intensity 1 and default transform using a coloured grid textur
 - RTX has a different mapping of the latlong texture from the others
 - Note: Arnold <7.2.2.1 ignored `metallic` and `roughness` attributes of the UsdPreviewSurface, which was visible in previous versions of the comparison images. The test has been switched to a plastic material.
 
+### `ies-plane.usda`
+A sphere light with radius 0.5 and intensity 30.0 and with `bega_84693k4.ies` applied and angled towards the plane.
+
+![IES contact sheet](ies-light.jpg)
+
+#### Observations
+- Karma and RIS behave similarly
+- Arnold and RTX ignore the `inputs:shaping:ies:normalize` attribute and default to always normalizing
+- Arnold appears to be using a different axis for the IES than the others
+- RTX and Arnold have a different brightness compared to Karma and RIS when normalize is on.
+
 ### Licenses
 Included IES files were taken from ieslibrary.com and are licensed under Creative Commons Attribution-NoDerivatives-4.0 International License https://ieslibrary.com/en/help/licenses
