@@ -6,21 +6,23 @@ Different renderers produce very different images for the same USD due to differ
 ![Moore Lane rendered in Solaris/Arnold](renders/moore-lane/moore-lane_arnold.jpg)
 ![Moore Lane rendered in USD Composer/RTX Interactive](renders/moore-lane/moore-lane_rtx.jpg)
 
-The issue here is that each renderer has its own interpretation of the quantity to be emitted given a particular parameterization of the distant light representiong the sun. Karma appears to be emitting nits when normalize is off and "lux at a patch facing the light" when normalize is on. Arnold and RTX both ignore the normalize flag, and RTX is essentially emitting "pi * lux". RIS does something else entirely:
+The issue here is that each renderer has its own interpretation of the quantity to be emitted given a particular parameterization of the distant light representiong the sun. Karma appears to be emitting nits when normalize is off and "lux/pi at a patch facing the light" when normalize is on. Arnold and RTX both ignore the normalize flag, and RTX is essentially interpreting intensity as lux. RIS does something else entirely:
 
 ![Comparison of a distant light illuminating a sphere](renders/distant_comparison.jpg)
 
 # Solution
 We need to update UsdLux to specify exactly what quantities should be emitted for each light and combination of its attributes so that lighting can be shared between applications and renderers.
 
+[Draft Specification](specification/specification.md)
+
 
 # High-Level Plan
-- [ ] Form working group with major rendering authors and users to decide on specification
-- [ ] Enumerate all combinations of lighting attributes that affect the output and create contact sheets to show differences in implementation
-- [ ] Reach consensus on what the implementation should be
-- [ ] Draft a documentation update and/or new USD lighting Schema according to the decided specification
-- [ ] Merge to USD
-- [ ] Render happily ever after
+- :ballot_box_with_check: Form working group with major rendering authors and users to decide on specification
+- :construction: Enumerate all combinations of lighting attributes that affect the output and create contact sheets to show differences in implementation
+- :construction: Reach consensus on what the implementation should be
+- :construction: Draft a documentation update and/or new USD lighting Schema according to the decided specification
+- :white_square_button: Merge to USD
+- :white_square_button: Render happily ever after
 
 # Contents of This Repository
 
@@ -31,7 +33,7 @@ Directory containing source renders for each scene/attribute combination, for ea
 Nuke script used to generate the contact sheet images
 
 ## `light_comparison.hip`
-Houdini project used to create USDs for testing, and to perform comparison renders in Solaris of Karma and Arnold (and eventually RIS hopefully). That was used to generate the following USD layers:
+Houdini project used to create USDs for testing, and to perform comparison renders in Solaris of Karma, RIS and Arnold. This project was used to generate the following USD layers:
 
 ###  `cylinder-light-plane.usda` 
 A cylinder light of length 1, radius 0.5 and intensity 30, 2 units above an 0.18-grey plane with the camera facing perpendicular to the plane.
@@ -103,7 +105,7 @@ A sphere light of radius 0.5, and intensity 30, 2 units above and rotated at 45 
 - RIS seems to interpret `coneAngle` much differently than the others.
 
 ### `dome-light.usda`
-A dome light with intensity 1 and default transform using a coloured grid texture, illuminating a perfectly specular metallic sphere with the camera facing the sphere from 6 units along the +Z axis.
+A dome light with intensity 1 and default transform using a coloured grid texture, illuminating a plastic sphere with the camera facing the sphere from 6 units along the +Z axis.
 
 ![Dome light texture](dome.jpg)
 
@@ -111,6 +113,9 @@ A dome light with intensity 1 and default transform using a coloured grid textur
 
 #### Observations
 - Karma and Arnold appear to match in terms of mapping on the dome. 
-- For this texture, Arnold interprets `format=automatic` as `angular`, and had to be set manually to `latlong`
-- Arnold appears to ignore `metallic` and `roughness` attributes of the UsdPreviewSurface
+- For this texture, Arnold interprets `format=automatic` as `angular`, and had to be set manually to `latlong`. Spec should really define latlong to be the default as that's what most users expect.
 - RTX has a different mapping of the latlong texture from the others
+- Note: Arnold <7.2.2.1 ignored `metallic` and `roughness` attributes of the UsdPreviewSurface, which was visible in previous versions of the comparison images. The test has been switched to a plastic material.
+
+### Licenses
+Included IES files were taken from ieslibrary.com and are licensed under Creative Commons Attribution-NoDerivatives-4.0 International License https://ieslibrary.com/en/help/licenses
