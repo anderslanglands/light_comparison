@@ -84,14 +84,20 @@ def Scope "Render"
     {
         def Scope "Vars"
         {
-            def RenderVar "RGBA"
+            def RenderVar "Beauty" (
+                prepend apiSchemas = ["KarmaAOVSettingsAPI"]
+            )
             {
-                custom string arnold:filter = "box_filter"
-                uniform token dataType = "color4f"
-                custom token driver:parameters:aov:format = "color4f"
-                custom string driver:parameters:aov:name = "RGBA"
-                uniform string sourceName = "RGBA"
-                uniform token sourceType = "raw"
+                token dataType = "color4f"
+                custom string driver:parameters:aov:channel_prefix = ""
+                custom int driver:parameters:aov:clearValue = 0
+                bool driver:parameters:aov:cryptomatte = 0
+                string driver:parameters:aov:filter = '["ubox",{}]'
+                custom token driver:parameters:aov:format = "color4h"
+                custom bool driver:parameters:aov:multiSampled = 1
+                custom string driver:parameters:aov:name = "C"
+                string sourceName = "C.*"
+                token sourceType = "lpe"
             }
 
             def RenderVar "Ci"
@@ -211,20 +217,14 @@ def Scope "Render"
                 token sourceType = "raw"
             }
 
-            def RenderVar "Beauty" (
-                prepend apiSchemas = ["KarmaAOVSettingsAPI"]
-            )
+            def RenderVar "RGBA"
             {
-                token dataType = "color4f"
-                custom string driver:parameters:aov:channel_prefix = ""
-                custom int driver:parameters:aov:clearValue = 0
-                bool driver:parameters:aov:cryptomatte = 0
-                string driver:parameters:aov:filter = '["ubox",{}]'
-                custom token driver:parameters:aov:format = "color4h"
-                custom bool driver:parameters:aov:multiSampled = 1
-                custom string driver:parameters:aov:name = "C"
-                string sourceName = "C.*"
-                token sourceType = "lpe"
+                custom string arnold:filter = "box_filter"
+                uniform token dataType = "color4f"
+                custom token driver:parameters:aov:format = "color4f"
+                custom string driver:parameters:aov:name = "RGBA"
+                uniform string sourceName = "RGBA"
+                uniform token sourceType = "raw"
             }
         }
 
@@ -243,45 +243,95 @@ def Scope "Render"
             custom string driver:parameters:openexr:exrpixeltype = "half"
             custom string driver:parameters:openexr:storage = "scanline"
             custom int includeAovs = 1
-            bool instantaneousShutter = 1
-            rel orderedVars = [
-                </Render/Products/Vars/Beauty>,
-                </Render/Products/Vars/Ci>,
-                </Render/Products/Vars/Nn>,
-                </Render/Products/Vars/RGBA>,
-                </Render/Products/Vars/__depth>,
-                </Render/Products/Vars/a>,
-                </Render/Products/Vars/beauty>,
-                </Render/Products/Vars/directDiffuse>,
-                </Render/Products/Vars/directSpecular>,
-                </Render/Products/Vars/u>,
-                </Render/Products/Vars/v>,
-            ]
+            bool instantaneousShutter = 0
+            rel orderedVars = </Render/Products/Vars/RGBA>
             float pixelAspectRatio = 1
             token productName.timeSamples = {
-                1: "C:/Users/alanglands/code/light_comparison/render/light_comparison.karmarendersettings6.0001.exr",
+                1: "C:/Users/alanglands/code/light_comparison/light_comparison.arnold_rendersettings1.0001.exr",
             }
             token productType = "raster"
-            int2 resolution = (1024, 1024)
+            int2 resolution = (512, 512)
         }
     }
 
-    def RenderSettings "arnold_rendersettings"
+    def RenderSettings "karma_rendersettings" (
+        prepend apiSchemas = ["KarmaRendererSettingsAPI"]
+    )
     {
-        custom int arnold:global:AA_samples = 9
-        custom int arnold:global:AA_seed
-        int arnold:global:AA_seed.timeSamples = {
-            1: 1,
-        }
         token aspectRatioConformPolicy = "expandAperture"
-        rel camera = None
+        rel camera = </cameras/camera1>
         float4 dataWindowNDC = (0, 0, 1, 1)
-        token[] includedPurposes = ["default"]
+        token[] includedPurposes = ["default", "render"]
         bool instantaneousShutter = 0
+        bool karma:global:abortmissingtexture = 0
+        bool karma:global:autoheadlight = 1
+        token karma:global:bucketorder = "Middle"
+        int karma:global:bucketsize = 32
+        float karma:global:cacheratio = 0.25
+        int karma:global:cachesize = 1000
+        float karma:global:colorlimit = 10
+        float karma:global:colorlimitindirect = 10
+        bool karma:global:colorlimitindlinked = 1
+        bool karma:global:constrainmaxrough = 1
+        token karma:global:convergence_mode = "Variance"
+        float karma:global:dicingqualityscale = 1
+        string karma:global:diffusecomponents = "diffuse"
+        bool karma:global:enable_dof = 1
+        string karma:global:engine = "cpu"
+        string karma:global:exportcomponents = "diffuse reflect coat refract volume sss"
+        bool karma:global:guiding_enable = 0
+        int karma:global:guiding_samples = 64
+        string karma:global:imagefilter = "[]"
+        token karma:global:imagemode = "Progressive"
+        token karma:global:light_sampling_mode = "Light Tree"
+        float karma:global:light_sampling_quality = 1
+        float karma:global:offscreenquality = 0.1
+        int karma:global:pathtracedsamples = 64
+        string karma:global:pixelfilter = "gauss"
+        float karma:global:pixelfiltersize = 2
+        string karma:global:pixeloracle = '["variance", {"variance": 0.01, "plane": "C", "minrays": 3, "ociomode": 0, "ociodisplay": "ACES", "ocioview": "sRGB", "ociocolorspace": "default"}]'
+        int karma:global:randomseed = 0
+        float karma:global:raybias = 0.001
+        string karma:global:refractcomponents = "refract"
+        int karma:global:russianroulette_cutoff = 2
+        string karma:global:samplefilter = "[]"
+        int karma:global:samplesperpixel = 9
+        int karma:global:screendoorlimit = 4
+        float karma:global:shadingqualitymult = 1
+        string karma:global:ssscomponents = "sss"
+        bool karma:global:usecacheratio = 1
+        string karma:global:volumecomponents = "volume"
+        custom bool karma:object:causticsenable = 0
+        custom float karma:object:causticsroughnessclamp = 0.2
+        custom token karma:object:cull_backface = "Off"
+        custom int karma:object:curve_basis = 0
+        custom token karma:object:curve_style = "Rounded Curves"
+        custom float karma:object:diffuselimit = 0
+        custom float karma:object:diffusequality = 1
+        custom int karma:object:geosamples = 2
+        custom int karma:object:instance_samples = 2
+        custom token karma:object:instance_vblur = "No Velocity Blur"
+        custom bool karma:object:mblur = 1
+        custom token karma:object:point_style = "Spheres"
+        custom float karma:object:reflectlimit = 0
+        custom float karma:object:reflectquality = 1
+        custom float karma:object:refractlimit = 0
+        custom float karma:object:refractquality = 1
+        custom float karma:object:ssslimit = 0
+        custom float karma:object:sssquality = 1
+        custom int karma:object:varianceaa_maxsamples = 9
+        custom int karma:object:varianceaa_minsamples = 1
+        custom float karma:object:varianceaa_thresh = 0.01
+        custom token karma:object:vblur = "No Velocity Blur"
+        custom float karma:object:volumelimit = 1.05
+        custom float karma:object:volumequality = 1
+        custom float karma:object:volumesteprate = 0.25
+        custom float karma:object:volumevblurscale = 1
+        custom int karma:object:xformsamples = 2
         token[] materialBindingPurposes = ["full", "allPurpose"]
         float pixelAspectRatio = 1
         rel products = </Render/Products/renderproduct>
-        int2 resolution = (1024, 1024)
+        int2 resolution = (512, 512)
     }
 
     def RenderSettings "rendersettings"
@@ -290,11 +340,11 @@ def Scope "Render"
         rel camera = </cameras/camera1>
         float4 dataWindowNDC = (0, 0, 1, 1)
         token[] includedPurposes = ["default"]
-        bool instantaneousShutter = 1
+        bool instantaneousShutter = 0
         token[] materialBindingPurposes = ["full", "allPurpose"]
         float pixelAspectRatio = 1
         rel products = </Render/Products/renderproduct>
-        int2 resolution = (1024, 1024)
+        int2 resolution = (512, 512)
         custom string ri:bucket:order = "horizontal"
         custom float2 ri:bucket:orderorigin = (-1, -1)
         custom int ri:checkpoint:asfinal = 0
@@ -330,25 +380,9 @@ def Scope "Render"
         custom int ri:hider:sampleoffset = 0
         custom int ri:hider:samplestride = 1
         custom string ri:hider:type = "raytrace"
-        custom string ri:integrator:name = "PxrPathTracer"
-        custom int ri:integrator:PxrPathTracer:accumOpacity = 0
-        custom int ri:integrator:PxrPathTracer:allowCaustics = 0
-        custom int ri:integrator:PxrPathTracer:clampDepth = 2
-        custom float ri:integrator:PxrPathTracer:clampLuminance = 10
-        custom int ri:integrator:PxrPathTracer:jointSampling = 0
-        custom int ri:integrator:PxrPathTracer:maxContinuationLength = -1
-        custom int ri:integrator:PxrPathTracer:maxIndirectBounces = 8
-        custom int ri:integrator:PxrPathTracer:maxNonStochasticOpacityEvents = 0
-        custom int ri:integrator:PxrPathTracer:numBxdfSamples = 1
-        custom int ri:integrator:PxrPathTracer:numIndirectSamples = 1
-        custom int ri:integrator:PxrPathTracer:numLightSamples = 1
-        custom int ri:integrator:PxrPathTracer:rouletteDepth = 4
-        custom float ri:integrator:PxrPathTracer:rouletteThreshold = 0.2
-        custom string ri:integrator:PxrPathTracer:sampleMode = "bxdf"
-        custom string ri:integrator:PxrPathTracer:volumeAggregate = "globalVolumeAggregate"
-        custom string ri:integrator:PxrPathTracer:volumeAggregateCamera = ""
-        custom string ri:integrator:PxrPathTracer:volumeAggregateIndirect = ""
-        custom string ri:integrator:PxrPathTracer:volumeAggregateTransmission = ""
+        custom string ri:integrator:name = "PxrDirectLighting"
+        custom int ri:integrator:PxrDirectLighting:numBxdfSamples = 4
+        custom int ri:integrator:PxrDirectLighting:numLightSamples = 4
         custom int ri:lighting:selectionlearningscheme = 1
         custom int ri:limits:brickmemory = 2097150
         custom int2 ri:limits:bucketsize = (16, 16)
@@ -356,7 +390,7 @@ def Scope "Render"
         custom int ri:limits:geocachememory = 2097150
         custom int ri:limits:octreememory = 20480
         custom int ri:limits:opacitycachememory = 1048580
-        custom float3 ri:limits:othreshold = (0.99609375, 0, 0)
+        custom float3 ri:limits:othreshold = (0.99609375, 0.99609375, 0.99609375)
         custom int ri:limits:pointmemory = 20480
         custom int ri:limits:ptexturemaxfiles = 128
         custom int ri:limits:ptexturememory = 32768
@@ -416,84 +450,21 @@ def Scope "Render"
         custom string ri:volume:aggregatespace = "world"
     }
 
-    def RenderSettings "karma_rendersettings" (
-        prepend apiSchemas = ["KarmaRendererSettingsAPI"]
-    )
+    def RenderSettings "arnold_rendersettings"
     {
+        custom int arnold:global:AA_seed
+        int arnold:global:AA_seed.timeSamples = {
+            1: 1,
+        }
         token aspectRatioConformPolicy = "expandAperture"
-        rel camera = </cameras/camera1>
+        rel camera = None
         float4 dataWindowNDC = (0, 0, 1, 1)
-        token[] includedPurposes = ["default", "render"]
+        token[] includedPurposes = ["default"]
         bool instantaneousShutter = 0
-        bool karma:global:abortmissingtexture = 0
-        bool karma:global:autoheadlight = 1
-        token karma:global:bucketorder = "Middle"
-        int karma:global:bucketsize = 32
-        float karma:global:cacheratio = 0.25
-        int karma:global:cachesize = 1000
-        float karma:global:colorlimit = 10
-        float karma:global:colorlimitindirect = 10
-        bool karma:global:colorlimitindlinked = 1
-        bool karma:global:constrainmaxrough = 1
-        token karma:global:convergence_mode = "Variance"
-        float karma:global:dicingqualityscale = 1
-        string karma:global:diffusecomponents = "diffuse"
-        bool karma:global:enable_dof = 1
-        string karma:global:engine = "xpu"
-        string karma:global:exportcomponents = "diffuse reflect coat refract volume sss"
-        bool karma:global:guiding_enable = 0
-        int karma:global:guiding_samples = 64
-        string karma:global:imagefilter = "[]"
-        token karma:global:imagemode = "Progressive"
-        token karma:global:light_sampling_mode = "Light Tree"
-        float karma:global:light_sampling_quality = 1
-        float karma:global:offscreenquality = 0.1
-        int karma:global:pathtracedsamples = 128
-        string karma:global:pixelfilter = "gauss"
-        float karma:global:pixelfiltersize = 2
-        string karma:global:pixeloracle = '["variance", {"variance": 0.01, "plane": "C", "minrays": 3, "ociomode": 0, "ociodisplay": "ACES", "ocioview": "sRGB", "ociocolorspace": "default"}]'
-        int karma:global:randomseed = 0
-        float karma:global:raybias = 0.001
-        string karma:global:refractcomponents = "refract"
-        int karma:global:russianroulette_cutoff = 2
-        string karma:global:samplefilter = "[]"
-        int karma:global:samplesperpixel = 9
-        int karma:global:screendoorlimit = 4
-        float karma:global:shadingqualitymult = 1
-        string karma:global:ssscomponents = "sss"
-        bool karma:global:usecacheratio = 1
-        string karma:global:volumecomponents = "volume"
-        custom bool karma:object:causticsenable = 0
-        custom float karma:object:causticsroughnessclamp = 0.2
-        custom token karma:object:cull_backface = "Off"
-        custom int karma:object:curve_basis = 0
-        custom token karma:object:curve_style = "Rounded Curves"
-        custom float karma:object:diffuselimit = 1
-        custom float karma:object:diffusequality = 1
-        custom int karma:object:geosamples = 2
-        custom int karma:object:instance_samples = 2
-        custom token karma:object:instance_vblur = "No Velocity Blur"
-        custom bool karma:object:mblur = 1
-        custom token karma:object:point_style = "Spheres"
-        custom float karma:object:reflectlimit = 4
-        custom float karma:object:reflectquality = 1
-        custom float karma:object:refractlimit = 4
-        custom float karma:object:refractquality = 1
-        custom float karma:object:ssslimit = 0
-        custom float karma:object:sssquality = 1
-        custom int karma:object:varianceaa_maxsamples = 9
-        custom int karma:object:varianceaa_minsamples = 1
-        custom float karma:object:varianceaa_thresh = 0.01
-        custom token karma:object:vblur = "No Velocity Blur"
-        custom float karma:object:volumelimit = 0
-        custom float karma:object:volumequality = 1
-        custom float karma:object:volumesteprate = 0.25
-        custom float karma:object:volumevblurscale = 1
-        custom int karma:object:xformsamples = 2
         token[] materialBindingPurposes = ["full", "allPurpose"]
         float pixelAspectRatio = 1
         rel products = </Render/Products/renderproduct>
-        int2 resolution = (1024, 1024)
+        int2 resolution = (512, 512)
     }
 }
 

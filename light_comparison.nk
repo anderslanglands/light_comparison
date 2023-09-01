@@ -2,20 +2,20 @@
 version 13.2 v1
 define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="-1" y="-8" w="2560" h="1369" maximized="1" screen="0">
+    <window x="0" y="0" w="2557" h="1360" screen="0">
         <splitter orientation="1">
             <split size="40"/>
             <dock id="" hideTitles="1" activePageId="Toolbar.1">
                 <page id="Toolbar.1"/>
             </dock>
-            <split size="1897" stretch="1"/>
+            <split size="1894" stretch="1"/>
             <splitter orientation="2">
-                <split size="779"/>
-                <dock id="" activePageId="Viewer.1" focus="true">
+                <split size="774"/>
+                <dock id="" activePageId="Viewer.1">
                     <page id="Viewer.1"/>
                 </dock>
-                <split size="548"/>
-                <dock id="" activePageId="DAG.1">
+                <split size="544"/>
+                <dock id="" activePageId="DAG.1" focus="true">
                     <page id="DAG.1"/>
                     <page id="Curve Editor.1"/>
                     <page id="DopeSheet.1"/>
@@ -32,7 +32,7 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 }
 Root {
  inputs 0
- name D:/code_win/light_comparison/light_comparison.nk
+ name C:/Users/alanglands/code/light_comparison/light_comparison.nk
  project_directory "\[python \{nuke.script_directory()\}]"
  format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
  proxy_type scale
@@ -57,7 +57,7 @@ Read {
  xpos 5214
  ypos 10278
 }
-set Neba4bc00 [stack 0]
+set Na33ab000 [stack 0]
 ModifyMetaData {
  metadata {
   {set renderer ris}
@@ -274,6 +274,8 @@ Write {
  file_type jpeg
  checkHashOnRead false
  version 5
+ in_colorspace scene_linear
+ out_colorspace scene_linear
  name Write6
  xpos 5088
  ypos 11082
@@ -709,6 +711,8 @@ Write {
  file_type jpeg
  checkHashOnRead false
  version 5
+ in_colorspace scene_linear
+ out_colorspace scene_linear
  name Write5
  xpos 5075
  ypos 8910
@@ -1633,6 +1637,8 @@ Write {
  file_type jpeg
  checkHashOnRead false
  version 4
+ in_colorspace scene_linear
+ out_colorspace scene_linear
  name Write7
  xpos 6394
  ypos 4985
@@ -2557,6 +2563,8 @@ Write {
  file_type jpeg
  checkHashOnRead false
  version 5
+ in_colorspace scene_linear
+ out_colorspace scene_linear
  name Write8
  xpos 7753
  ypos 4941
@@ -3702,6 +3710,8 @@ Write {
  file_type jpeg
  checkHashOnRead false
  version 3
+ in_colorspace scene_linear
+ out_colorspace scene_linear
  name Write10
  xpos 7071
  ypos 2845
@@ -4847,6 +4857,8 @@ Write {
  file_type jpeg
  checkHashOnRead false
  version 3
+ in_colorspace scene_linear
+ out_colorspace scene_linear
  name Write9
  xpos 5946
  ypos 2872
@@ -4885,6 +4897,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -4937,6 +4950,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -4989,6 +5003,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -5041,6 +5056,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -5093,6 +5109,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -5145,6 +5162,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -5197,6 +5215,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -5249,6 +5268,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -5301,6 +5321,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -5353,6 +5374,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -5405,6 +5427,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -5457,6 +5480,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -5509,6 +5533,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -5561,6 +5586,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -5613,6 +5639,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -5665,6 +5692,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -5717,6 +5745,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -5769,6 +5798,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -5821,6 +5851,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -5873,6 +5904,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -5925,6 +5957,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -5977,6 +6010,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -6029,6 +6063,7 @@ Text2 {
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -6053,6 +6088,7 @@ Read {
  file renders/distant-light-plane/distant-light-plane_karma_norm-off_angle-0.exr
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
+ version 1
  name Read27
  xpos 4618
  ypos -268
@@ -6076,11 +6112,12 @@ Text2 {
    }
  old_expression_markers {{0 4 12 14 23 23}
    }
- box {24 24 1024 1024}
+ box {24 24 512 512}
  yjustify bottom
  transforms {{0 2}
    }
  cursor_position 70
+ global_font_scale 0.5
  center {512 512}
  cursor_initialised true
  autofit_bbox false
@@ -6099,6 +6136,7 @@ Text2 {
  xpos 4618
  ypos -160
 }
+set N75a0b400 [stack 0]
 ContactSheet {
  inputs 24
  width 6144
@@ -6115,6 +6153,8 @@ Write {
  file_type jpeg
  checkHashOnRead false
  version 4
+ in_colorspace scene_linear
+ out_colorspace scene_linear
  name Write1
  xpos 5016
  ypos 808
@@ -6551,6 +6591,8 @@ Write {
  file_type jpeg
  checkHashOnRead false
  version 5
+ in_colorspace scene_linear
+ out_colorspace scene_linear
  name Write4
  xpos 5116
  ypos 7161
@@ -7406,6 +7448,8 @@ Write {
  file_type jpeg
  checkHashOnRead false
  version 4
+ in_colorspace scene_linear
+ out_colorspace scene_linear
  name Write3
  xpos 5038
  ypos 5014
@@ -7842,11 +7886,12 @@ Write {
  file_type jpeg
  checkHashOnRead false
  version 4
+ in_colorspace scene_linear
+ out_colorspace scene_linear
  name Write2
  xpos 5037
  ypos 2843
 }
-push $Neba4bc00
 Read {
  inputs 0
  file_type exr
@@ -8280,13 +8325,13 @@ Write {
  checkHashOnRead false
  version 4
  name Write11
- selected true
  xpos 4323
  ypos 2822
 }
+push $Na33ab000
+push $N75a0b400
 Viewer {
  inputs 2
- frame 1
  frame_range 1-100
  monitorOutOutputTransform rec709
  name Viewer1
