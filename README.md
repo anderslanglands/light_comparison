@@ -37,7 +37,7 @@ Nuke script used to generate the contact sheet images
 Houdini project used to create USDs for testing, and to perform comparison renders in Solaris of Karma, RIS and Arnold. This project was used to generate the following USD layers:
 
 ###  `cylinder-light-plane.usda` 
-A cylinder light of length 1, radius 0.5 and intensity 30, 2 units above an 0.18-grey plane with the camera facing perpendicular to the plane.
+A cylinder light of length 1, radius 0.5 and intensity 30, 2 units above a 100% diffuse reflective plane with the camera facing perpendicular to the plane.
 
 ![Cylinder light contact sheet](cylinder-light.jpg)
 
@@ -45,7 +45,7 @@ A cylinder light of length 1, radius 0.5 and intensity 30, 2 units above an 0.18
 - Karma, Arnold and RTX appear to match
 
 ###  `disk-light-plane.usda` 
-A disk light of radius 0.5, and intensity 30, 2 units above and directly facing an 0.18-grey plane with the camera facing perpendicular to the plane.
+A disk light of radius 0.5, and intensity 30, 2 units above and directly facing a 100% diffuse reflective plane with the camera facing perpendicular to the plane.
 
 ![Disk light contact sheet](disk-light.jpg)
 
@@ -53,7 +53,7 @@ A disk light of radius 0.5, and intensity 30, 2 units above and directly facing 
 - Karma, Arnold and RTX appear to match
 
 ###  `distant-light-plane.usda` 
-A distant light of intensity 5, directly facing an 0.18-grey plane with the camera facing perpendicular to the plane.
+A distant light of intensity 0.5, directly facing a 100% diffuse reflective plane with the camera facing perpendicular to the plane.
 
 ![Distant light contact sheet](distant-light.jpg)
 
@@ -64,7 +64,7 @@ A distant light of intensity 5, directly facing an 0.18-grey plane with the came
 - RIS uses a very different mapping of `intensity` to emitted luminance
 
 ###  `rect-light-plane.usda` 
-A rect light of intensity 10, 1 unit above and directly facing an 0.18-grey plane with the camera facing perpendicular to the plane.
+A rect light of intensity 10, 1 unit above and directly facing a 100% diffuse reflective plane with the camera facing perpendicular to the plane.
 
 ![Rect light contact sheet](rect-light.jpg)
 
@@ -73,7 +73,7 @@ A rect light of intensity 10, 1 unit above and directly facing an 0.18-grey plan
 - Karma and RTX appear to match
 
 ###  `rect-light-plane_rotated.usda` 
-A rect light of intensity 10, 1 unit above and rotated at 45 degrees to an 0.18-grey plane with the camera facing perpendicular to the plane. Used to test shaping controls.
+A rect light of intensity 10, 1 unit above and rotated at 45 degrees to a 100% diffuse reflective plane with the camera facing perpendicular to the plane. Used to test shaping controls.
 
 ![Rect spot, focus 0 contact sheet](rect-light_spot_focus-0.jpg)
 ![Rect spot, focus 10 contact sheet](rect-light_spot_focus-10.jpg)
@@ -85,7 +85,7 @@ A rect light of intensity 10, 1 unit above and rotated at 45 degrees to an 0.18-
 - RIS seems to interpret `coneAngle` much differently than the others.
 
 ###  `sphere-light-plane.usda` 
-A sphere light of radius 0.5, and intensity 30, 2 units above an 0.18-grey plane with the camera facing perpendicular to the plane.
+A sphere light of radius 0.5, and intensity 30, 2 units above a 100% diffuse reflective plane with the camera facing perpendicular to the plane.
 
 ![Sphere light contact sheet](sphere-light.jpg)
 
@@ -93,7 +93,7 @@ A sphere light of radius 0.5, and intensity 30, 2 units above an 0.18-grey plane
 - Karma and RTX have the same normalization, Arnold is different
 
 ###  `sphere-light-plane_rotated.usda` 
-A sphere light of radius 0.5, and intensity 30, 2 units above and rotated at 45 degrees to an 0.18-grey plane with the camera facing perpendicular to the plane. Used to test shaping controls.
+A sphere light of radius 0.5, and intensity 30, 2 units above and rotated at 45 degrees to a 100% diffuse reflective plane with the camera facing perpendicular to the plane. Used to test shaping controls.
 
 ![Sphere spot, focus 0 contact sheet](sphere-light_spot_focus-0.jpg)
 ![Sphere spot, focus 10 contact sheet](sphere-light_spot_focus-10.jpg)
