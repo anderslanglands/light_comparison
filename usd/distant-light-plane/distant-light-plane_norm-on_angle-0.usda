@@ -69,6 +69,7 @@ def Scope "materials"
         def Shader "usdpreviewsurface1"
         {
             uniform token info:id = "UsdPreviewSurface"
+            color3f inputs:diffuseColor = (1, 1, 1)
             float inputs:ior = 1
             int inputs:useSpecularWorkflow = 1
             token outputs:displacement
@@ -438,7 +439,7 @@ def Scope "Render"
         float karma:global:dicingqualityscale = 1
         string karma:global:diffusecomponents = "diffuse"
         bool karma:global:enable_dof = 1
-        string karma:global:engine = "cpu"
+        string karma:global:engine = "xpu"
         string karma:global:exportcomponents = "diffuse reflect coat refract volume sss"
         bool karma:global:guiding_enable = 0
         int karma:global:guiding_samples = 64
@@ -511,7 +512,7 @@ def Xform "lights"
         float inputs:diffuse = 1
         bool inputs:enableColorTemperature = 0
         float inputs:exposure = 0
-        float inputs:intensity = 5
+        float inputs:intensity = 0.5
         bool inputs:normalize = 1
         float inputs:specular = 1
         rel light:filters = None

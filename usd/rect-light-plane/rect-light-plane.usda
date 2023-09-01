@@ -499,24 +499,23 @@ def Scope "Render"
 
 def Xform "lights"
 {
-    def DistantLight "distantlight1" (
+    def RectLight "light1" (
         prepend apiSchemas = ["HoudiniViewportGuideAPI"]
     )
     {
-        float houdini:guidescale.timeSamples = {
-            1: 1,
-        }
         bool houdini:inviewermenu = 1
-        float inputs:angle = 1
         color3f inputs:color = (1, 1, 1)
         float inputs:diffuse = 1
         bool inputs:enableColorTemperature = 0
         float inputs:exposure = 0
-        float inputs:intensity = 0.5
-        bool inputs:normalize = 1
+        float inputs:height = 2
+        float inputs:intensity = 10
+        bool inputs:normalize = 0
         float inputs:specular = 1
+        asset inputs:texture:file = @@
+        float inputs:width = 2
         rel light:filters = None
-        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 0, -1, 0), (0, 1, 0, 0), (0, 4.5685529708862305, 0, 1) )
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 0, -1, 0), (0, 1, 0, 0), (0, 1, 0, 1) )
         uniform token[] xformOpOrder = ["xformOp:transform"]
     }
 }
