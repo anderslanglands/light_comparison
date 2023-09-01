@@ -4866,1302 +4866,6 @@ Write {
 Read {
  inputs 0
  file_type exr
- file renders/distant-light-plane/distant-light-plane_ris_norm-on_angle-65.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read112
- xpos 5472
- ypos 375
-}
-ModifyMetaData {
- metadata {
-  {set renderer ris}
-  {set normalize on}
-  {set angle 65}
- }
- name ModifyMetaData112
- xpos 5472
- ypos 483
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{114 105 115 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 54 53}
-   }
- old_expression_markers {{0 2 10 11 20 21}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text112
- xpos 5472
- ypos 507
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_ris_norm-on_angle-1.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read113
- xpos 5321
- ypos 376
-}
-ModifyMetaData {
- metadata {
-  {set renderer ris}
-  {set normalize on}
-  {set angle 1}
- }
- name ModifyMetaData113
- xpos 5321
- ypos 485
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{114 105 115 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 49}
-   }
- old_expression_markers {{0 2 10 11 20 20}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text113
- xpos 5321
- ypos 509
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_ris_norm-on_angle-0.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read114
- xpos 5156
- ypos 382
-}
-ModifyMetaData {
- metadata {
-  {set renderer ris}
-  {set normalize on}
-  {set angle 0}
- }
- name ModifyMetaData114
- xpos 5156
- ypos 487
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{114 105 115 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 48}
-   }
- old_expression_markers {{0 2 10 11 20 20}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text114
- xpos 5156
- ypos 511
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_ris_norm-off_angle-65.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read115
- xpos 4925
- ypos 386
-}
-ModifyMetaData {
- metadata {
-  {set renderer ris}
-  {set normalize off}
-  {set angle 65}
- }
- name ModifyMetaData115
- xpos 4925
- ypos 492
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{114 105 115 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 54 53}
-   }
- old_expression_markers {{0 2 10 12 21 22}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text115
- xpos 4925
- ypos 516
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_ris_norm-off_angle-1.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read116
- xpos 4773
- ypos 393
-}
-ModifyMetaData {
- metadata {
-  {set renderer ris}
-  {set normalize off}
-  {set angle 1}
- }
- name ModifyMetaData116
- xpos 4773
- ypos 498
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{114 105 115 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 49}
-   }
- old_expression_markers {{0 2 10 12 21 21}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text116
- xpos 4773
- ypos 522
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_ris_norm-off_angle-0.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read117
- xpos 4615
- ypos 395
-}
-ModifyMetaData {
- metadata {
-  {set renderer ris}
-  {set normalize off}
-  {set angle 0}
- }
- name ModifyMetaData117
- xpos 4615
- ypos 493
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{114 105 115 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 48}
-   }
- old_expression_markers {{0 2 10 12 21 21}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text117
- xpos 4615
- ypos 517
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_rtx_norm-on_angle-65.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read6
- xpos 5474
- ypos 187
-}
-ModifyMetaData {
- metadata {
-  {set renderer rtx}
-  {set normalize on}
-  {set angle 65}
- }
- name ModifyMetaData18
- xpos 5474
- ypos 295
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{114 116 120 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 54 53}
-   }
- old_expression_markers {{0 2 10 11 20 21}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text18
- xpos 5474
- ypos 319
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_rtx_norm-on_angle-1.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read5
- xpos 5323
- ypos 188
-}
-ModifyMetaData {
- metadata {
-  {set renderer rtx}
-  {set normalize on}
-  {set angle 1}
- }
- name ModifyMetaData17
- xpos 5323
- ypos 297
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{114 116 120 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 49}
-   }
- old_expression_markers {{0 2 10 11 20 20}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text17
- xpos 5323
- ypos 321
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_rtx_norm-on_angle-0.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read4
- xpos 5158
- ypos 194
-}
-ModifyMetaData {
- metadata {
-  {set renderer rtx}
-  {set normalize on}
-  {set angle 0}
- }
- name ModifyMetaData16
- xpos 5158
- ypos 299
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{114 116 120 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 48}
-   }
- old_expression_markers {{0 2 10 11 20 20}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text16
- xpos 5158
- ypos 323
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_rtx_norm-off_angle-65.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read3
- xpos 4927
- ypos 198
-}
-ModifyMetaData {
- metadata {
-  {set renderer rtx}
-  {set normalize off}
-  {set angle 65}
- }
- name ModifyMetaData15
- xpos 4927
- ypos 304
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{114 116 120 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 54 53}
-   }
- old_expression_markers {{0 2 10 12 21 22}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text15
- xpos 4927
- ypos 328
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_rtx_norm-off_angle-1.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read2
- xpos 4775
- ypos 205
-}
-ModifyMetaData {
- metadata {
-  {set renderer rtx}
-  {set normalize off}
-  {set angle 1}
- }
- name ModifyMetaData14
- xpos 4775
- ypos 310
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{114 116 120 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 49}
-   }
- old_expression_markers {{0 2 10 12 21 21}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text14
- xpos 4775
- ypos 334
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_rtx_norm-off_angle-0.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read1
- xpos 4617
- ypos 207
-}
-ModifyMetaData {
- metadata {
-  {set renderer rtx}
-  {set normalize off}
-  {set angle 0}
- }
- name ModifyMetaData13
- xpos 4617
- ypos 305
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{114 116 120 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 48}
-   }
- old_expression_markers {{0 2 10 12 21 21}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text13
- xpos 4617
- ypos 329
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_arnold_norm-on_angle-65.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read16
- xpos 5468
- ypos -30
-}
-ModifyMetaData {
- metadata {
-  {set renderer arnold}
-  {set normalize on}
-  {set angle 65}
- }
- name ModifyMetaData12
- xpos 5464
- ypos 62
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 54 53}
-   }
- old_expression_markers {{0 5 13 14 23 24}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text12
- xpos 5464
- ypos 86
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_arnold_norm-on_angle-1.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read17
- xpos 5318
- ypos -31
-}
-ModifyMetaData {
- metadata {
-  {set renderer arnold}
-  {set normalize on}
-  {set angle 1}
- }
- name ModifyMetaData11
- xpos 5318
- ypos 65
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 49}
-   }
- old_expression_markers {{0 5 13 14 23 23}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text11
- xpos 5318
- ypos 89
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_arnold_norm-on_angle-0.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read18
- xpos 5156
- ypos -36
-}
-ModifyMetaData {
- metadata {
-  {set renderer arnold}
-  {set normalize on}
-  {set angle 0}
- }
- name ModifyMetaData10
- xpos 5156
- ypos 62
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 48}
-   }
- old_expression_markers {{0 5 13 14 23 23}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text10
- xpos 5156
- ypos 86
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_arnold_norm-off_angle-65.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read19
- xpos 4917
- ypos -35
-}
-ModifyMetaData {
- metadata {
-  {set renderer arnold}
-  {set normalize off}
-  {set angle 65}
- }
- name ModifyMetaData9
- xpos 4915
- ypos 65
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 54 53}
-   }
- old_expression_markers {{0 5 13 15 24 25}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text9
- xpos 4915
- ypos 89
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_arnold_norm-off_angle-1.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read20
- xpos 4765
- ypos -36
-}
-ModifyMetaData {
- metadata {
-  {set renderer arnold}
-  {set normalize off}
-  {set angle 1}
- }
- name ModifyMetaData8
- xpos 4765
- ypos 60
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 49}
-   }
- old_expression_markers {{0 5 13 15 24 24}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text8
- xpos 4765
- ypos 84
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_arnold_norm-off_angle-0.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read21
- xpos 4611
- ypos -39
-}
-ModifyMetaData {
- metadata {
-  {set renderer arnold}
-  {set normalize off}
-  {set angle 0}
- }
- name ModifyMetaData7
- xpos 4611
- ypos 63
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 48}
-   }
- old_expression_markers {{0 5 13 15 24 24}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text7
- xpos 4611
- ypos 87
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_karma_norm-on_angle-65.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read22
- xpos 5460
- ypos -285
-}
-ModifyMetaData {
- metadata {
-  {set renderer karma}
-  {set normalize on}
-  {set angle 65}
- }
- name ModifyMetaData6
- xpos 5461
- ypos -196
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 54 53}
-   }
- old_expression_markers {{0 4 12 13 22 23}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text6
- xpos 5461
- ypos -172
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_karma_norm-on_angle-1.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read23
- xpos 5312
- ypos -279
-}
-ModifyMetaData {
- metadata {
-  {set renderer karma}
-  {set normalize on}
-  {set angle 1}
- }
- name ModifyMetaData5
- xpos 5311
- ypos -192
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 49}
-   }
- old_expression_markers {{0 4 12 13 22 22}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text5
- xpos 5311
- ypos -168
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_karma_norm-on_angle-0.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read24
- xpos 5156
- ypos -286
-}
-ModifyMetaData {
- metadata {
-  {set renderer karma}
-  {set normalize on}
-  {set angle 0}
- }
- name ModifyMetaData4
- xpos 5167
- ypos -187
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 48}
-   }
- old_expression_markers {{0 4 12 13 22 22}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text4
- xpos 5167
- ypos -163
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_karma_norm-off_angle-65.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read25
- xpos 4912
- ypos -277
-}
-ModifyMetaData {
- metadata {
-  {set renderer karma}
-  {set normalize off}
-  {set angle 65}
- }
- name ModifyMetaData3
- xpos 4912
- ypos -193
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 54 53}
-   }
- old_expression_markers {{0 4 12 14 23 24}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text3
- xpos 4912
- ypos -169
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_karma_norm-off_angle-1.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- name Read26
- xpos 4762
- ypos -273
-}
-ModifyMetaData {
- metadata {
-  {set renderer karma}
-  {set normalize off}
-  {set angle 1}
- }
- name ModifyMetaData2
- xpos 4762
- ypos -189
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 49}
-   }
- old_expression_markers {{0 4 12 14 23 23}
-   }
- box {24 24 1024 1024}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text2
- xpos 4762
- ypos -165
-}
-Read {
- inputs 0
- file_type exr
- file renders/distant-light-plane/distant-light-plane_karma_norm-off_angle-0.exr
- format "1024 1024 0 0 1024 1024 1 square_1K"
- origset true
- version 1
- name Read27
- xpos 4618
- ypos -268
-}
-ModifyMetaData {
- metadata {
-  {set renderer karma}
-  {set normalize off}
-  {set angle 0}
- }
- name ModifyMetaData1
- xpos 4618
- ypos -184
-}
-Text2 {
- font_size_toolbar 100
- font_width_toolbar 100
- font_height_toolbar 100
- message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
- old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 48}
-   }
- old_expression_markers {{0 4 12 14 23 23}
-   }
- box {24 24 512 512}
- yjustify bottom
- transforms {{0 2}
-   }
- cursor_position 70
- global_font_scale 0.5
- center {512 512}
- cursor_initialised true
- autofit_bbox false
- initial_cursor_position {{0 1024}
-   }
- group_animations {{0} imported: 0 selected: items: "root transform/"}
- animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
-   }
- enable_shadows true
- shadow_opacity 0.765
- shadow_angle 0
- shadow_distance 0
- shadow_softness 0.4
- shadow_size 4.25
- name Text1
- xpos 4618
- ypos -160
-}
-set N75a0b400 [stack 0]
-ContactSheet {
- inputs 24
- width 6144
- height 4096
- rows 4
- columns 6
- roworder TopBottom
- name ContactSheet1
- xpos 5016
- ypos 631
-}
-Write {
- file distant-light.jpg
- file_type jpeg
- checkHashOnRead false
- version 4
- in_colorspace scene_linear
- out_colorspace scene_linear
- name Write1
- xpos 5016
- ypos 808
-}
-Read {
- inputs 0
- file_type exr
  file renders/disk-light-plane/disk-light-plane_ris_norm-on.exr
  format "1024 1024 0 0 1024 1024 1 square_1K"
  origset true
@@ -8329,7 +7033,1317 @@ Write {
  ypos 2822
 }
 push $Na33ab000
-push $N75a0b400
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_ris_norm-on_angle-65.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 1
+ name Read112
+ xpos 5472
+ ypos 375
+}
+ModifyMetaData {
+ metadata {
+  {set renderer ris}
+  {set normalize on}
+  {set angle 65}
+ }
+ name ModifyMetaData112
+ xpos 5472
+ ypos 483
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{114 105 115 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 54 53}
+   }
+ old_expression_markers {{0 2 10 11 20 21}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text112
+ xpos 5472
+ ypos 507
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_ris_norm-on_angle-1.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 1
+ name Read113
+ xpos 5321
+ ypos 376
+}
+ModifyMetaData {
+ metadata {
+  {set renderer ris}
+  {set normalize on}
+  {set angle 1}
+ }
+ name ModifyMetaData113
+ xpos 5321
+ ypos 485
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{114 105 115 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 49}
+   }
+ old_expression_markers {{0 2 10 11 20 20}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text113
+ xpos 5321
+ ypos 509
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_ris_norm-on_angle-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 1
+ name Read114
+ xpos 5156
+ ypos 382
+}
+ModifyMetaData {
+ metadata {
+  {set renderer ris}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData114
+ xpos 5156
+ ypos 487
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{114 105 115 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 48}
+   }
+ old_expression_markers {{0 2 10 11 20 20}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text114
+ xpos 5156
+ ypos 511
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_ris_norm-off_angle-65.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 1
+ name Read115
+ xpos 4925
+ ypos 386
+}
+ModifyMetaData {
+ metadata {
+  {set renderer ris}
+  {set normalize off}
+  {set angle 65}
+ }
+ name ModifyMetaData115
+ xpos 4925
+ ypos 492
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{114 105 115 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 54 53}
+   }
+ old_expression_markers {{0 2 10 12 21 22}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text115
+ xpos 4925
+ ypos 516
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_ris_norm-off_angle-1.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 2
+ name Read116
+ selected true
+ xpos 4773
+ ypos 393
+}
+ModifyMetaData {
+ metadata {
+  {set renderer ris}
+  {set normalize off}
+  {set angle 1}
+ }
+ name ModifyMetaData116
+ xpos 4773
+ ypos 498
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{114 105 115 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 49}
+   }
+ old_expression_markers {{0 2 10 12 21 21}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text116
+ xpos 4773
+ ypos 522
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_ris_norm-off_angle-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 3
+ name Read117
+ xpos 4615
+ ypos 395
+}
+ModifyMetaData {
+ metadata {
+  {set renderer ris}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData117
+ xpos 4615
+ ypos 493
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{114 105 115 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 48}
+   }
+ old_expression_markers {{0 2 10 12 21 21}
+   }
+ box {24 24 512 512}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text117
+ xpos 4615
+ ypos 517
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_rtx_norm-on_angle-65.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read6
+ xpos 5474
+ ypos 187
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize on}
+  {set angle 65}
+ }
+ name ModifyMetaData18
+ xpos 5474
+ ypos 295
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 54 53}
+   }
+ old_expression_markers {{0 2 10 11 20 21}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text18
+ xpos 5474
+ ypos 319
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_rtx_norm-on_angle-1.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read5
+ xpos 5323
+ ypos 188
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize on}
+  {set angle 1}
+ }
+ name ModifyMetaData17
+ xpos 5323
+ ypos 297
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 49}
+   }
+ old_expression_markers {{0 2 10 11 20 20}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text17
+ xpos 5323
+ ypos 321
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_rtx_norm-on_angle-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read4
+ xpos 5158
+ ypos 194
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData16
+ xpos 5158
+ ypos 299
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 48}
+   }
+ old_expression_markers {{0 2 10 11 20 20}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text16
+ xpos 5158
+ ypos 323
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_rtx_norm-off_angle-65.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read3
+ xpos 4927
+ ypos 198
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set angle 65}
+ }
+ name ModifyMetaData15
+ xpos 4927
+ ypos 304
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 54 53}
+   }
+ old_expression_markers {{0 2 10 12 21 22}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text15
+ xpos 4927
+ ypos 328
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_rtx_norm-off_angle-1.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read2
+ xpos 4775
+ ypos 205
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set angle 1}
+ }
+ name ModifyMetaData14
+ xpos 4775
+ ypos 310
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 49}
+   }
+ old_expression_markers {{0 2 10 12 21 21}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text14
+ xpos 4775
+ ypos 334
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_rtx_norm-off_angle-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ name Read1
+ xpos 4617
+ ypos 207
+}
+ModifyMetaData {
+ metadata {
+  {set renderer rtx}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData13
+ xpos 4617
+ ypos 305
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{114 116 120 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 48}
+   }
+ old_expression_markers {{0 2 10 12 21 21}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text13
+ xpos 4617
+ ypos 329
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_arnold_norm-on_angle-65.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 1
+ name Read16
+ xpos 5468
+ ypos -30
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize on}
+  {set angle 65}
+ }
+ name ModifyMetaData12
+ xpos 5464
+ ypos 62
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 54 53}
+   }
+ old_expression_markers {{0 5 13 14 23 24}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text12
+ xpos 5464
+ ypos 86
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_arnold_norm-on_angle-1.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 1
+ name Read17
+ xpos 5318
+ ypos -31
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize on}
+  {set angle 1}
+ }
+ name ModifyMetaData11
+ xpos 5318
+ ypos 65
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 49}
+   }
+ old_expression_markers {{0 5 13 14 23 23}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text11
+ xpos 5318
+ ypos 89
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_arnold_norm-on_angle-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 1
+ name Read18
+ xpos 5156
+ ypos -36
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData10
+ xpos 5156
+ ypos 62
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 48}
+   }
+ old_expression_markers {{0 5 13 14 23 23}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text10
+ xpos 5156
+ ypos 86
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_arnold_norm-off_angle-65.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 1
+ name Read19
+ xpos 4917
+ ypos -35
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set angle 65}
+ }
+ name ModifyMetaData9
+ xpos 4915
+ ypos 65
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 54 53}
+   }
+ old_expression_markers {{0 5 13 15 24 25}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text9
+ xpos 4915
+ ypos 89
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_arnold_norm-off_angle-1.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 2
+ name Read20
+ xpos 4765
+ ypos -39
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set angle 1}
+ }
+ name ModifyMetaData8
+ xpos 4765
+ ypos 60
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 49}
+   }
+ old_expression_markers {{0 5 13 15 24 24}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text8
+ xpos 4765
+ ypos 84
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_arnold_norm-off_angle-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 2
+ name Read21
+ xpos 4611
+ ypos -39
+}
+ModifyMetaData {
+ metadata {
+  {set renderer arnold}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData7
+ xpos 4611
+ ypos 63
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{97 114 110 111 108 100 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 48}
+   }
+ old_expression_markers {{0 5 13 15 24 24}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text7
+ xpos 4611
+ ypos 87
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_karma_norm-on_angle-65.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 1
+ name Read22
+ xpos 5460
+ ypos -285
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize on}
+  {set angle 65}
+ }
+ name ModifyMetaData6
+ xpos 5461
+ ypos -196
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 54 53}
+   }
+ old_expression_markers {{0 4 12 13 22 23}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text6
+ xpos 5461
+ ypos -172
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_karma_norm-on_angle-1.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 2
+ name Read23
+ xpos 5312
+ ypos -279
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize on}
+  {set angle 1}
+ }
+ name ModifyMetaData5
+ xpos 5311
+ ypos -192
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 49}
+   }
+ old_expression_markers {{0 4 12 13 22 22}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text5
+ xpos 5311
+ ypos -168
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_karma_norm-on_angle-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 1
+ name Read24
+ xpos 5156
+ ypos -286
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize on}
+  {set angle 0}
+ }
+ name ModifyMetaData4
+ xpos 5167
+ ypos -187
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 110 10 97 110 103 108 101 58 32 48}
+   }
+ old_expression_markers {{0 4 12 13 22 22}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text4
+ xpos 5167
+ ypos -163
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_karma_norm-off_angle-65.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 1
+ name Read25
+ xpos 4912
+ ypos -277
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set angle 65}
+ }
+ name ModifyMetaData3
+ xpos 4912
+ ypos -193
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 54 53}
+   }
+ old_expression_markers {{0 4 12 14 23 24}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text3
+ xpos 4912
+ ypos -169
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_karma_norm-off_angle-1.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 1
+ name Read26
+ xpos 4762
+ ypos -273
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set angle 1}
+ }
+ name ModifyMetaData2
+ xpos 4762
+ ypos -189
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 49}
+   }
+ old_expression_markers {{0 4 12 14 23 23}
+   }
+ box {24 24 1024 1024}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text2
+ xpos 4762
+ ypos -165
+}
+Read {
+ inputs 0
+ file_type exr
+ file renders/distant-light-plane/distant-light-plane_karma_norm-off_angle-0.exr
+ format "1024 1024 0 0 1024 1024 1 square_1K"
+ origset true
+ version 1
+ name Read27
+ xpos 4618
+ ypos -268
+}
+ModifyMetaData {
+ metadata {
+  {set renderer karma}
+  {set normalize off}
+  {set angle 0}
+ }
+ name ModifyMetaData1
+ xpos 4618
+ ypos -184
+}
+Text2 {
+ font_size_toolbar 100
+ font_width_toolbar 100
+ font_height_toolbar 100
+ message "\[metadata renderer]\nnorm: \[metadata normalize]\nangle: \[metadata angle]"
+ old_message {{107 97 114 109 97 10 110 111 114 109 58 32 111 102 102 10 97 110 103 108 101 58 32 48}
+   }
+ old_expression_markers {{0 4 12 14 23 23}
+   }
+ box {24 24 512 512}
+ yjustify bottom
+ transforms {{0 2}
+   }
+ cursor_position 70
+ global_font_scale 0.5
+ center {512 512}
+ cursor_initialised true
+ autofit_bbox false
+ initial_cursor_position {{0 1024}
+   }
+ group_animations {{0} imported: 0 selected: items: "root transform/"}
+ animation_layers {{1 11 512 512 0 0 1 1 0 0 0 0}
+   }
+ enable_shadows true
+ shadow_opacity 0.765
+ shadow_angle 0
+ shadow_distance 0
+ shadow_softness 0.4
+ shadow_size 4.25
+ name Text1
+ xpos 4618
+ ypos -160
+}
+ContactSheet {
+ inputs 24
+ width 6144
+ height 4096
+ rows 4
+ columns 6
+ roworder TopBottom
+ name ContactSheet1
+ xpos 5016
+ ypos 631
+}
+Write {
+ file distant-light.jpg
+ file_type jpeg
+ checkHashOnRead false
+ version 4
+ name Write1
+ xpos 5016
+ ypos 808
+}
 Viewer {
  inputs 2
  frame_range 1-100
