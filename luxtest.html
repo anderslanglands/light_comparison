@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>UsdLux Comparison</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Comparison of hydra delegates to hdEmbree UsdLux reference">
+    <link rel="stylesheet" href="luxtest.css">
+  </head>
+  <body>
+<h1>distant</h1>
+
+<table>
+  <tr>
+    <td>Frame</td>
+    <td>Ref</td>
+
+    <td>karma</td>
+    <td>karma diff</td>
+
+    <td>ris</td>
+    <td>ris diff</td>
+
+    <td>arnold</td>
+    <td>arnold diff</td>
+
+  </tr>
+  <tr>
+    <td>0001</td>    <td><img src="luxtest\embree\distant-embree.0001.png"</td>
+    <td><img src="luxtest\karma\distant-karma.0001.png"</td>
+    <td><img src="luxtest\diff\distant-karma.0001.png"</td>
+    <td><img src="luxtest\ris\distant-ris.0001.png"</td>
+    <td><img src="luxtest\diff\distant-ris.0001.png"</td>
+    <td><img src="luxtest\arnold\distant-arnold.0001.png"</td>
+    <td><img src="luxtest\diff\distant-arnold.0001.png"</td>
+  </tr>  <tr>
+    <td>0002</td>    <td><img src="luxtest\embree\distant-embree.0002.png"</td>
+    <td><img src="luxtest\karma\distant-karma.0002.png"</td>
+    <td><img src="luxtest\diff\distant-karma.0002.png"</td>
+    <td><img src="luxtest\ris\distant-ris.0002.png"</td>
+    <td><img src="luxtest\diff\distant-ris.0002.png"</td>
+    <td><img src="luxtest\arnold\distant-arnold.0002.png"</td>
+    <td><img src="luxtest\diff\distant-arnold.0002.png"</td>
+  </tr>  <tr>
+    <td>0003</td>    <td><img src="luxtest\embree\distant-embree.0003.png"</td>
+    <td><img src="luxtest\karma\distant-karma.0003.png"</td>
+    <td><img src="luxtest\diff\distant-karma.0003.png"</td>
+    <td><img src="luxtest\ris\distant-ris.0003.png"</td>
+    <td><img src="luxtest\diff\distant-ris.0003.png"</td>
+    <td><img src="luxtest\arnold\distant-arnold.0003.png"</td>
+    <td><img src="luxtest\diff\distant-arnold.0003.png"</td>
+  </tr>  <tr>
+    <td>0004</td>    <td><img src="luxtest\embree\distant-embree.0004.png"</td>
+    <td><img src="luxtest\karma\distant-karma.0004.png"</td>
+    <td><img src="luxtest\diff\distant-karma.0004.png"</td>
+    <td><img src="luxtest\ris\distant-ris.0004.png"</td>
+    <td><img src="luxtest\diff\distant-ris.0004.png"</td>
+    <td><img src="luxtest\arnold\distant-arnold.0004.png"</td>
+    <td><img src="luxtest\diff\distant-arnold.0004.png"</td>
+  </tr>  <tr>
+    <td>0005</td>    <td><img src="luxtest\embree\distant-embree.0005.png"</td>
+    <td><img src="luxtest\karma\distant-karma.0005.png"</td>
+    <td><img src="luxtest\diff\distant-karma.0005.png"</td>
+    <td><img src="luxtest\ris\distant-ris.0005.png"</td>
+    <td><img src="luxtest\diff\distant-ris.0005.png"</td>
+    <td><img src="luxtest\arnold\distant-arnold.0005.png"</td>
+    <td><img src="luxtest\diff\distant-arnold.0005.png"</td>
+  </tr>  <tr>
+    <td>0006</td>    <td><img src="luxtest\embree\distant-embree.0006.png"</td>
+    <td><img src="luxtest\karma\distant-karma.0006.png"</td>
+    <td><img src="luxtest\diff\distant-karma.0006.png"</td>
+    <td><img src="luxtest\ris\distant-ris.0006.png"</td>
+    <td><img src="luxtest\diff\distant-ris.0006.png"</td>
+    <td><img src="luxtest\arnold\distant-arnold.0006.png"</td>
+    <td><img src="luxtest\diff\distant-arnold.0006.png"</td>
+  </tr>  <tr>
+    <td>0007</td>    <td><img src="luxtest\embree\distant-embree.0007.png"</td>
+    <td><img src="luxtest\karma\distant-karma.0007.png"</td>
+    <td><img src="luxtest\diff\distant-karma.0007.png"</td>
+    <td><img src="luxtest\ris\distant-ris.0007.png"</td>
+    <td><img src="luxtest\diff\distant-ris.0007.png"</td>
+    <td><img src="luxtest\arnold\distant-arnold.0007.png"</td>
+    <td><img src="luxtest\diff\distant-arnold.0007.png"</td>
+  </tr>  <tr>
+    <td>0008</td>    <td><img src="luxtest\embree\distant-embree.0008.png"</td>
+    <td><img src="luxtest\karma\distant-karma.0008.png"</td>
+    <td><img src="luxtest\diff\distant-karma.0008.png"</td>
+    <td><img src="luxtest\ris\distant-ris.0008.png"</td>
+    <td><img src="luxtest\diff\distant-ris.0008.png"</td>
+    <td><img src="luxtest\arnold\distant-arnold.0008.png"</td>
+    <td><img src="luxtest\diff\distant-arnold.0008.png"</td>
+  </tr>  <tr>
+    <td>0009</td>    <td><img src="luxtest\embree\distant-embree.0009.png"</td>
+    <td><img src="luxtest\karma\distant-karma.0009.png"</td>
+    <td><img src="luxtest\diff\distant-karma.0009.png"</td>
+    <td><img src="luxtest\ris\distant-ris.0009.png"</td>
+    <td><img src="luxtest\diff\distant-ris.0009.png"</td>
+    <td><img src="luxtest\arnold\distant-arnold.0009.png"</td>
+    <td><img src="luxtest\diff\distant-arnold.0009.png"</td>
+  </tr>  <tr>
+    <td>0010</td>    <td><img src="luxtest\embree\distant-embree.0010.png"</td>
+    <td><img src="luxtest\karma\distant-karma.0010.png"</td>
+    <td><img src="luxtest\diff\distant-karma.0010.png"</td>
+    <td><img src="luxtest\ris\distant-ris.0010.png"</td>
+    <td><img src="luxtest\diff\distant-ris.0010.png"</td>
+    <td><img src="luxtest\arnold\distant-arnold.0010.png"</td>
+    <td><img src="luxtest\diff\distant-arnold.0010.png"</td>
+  </tr>  <tr>
+    <td>0011</td>    <td><img src="luxtest\embree\distant-embree.0011.png"</td>
+    <td><img src="luxtest\karma\distant-karma.0011.png"</td>
+    <td><img src="luxtest\diff\distant-karma.0011.png"</td>
+    <td><img src="luxtest\ris\distant-ris.0011.png"</td>
+    <td><img src="luxtest\diff\distant-ris.0011.png"</td>
+    <td><img src="luxtest\arnold\distant-arnold.0011.png"</td>
+    <td><img src="luxtest\diff\distant-arnold.0011.png"</td>
+  </tr>  <tr>
+    <td>0012</td>    <td><img src="luxtest\embree\distant-embree.0012.png"</td>
+    <td><img src="luxtest\karma\distant-karma.0012.png"</td>
+    <td><img src="luxtest\diff\distant-karma.0012.png"</td>
+    <td><img src="luxtest\ris\distant-ris.0012.png"</td>
+    <td><img src="luxtest\diff\distant-ris.0012.png"</td>
+    <td><img src="luxtest\arnold\distant-arnold.0012.png"</td>
+    <td><img src="luxtest\diff\distant-arnold.0012.png"</td>
+  </tr>  <tr>
+    <td>0013</td>    <td><img src="luxtest\embree\distant-embree.0013.png"</td>
+    <td><img src="luxtest\karma\distant-karma.0013.png"</td>
+    <td><img src="luxtest\diff\distant-karma.0013.png"</td>
+    <td><img src="luxtest\ris\distant-ris.0013.png"</td>
+    <td><img src="luxtest\diff\distant-ris.0013.png"</td>
+    <td><img src="luxtest\arnold\distant-arnold.0013.png"</td>
+    <td><img src="luxtest\diff\distant-arnold.0013.png"</td>
+  </tr>  <tr>
+    <td>0014</td>    <td><img src="luxtest\embree\distant-embree.0014.png"</td>
+    <td><img src="luxtest\karma\distant-karma.0014.png"</td>
+    <td><img src="luxtest\diff\distant-karma.0014.png"</td>
+    <td><img src="luxtest\ris\distant-ris.0014.png"</td>
+    <td><img src="luxtest\diff\distant-ris.0014.png"</td>
+    <td><img src="luxtest\arnold\distant-arnold.0014.png"</td>
+    <td><img src="luxtest\diff\distant-arnold.0014.png"</td>
+  </tr></table>
+<h1>cylinder</h1>
+
+<table>
+  <tr>
+    <td>Frame</td>
+    <td>Ref</td>
+
+    <td>karma</td>
+    <td>karma diff</td>
+
+    <td>ris</td>
+    <td>ris diff</td>
+
+    <td>arnold</td>
+    <td>arnold diff</td>
+
+  </tr>
+  <tr>
+    <td>0001</td>    <td><img src="luxtest\embree\cylinder-embree.0001.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0001.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0001.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0001.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0001.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0001.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0001.png"</td>
+  </tr>  <tr>
+    <td>0002</td>    <td><img src="luxtest\embree\cylinder-embree.0002.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0002.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0002.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0002.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0002.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0002.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0002.png"</td>
+  </tr>  <tr>
+    <td>0003</td>    <td><img src="luxtest\embree\cylinder-embree.0003.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0003.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0003.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0003.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0003.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0003.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0003.png"</td>
+  </tr>  <tr>
+    <td>0004</td>    <td><img src="luxtest\embree\cylinder-embree.0004.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0004.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0004.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0004.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0004.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0004.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0004.png"</td>
+  </tr>  <tr>
+    <td>0005</td>    <td><img src="luxtest\embree\cylinder-embree.0005.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0005.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0005.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0005.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0005.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0005.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0005.png"</td>
+  </tr>  <tr>
+    <td>0006</td>    <td><img src="luxtest\embree\cylinder-embree.0006.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0006.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0006.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0006.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0006.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0006.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0006.png"</td>
+  </tr>  <tr>
+    <td>0007</td>    <td><img src="luxtest\embree\cylinder-embree.0007.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0007.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0007.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0007.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0007.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0007.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0007.png"</td>
+  </tr>  <tr>
+    <td>0008</td>    <td><img src="luxtest\embree\cylinder-embree.0008.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0008.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0008.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0008.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0008.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0008.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0008.png"</td>
+  </tr>  <tr>
+    <td>0009</td>    <td><img src="luxtest\embree\cylinder-embree.0009.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0009.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0009.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0009.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0009.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0009.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0009.png"</td>
+  </tr>  <tr>
+    <td>0010</td>    <td><img src="luxtest\embree\cylinder-embree.0010.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0010.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0010.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0010.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0010.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0010.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0010.png"</td>
+  </tr>  <tr>
+    <td>0011</td>    <td><img src="luxtest\embree\cylinder-embree.0011.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0011.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0011.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0011.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0011.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0011.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0011.png"</td>
+  </tr>  <tr>
+    <td>0012</td>    <td><img src="luxtest\embree\cylinder-embree.0012.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0012.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0012.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0012.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0012.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0012.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0012.png"</td>
+  </tr>  <tr>
+    <td>0013</td>    <td><img src="luxtest\embree\cylinder-embree.0013.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0013.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0013.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0013.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0013.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0013.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0013.png"</td>
+  </tr>  <tr>
+    <td>0014</td>    <td><img src="luxtest\embree\cylinder-embree.0014.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0014.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0014.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0014.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0014.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0014.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0014.png"</td>
+  </tr>  <tr>
+    <td>0015</td>    <td><img src="luxtest\embree\cylinder-embree.0015.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0015.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0015.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0015.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0015.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0015.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0015.png"</td>
+  </tr>  <tr>
+    <td>0016</td>    <td><img src="luxtest\embree\cylinder-embree.0016.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0016.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0016.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0016.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0016.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0016.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0016.png"</td>
+  </tr>  <tr>
+    <td>0017</td>    <td><img src="luxtest\embree\cylinder-embree.0017.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0017.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0017.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0017.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0017.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0017.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0017.png"</td>
+  </tr>  <tr>
+    <td>0018</td>    <td><img src="luxtest\embree\cylinder-embree.0018.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0018.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0018.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0018.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0018.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0018.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0018.png"</td>
+  </tr>  <tr>
+    <td>0019</td>    <td><img src="luxtest\embree\cylinder-embree.0019.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0019.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0019.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0019.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0019.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0019.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0019.png"</td>
+  </tr>  <tr>
+    <td>0020</td>    <td><img src="luxtest\embree\cylinder-embree.0020.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0020.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0020.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0020.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0020.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0020.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0020.png"</td>
+  </tr>  <tr>
+    <td>0021</td>    <td><img src="luxtest\embree\cylinder-embree.0021.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0021.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0021.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0021.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0021.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0021.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0021.png"</td>
+  </tr>  <tr>
+    <td>0022</td>    <td><img src="luxtest\embree\cylinder-embree.0022.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0022.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0022.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0022.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0022.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0022.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0022.png"</td>
+  </tr>  <tr>
+    <td>0023</td>    <td><img src="luxtest\embree\cylinder-embree.0023.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0023.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0023.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0023.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0023.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0023.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0023.png"</td>
+  </tr>  <tr>
+    <td>0024</td>    <td><img src="luxtest\embree\cylinder-embree.0024.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0024.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0024.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0024.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0024.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0024.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0024.png"</td>
+  </tr>  <tr>
+    <td>0025</td>    <td><img src="luxtest\embree\cylinder-embree.0025.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0025.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0025.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0025.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0025.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0025.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0025.png"</td>
+  </tr>  <tr>
+    <td>0026</td>    <td><img src="luxtest\embree\cylinder-embree.0026.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0026.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0026.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0026.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0026.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0026.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0026.png"</td>
+  </tr>  <tr>
+    <td>0027</td>    <td><img src="luxtest\embree\cylinder-embree.0027.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0027.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0027.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0027.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0027.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0027.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0027.png"</td>
+  </tr>  <tr>
+    <td>0028</td>    <td><img src="luxtest\embree\cylinder-embree.0028.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0028.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0028.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0028.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0028.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0028.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0028.png"</td>
+  </tr>  <tr>
+    <td>0029</td>    <td><img src="luxtest\embree\cylinder-embree.0029.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0029.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0029.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0029.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0029.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0029.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0029.png"</td>
+  </tr>  <tr>
+    <td>0030</td>    <td><img src="luxtest\embree\cylinder-embree.0030.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0030.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0030.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0030.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0030.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0030.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0030.png"</td>
+  </tr>  <tr>
+    <td>0031</td>    <td><img src="luxtest\embree\cylinder-embree.0031.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0031.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0031.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0031.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0031.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0031.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0031.png"</td>
+  </tr>  <tr>
+    <td>0032</td>    <td><img src="luxtest\embree\cylinder-embree.0032.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0032.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0032.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0032.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0032.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0032.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0032.png"</td>
+  </tr>  <tr>
+    <td>0033</td>    <td><img src="luxtest\embree\cylinder-embree.0033.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0033.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0033.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0033.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0033.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0033.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0033.png"</td>
+  </tr>  <tr>
+    <td>0034</td>    <td><img src="luxtest\embree\cylinder-embree.0034.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0034.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0034.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0034.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0034.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0034.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0034.png"</td>
+  </tr>  <tr>
+    <td>0035</td>    <td><img src="luxtest\embree\cylinder-embree.0035.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0035.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0035.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0035.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0035.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0035.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0035.png"</td>
+  </tr>  <tr>
+    <td>0036</td>    <td><img src="luxtest\embree\cylinder-embree.0036.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0036.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0036.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0036.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0036.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0036.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0036.png"</td>
+  </tr>  <tr>
+    <td>0037</td>    <td><img src="luxtest\embree\cylinder-embree.0037.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0037.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0037.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0037.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0037.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0037.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0037.png"</td>
+  </tr>  <tr>
+    <td>0038</td>    <td><img src="luxtest\embree\cylinder-embree.0038.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0038.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0038.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0038.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0038.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0038.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0038.png"</td>
+  </tr>  <tr>
+    <td>0039</td>    <td><img src="luxtest\embree\cylinder-embree.0039.png"</td>
+    <td><img src="luxtest\karma\cylinder-karma.0039.png"</td>
+    <td><img src="luxtest\diff\cylinder-karma.0039.png"</td>
+    <td><img src="luxtest\ris\cylinder-ris.0039.png"</td>
+    <td><img src="luxtest\diff\cylinder-ris.0039.png"</td>
+    <td><img src="luxtest\arnold\cylinder-arnold.0039.png"</td>
+    <td><img src="luxtest\diff\cylinder-arnold.0039.png"</td>
+  </tr></table>
+<h1>disk</h1>
+
+<table>
+  <tr>
+    <td>Frame</td>
+    <td>Ref</td>
+
+    <td>karma</td>
+    <td>karma diff</td>
+
+    <td>ris</td>
+    <td>ris diff</td>
+
+    <td>arnold</td>
+    <td>arnold diff</td>
+
+  </tr>
+  <tr>
+    <td>0001</td>    <td><img src="luxtest\embree\disk-embree.0001.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0001.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0001.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0001.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0001.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0001.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0001.png"</td>
+  </tr>  <tr>
+    <td>0002</td>    <td><img src="luxtest\embree\disk-embree.0002.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0002.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0002.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0002.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0002.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0002.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0002.png"</td>
+  </tr>  <tr>
+    <td>0003</td>    <td><img src="luxtest\embree\disk-embree.0003.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0003.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0003.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0003.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0003.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0003.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0003.png"</td>
+  </tr>  <tr>
+    <td>0004</td>    <td><img src="luxtest\embree\disk-embree.0004.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0004.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0004.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0004.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0004.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0004.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0004.png"</td>
+  </tr>  <tr>
+    <td>0005</td>    <td><img src="luxtest\embree\disk-embree.0005.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0005.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0005.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0005.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0005.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0005.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0005.png"</td>
+  </tr>  <tr>
+    <td>0006</td>    <td><img src="luxtest\embree\disk-embree.0006.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0006.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0006.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0006.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0006.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0006.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0006.png"</td>
+  </tr>  <tr>
+    <td>0007</td>    <td><img src="luxtest\embree\disk-embree.0007.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0007.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0007.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0007.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0007.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0007.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0007.png"</td>
+  </tr>  <tr>
+    <td>0008</td>    <td><img src="luxtest\embree\disk-embree.0008.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0008.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0008.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0008.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0008.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0008.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0008.png"</td>
+  </tr>  <tr>
+    <td>0009</td>    <td><img src="luxtest\embree\disk-embree.0009.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0009.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0009.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0009.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0009.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0009.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0009.png"</td>
+  </tr>  <tr>
+    <td>0010</td>    <td><img src="luxtest\embree\disk-embree.0010.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0010.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0010.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0010.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0010.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0010.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0010.png"</td>
+  </tr>  <tr>
+    <td>0011</td>    <td><img src="luxtest\embree\disk-embree.0011.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0011.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0011.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0011.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0011.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0011.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0011.png"</td>
+  </tr>  <tr>
+    <td>0012</td>    <td><img src="luxtest\embree\disk-embree.0012.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0012.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0012.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0012.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0012.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0012.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0012.png"</td>
+  </tr>  <tr>
+    <td>0013</td>    <td><img src="luxtest\embree\disk-embree.0013.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0013.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0013.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0013.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0013.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0013.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0013.png"</td>
+  </tr>  <tr>
+    <td>0014</td>    <td><img src="luxtest\embree\disk-embree.0014.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0014.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0014.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0014.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0014.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0014.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0014.png"</td>
+  </tr>  <tr>
+    <td>0015</td>    <td><img src="luxtest\embree\disk-embree.0015.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0015.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0015.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0015.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0015.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0015.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0015.png"</td>
+  </tr>  <tr>
+    <td>0016</td>    <td><img src="luxtest\embree\disk-embree.0016.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0016.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0016.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0016.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0016.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0016.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0016.png"</td>
+  </tr>  <tr>
+    <td>0017</td>    <td><img src="luxtest\embree\disk-embree.0017.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0017.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0017.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0017.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0017.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0017.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0017.png"</td>
+  </tr>  <tr>
+    <td>0018</td>    <td><img src="luxtest\embree\disk-embree.0018.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0018.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0018.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0018.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0018.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0018.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0018.png"</td>
+  </tr>  <tr>
+    <td>0019</td>    <td><img src="luxtest\embree\disk-embree.0019.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0019.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0019.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0019.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0019.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0019.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0019.png"</td>
+  </tr>  <tr>
+    <td>0020</td>    <td><img src="luxtest\embree\disk-embree.0020.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0020.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0020.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0020.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0020.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0020.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0020.png"</td>
+  </tr>  <tr>
+    <td>0021</td>    <td><img src="luxtest\embree\disk-embree.0021.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0021.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0021.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0021.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0021.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0021.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0021.png"</td>
+  </tr>  <tr>
+    <td>0022</td>    <td><img src="luxtest\embree\disk-embree.0022.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0022.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0022.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0022.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0022.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0022.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0022.png"</td>
+  </tr>  <tr>
+    <td>0023</td>    <td><img src="luxtest\embree\disk-embree.0023.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0023.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0023.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0023.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0023.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0023.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0023.png"</td>
+  </tr>  <tr>
+    <td>0024</td>    <td><img src="luxtest\embree\disk-embree.0024.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0024.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0024.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0024.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0024.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0024.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0024.png"</td>
+  </tr>  <tr>
+    <td>0025</td>    <td><img src="luxtest\embree\disk-embree.0025.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0025.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0025.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0025.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0025.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0025.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0025.png"</td>
+  </tr>  <tr>
+    <td>0026</td>    <td><img src="luxtest\embree\disk-embree.0026.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0026.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0026.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0026.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0026.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0026.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0026.png"</td>
+  </tr>  <tr>
+    <td>0027</td>    <td><img src="luxtest\embree\disk-embree.0027.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0027.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0027.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0027.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0027.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0027.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0027.png"</td>
+  </tr>  <tr>
+    <td>0028</td>    <td><img src="luxtest\embree\disk-embree.0028.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0028.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0028.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0028.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0028.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0028.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0028.png"</td>
+  </tr>  <tr>
+    <td>0029</td>    <td><img src="luxtest\embree\disk-embree.0029.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0029.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0029.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0029.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0029.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0029.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0029.png"</td>
+  </tr>  <tr>
+    <td>0030</td>    <td><img src="luxtest\embree\disk-embree.0030.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0030.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0030.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0030.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0030.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0030.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0030.png"</td>
+  </tr>  <tr>
+    <td>0031</td>    <td><img src="luxtest\embree\disk-embree.0031.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0031.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0031.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0031.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0031.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0031.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0031.png"</td>
+  </tr>  <tr>
+    <td>0032</td>    <td><img src="luxtest\embree\disk-embree.0032.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0032.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0032.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0032.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0032.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0032.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0032.png"</td>
+  </tr>  <tr>
+    <td>0033</td>    <td><img src="luxtest\embree\disk-embree.0033.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0033.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0033.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0033.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0033.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0033.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0033.png"</td>
+  </tr>  <tr>
+    <td>0034</td>    <td><img src="luxtest\embree\disk-embree.0034.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0034.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0034.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0034.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0034.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0034.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0034.png"</td>
+  </tr>  <tr>
+    <td>0035</td>    <td><img src="luxtest\embree\disk-embree.0035.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0035.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0035.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0035.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0035.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0035.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0035.png"</td>
+  </tr>  <tr>
+    <td>0036</td>    <td><img src="luxtest\embree\disk-embree.0036.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0036.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0036.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0036.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0036.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0036.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0036.png"</td>
+  </tr>  <tr>
+    <td>0037</td>    <td><img src="luxtest\embree\disk-embree.0037.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0037.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0037.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0037.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0037.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0037.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0037.png"</td>
+  </tr>  <tr>
+    <td>0038</td>    <td><img src="luxtest\embree\disk-embree.0038.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0038.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0038.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0038.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0038.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0038.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0038.png"</td>
+  </tr>  <tr>
+    <td>0039</td>    <td><img src="luxtest\embree\disk-embree.0039.png"</td>
+    <td><img src="luxtest\karma\disk-karma.0039.png"</td>
+    <td><img src="luxtest\diff\disk-karma.0039.png"</td>
+    <td><img src="luxtest\ris\disk-ris.0039.png"</td>
+    <td><img src="luxtest\diff\disk-ris.0039.png"</td>
+    <td><img src="luxtest\arnold\disk-arnold.0039.png"</td>
+    <td><img src="luxtest\diff\disk-arnold.0039.png"</td>
+  </tr></table>
+<h1>rect</h1>
+
+<table>
+  <tr>
+    <td>Frame</td>
+    <td>Ref</td>
+
+    <td>karma</td>
+    <td>karma diff</td>
+
+    <td>ris</td>
+    <td>ris diff</td>
+
+    <td>arnold</td>
+    <td>arnold diff</td>
+
+  </tr>
+  <tr>
+    <td>0001</td>    <td><img src="luxtest\embree\rect-embree.0001.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0001.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0001.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0001.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0001.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0001.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0001.png"</td>
+  </tr>  <tr>
+    <td>0002</td>    <td><img src="luxtest\embree\rect-embree.0002.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0002.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0002.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0002.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0002.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0002.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0002.png"</td>
+  </tr>  <tr>
+    <td>0003</td>    <td><img src="luxtest\embree\rect-embree.0003.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0003.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0003.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0003.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0003.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0003.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0003.png"</td>
+  </tr>  <tr>
+    <td>0004</td>    <td><img src="luxtest\embree\rect-embree.0004.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0004.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0004.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0004.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0004.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0004.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0004.png"</td>
+  </tr>  <tr>
+    <td>0005</td>    <td><img src="luxtest\embree\rect-embree.0005.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0005.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0005.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0005.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0005.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0005.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0005.png"</td>
+  </tr>  <tr>
+    <td>0006</td>    <td><img src="luxtest\embree\rect-embree.0006.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0006.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0006.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0006.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0006.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0006.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0006.png"</td>
+  </tr>  <tr>
+    <td>0007</td>    <td><img src="luxtest\embree\rect-embree.0007.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0007.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0007.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0007.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0007.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0007.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0007.png"</td>
+  </tr>  <tr>
+    <td>0008</td>    <td><img src="luxtest\embree\rect-embree.0008.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0008.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0008.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0008.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0008.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0008.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0008.png"</td>
+  </tr>  <tr>
+    <td>0009</td>    <td><img src="luxtest\embree\rect-embree.0009.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0009.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0009.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0009.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0009.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0009.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0009.png"</td>
+  </tr>  <tr>
+    <td>0010</td>    <td><img src="luxtest\embree\rect-embree.0010.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0010.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0010.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0010.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0010.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0010.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0010.png"</td>
+  </tr>  <tr>
+    <td>0011</td>    <td><img src="luxtest\embree\rect-embree.0011.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0011.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0011.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0011.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0011.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0011.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0011.png"</td>
+  </tr>  <tr>
+    <td>0012</td>    <td><img src="luxtest\embree\rect-embree.0012.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0012.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0012.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0012.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0012.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0012.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0012.png"</td>
+  </tr>  <tr>
+    <td>0013</td>    <td><img src="luxtest\embree\rect-embree.0013.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0013.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0013.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0013.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0013.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0013.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0013.png"</td>
+  </tr>  <tr>
+    <td>0014</td>    <td><img src="luxtest\embree\rect-embree.0014.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0014.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0014.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0014.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0014.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0014.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0014.png"</td>
+  </tr>  <tr>
+    <td>0015</td>    <td><img src="luxtest\embree\rect-embree.0015.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0015.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0015.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0015.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0015.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0015.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0015.png"</td>
+  </tr>  <tr>
+    <td>0016</td>    <td><img src="luxtest\embree\rect-embree.0016.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0016.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0016.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0016.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0016.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0016.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0016.png"</td>
+  </tr>  <tr>
+    <td>0017</td>    <td><img src="luxtest\embree\rect-embree.0017.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0017.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0017.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0017.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0017.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0017.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0017.png"</td>
+  </tr>  <tr>
+    <td>0018</td>    <td><img src="luxtest\embree\rect-embree.0018.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0018.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0018.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0018.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0018.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0018.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0018.png"</td>
+  </tr>  <tr>
+    <td>0019</td>    <td><img src="luxtest\embree\rect-embree.0019.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0019.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0019.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0019.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0019.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0019.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0019.png"</td>
+  </tr>  <tr>
+    <td>0020</td>    <td><img src="luxtest\embree\rect-embree.0020.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0020.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0020.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0020.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0020.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0020.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0020.png"</td>
+  </tr>  <tr>
+    <td>0021</td>    <td><img src="luxtest\embree\rect-embree.0021.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0021.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0021.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0021.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0021.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0021.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0021.png"</td>
+  </tr>  <tr>
+    <td>0022</td>    <td><img src="luxtest\embree\rect-embree.0022.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0022.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0022.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0022.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0022.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0022.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0022.png"</td>
+  </tr>  <tr>
+    <td>0023</td>    <td><img src="luxtest\embree\rect-embree.0023.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0023.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0023.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0023.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0023.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0023.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0023.png"</td>
+  </tr>  <tr>
+    <td>0024</td>    <td><img src="luxtest\embree\rect-embree.0024.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0024.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0024.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0024.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0024.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0024.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0024.png"</td>
+  </tr>  <tr>
+    <td>0025</td>    <td><img src="luxtest\embree\rect-embree.0025.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0025.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0025.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0025.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0025.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0025.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0025.png"</td>
+  </tr>  <tr>
+    <td>0026</td>    <td><img src="luxtest\embree\rect-embree.0026.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0026.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0026.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0026.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0026.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0026.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0026.png"</td>
+  </tr>  <tr>
+    <td>0027</td>    <td><img src="luxtest\embree\rect-embree.0027.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0027.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0027.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0027.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0027.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0027.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0027.png"</td>
+  </tr>  <tr>
+    <td>0028</td>    <td><img src="luxtest\embree\rect-embree.0028.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0028.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0028.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0028.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0028.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0028.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0028.png"</td>
+  </tr>  <tr>
+    <td>0029</td>    <td><img src="luxtest\embree\rect-embree.0029.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0029.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0029.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0029.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0029.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0029.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0029.png"</td>
+  </tr>  <tr>
+    <td>0030</td>    <td><img src="luxtest\embree\rect-embree.0030.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0030.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0030.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0030.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0030.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0030.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0030.png"</td>
+  </tr>  <tr>
+    <td>0031</td>    <td><img src="luxtest\embree\rect-embree.0031.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0031.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0031.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0031.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0031.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0031.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0031.png"</td>
+  </tr>  <tr>
+    <td>0032</td>    <td><img src="luxtest\embree\rect-embree.0032.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0032.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0032.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0032.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0032.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0032.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0032.png"</td>
+  </tr>  <tr>
+    <td>0033</td>    <td><img src="luxtest\embree\rect-embree.0033.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0033.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0033.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0033.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0033.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0033.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0033.png"</td>
+  </tr>  <tr>
+    <td>0034</td>    <td><img src="luxtest\embree\rect-embree.0034.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0034.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0034.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0034.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0034.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0034.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0034.png"</td>
+  </tr>  <tr>
+    <td>0035</td>    <td><img src="luxtest\embree\rect-embree.0035.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0035.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0035.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0035.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0035.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0035.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0035.png"</td>
+  </tr>  <tr>
+    <td>0036</td>    <td><img src="luxtest\embree\rect-embree.0036.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0036.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0036.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0036.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0036.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0036.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0036.png"</td>
+  </tr>  <tr>
+    <td>0037</td>    <td><img src="luxtest\embree\rect-embree.0037.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0037.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0037.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0037.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0037.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0037.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0037.png"</td>
+  </tr>  <tr>
+    <td>0038</td>    <td><img src="luxtest\embree\rect-embree.0038.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0038.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0038.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0038.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0038.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0038.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0038.png"</td>
+  </tr>  <tr>
+    <td>0039</td>    <td><img src="luxtest\embree\rect-embree.0039.png"</td>
+    <td><img src="luxtest\karma\rect-karma.0039.png"</td>
+    <td><img src="luxtest\diff\rect-karma.0039.png"</td>
+    <td><img src="luxtest\ris\rect-ris.0039.png"</td>
+    <td><img src="luxtest\diff\rect-ris.0039.png"</td>
+    <td><img src="luxtest\arnold\rect-arnold.0039.png"</td>
+    <td><img src="luxtest\diff\rect-arnold.0039.png"</td>
+  </tr></table>
+<h1>sphere</h1>
+
+<table>
+  <tr>
+    <td>Frame</td>
+    <td>Ref</td>
+
+    <td>karma</td>
+    <td>karma diff</td>
+
+    <td>ris</td>
+    <td>ris diff</td>
+
+    <td>arnold</td>
+    <td>arnold diff</td>
+
+  </tr>
+  <tr>
+    <td>0001</td>    <td><img src="luxtest\embree\sphere-embree.0001.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0001.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0001.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0001.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0001.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0001.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0001.png"</td>
+  </tr>  <tr>
+    <td>0002</td>    <td><img src="luxtest\embree\sphere-embree.0002.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0002.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0002.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0002.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0002.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0002.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0002.png"</td>
+  </tr>  <tr>
+    <td>0003</td>    <td><img src="luxtest\embree\sphere-embree.0003.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0003.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0003.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0003.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0003.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0003.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0003.png"</td>
+  </tr>  <tr>
+    <td>0004</td>    <td><img src="luxtest\embree\sphere-embree.0004.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0004.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0004.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0004.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0004.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0004.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0004.png"</td>
+  </tr>  <tr>
+    <td>0005</td>    <td><img src="luxtest\embree\sphere-embree.0005.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0005.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0005.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0005.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0005.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0005.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0005.png"</td>
+  </tr>  <tr>
+    <td>0006</td>    <td><img src="luxtest\embree\sphere-embree.0006.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0006.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0006.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0006.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0006.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0006.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0006.png"</td>
+  </tr>  <tr>
+    <td>0007</td>    <td><img src="luxtest\embree\sphere-embree.0007.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0007.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0007.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0007.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0007.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0007.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0007.png"</td>
+  </tr>  <tr>
+    <td>0008</td>    <td><img src="luxtest\embree\sphere-embree.0008.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0008.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0008.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0008.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0008.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0008.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0008.png"</td>
+  </tr>  <tr>
+    <td>0009</td>    <td><img src="luxtest\embree\sphere-embree.0009.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0009.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0009.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0009.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0009.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0009.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0009.png"</td>
+  </tr>  <tr>
+    <td>0010</td>    <td><img src="luxtest\embree\sphere-embree.0010.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0010.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0010.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0010.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0010.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0010.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0010.png"</td>
+  </tr>  <tr>
+    <td>0011</td>    <td><img src="luxtest\embree\sphere-embree.0011.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0011.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0011.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0011.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0011.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0011.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0011.png"</td>
+  </tr>  <tr>
+    <td>0012</td>    <td><img src="luxtest\embree\sphere-embree.0012.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0012.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0012.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0012.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0012.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0012.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0012.png"</td>
+  </tr>  <tr>
+    <td>0013</td>    <td><img src="luxtest\embree\sphere-embree.0013.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0013.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0013.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0013.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0013.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0013.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0013.png"</td>
+  </tr>  <tr>
+    <td>0014</td>    <td><img src="luxtest\embree\sphere-embree.0014.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0014.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0014.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0014.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0014.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0014.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0014.png"</td>
+  </tr>  <tr>
+    <td>0015</td>    <td><img src="luxtest\embree\sphere-embree.0015.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0015.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0015.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0015.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0015.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0015.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0015.png"</td>
+  </tr>  <tr>
+    <td>0016</td>    <td><img src="luxtest\embree\sphere-embree.0016.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0016.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0016.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0016.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0016.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0016.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0016.png"</td>
+  </tr>  <tr>
+    <td>0017</td>    <td><img src="luxtest\embree\sphere-embree.0017.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0017.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0017.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0017.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0017.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0017.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0017.png"</td>
+  </tr>  <tr>
+    <td>0018</td>    <td><img src="luxtest\embree\sphere-embree.0018.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0018.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0018.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0018.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0018.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0018.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0018.png"</td>
+  </tr>  <tr>
+    <td>0019</td>    <td><img src="luxtest\embree\sphere-embree.0019.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0019.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0019.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0019.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0019.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0019.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0019.png"</td>
+  </tr>  <tr>
+    <td>0020</td>    <td><img src="luxtest\embree\sphere-embree.0020.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0020.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0020.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0020.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0020.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0020.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0020.png"</td>
+  </tr>  <tr>
+    <td>0021</td>    <td><img src="luxtest\embree\sphere-embree.0021.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0021.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0021.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0021.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0021.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0021.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0021.png"</td>
+  </tr>  <tr>
+    <td>0022</td>    <td><img src="luxtest\embree\sphere-embree.0022.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0022.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0022.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0022.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0022.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0022.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0022.png"</td>
+  </tr>  <tr>
+    <td>0023</td>    <td><img src="luxtest\embree\sphere-embree.0023.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0023.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0023.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0023.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0023.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0023.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0023.png"</td>
+  </tr>  <tr>
+    <td>0024</td>    <td><img src="luxtest\embree\sphere-embree.0024.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0024.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0024.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0024.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0024.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0024.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0024.png"</td>
+  </tr>  <tr>
+    <td>0025</td>    <td><img src="luxtest\embree\sphere-embree.0025.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0025.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0025.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0025.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0025.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0025.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0025.png"</td>
+  </tr>  <tr>
+    <td>0026</td>    <td><img src="luxtest\embree\sphere-embree.0026.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0026.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0026.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0026.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0026.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0026.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0026.png"</td>
+  </tr>  <tr>
+    <td>0027</td>    <td><img src="luxtest\embree\sphere-embree.0027.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0027.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0027.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0027.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0027.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0027.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0027.png"</td>
+  </tr>  <tr>
+    <td>0028</td>    <td><img src="luxtest\embree\sphere-embree.0028.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0028.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0028.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0028.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0028.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0028.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0028.png"</td>
+  </tr>  <tr>
+    <td>0029</td>    <td><img src="luxtest\embree\sphere-embree.0029.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0029.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0029.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0029.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0029.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0029.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0029.png"</td>
+  </tr>  <tr>
+    <td>0030</td>    <td><img src="luxtest\embree\sphere-embree.0030.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0030.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0030.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0030.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0030.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0030.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0030.png"</td>
+  </tr>  <tr>
+    <td>0031</td>    <td><img src="luxtest\embree\sphere-embree.0031.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0031.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0031.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0031.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0031.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0031.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0031.png"</td>
+  </tr>  <tr>
+    <td>0032</td>    <td><img src="luxtest\embree\sphere-embree.0032.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0032.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0032.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0032.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0032.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0032.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0032.png"</td>
+  </tr>  <tr>
+    <td>0033</td>    <td><img src="luxtest\embree\sphere-embree.0033.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0033.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0033.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0033.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0033.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0033.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0033.png"</td>
+  </tr>  <tr>
+    <td>0034</td>    <td><img src="luxtest\embree\sphere-embree.0034.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0034.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0034.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0034.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0034.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0034.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0034.png"</td>
+  </tr>  <tr>
+    <td>0035</td>    <td><img src="luxtest\embree\sphere-embree.0035.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0035.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0035.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0035.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0035.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0035.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0035.png"</td>
+  </tr>  <tr>
+    <td>0036</td>    <td><img src="luxtest\embree\sphere-embree.0036.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0036.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0036.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0036.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0036.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0036.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0036.png"</td>
+  </tr>  <tr>
+    <td>0037</td>    <td><img src="luxtest\embree\sphere-embree.0037.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0037.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0037.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0037.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0037.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0037.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0037.png"</td>
+  </tr>  <tr>
+    <td>0038</td>    <td><img src="luxtest\embree\sphere-embree.0038.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0038.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0038.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0038.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0038.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0038.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0038.png"</td>
+  </tr>  <tr>
+    <td>0039</td>    <td><img src="luxtest\embree\sphere-embree.0039.png"</td>
+    <td><img src="luxtest\karma\sphere-karma.0039.png"</td>
+    <td><img src="luxtest\diff\sphere-karma.0039.png"</td>
+    <td><img src="luxtest\ris\sphere-ris.0039.png"</td>
+    <td><img src="luxtest\diff\sphere-ris.0039.png"</td>
+    <td><img src="luxtest\arnold\sphere-arnold.0039.png"</td>
+    <td><img src="luxtest\diff\sphere-arnold.0039.png"</td>
+  </tr></table>
